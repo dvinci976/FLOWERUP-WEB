@@ -1,0 +1,1381 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900;1000&family=Patrick+Hand&display=swap");
+:root {
+  --green: #063345;
+  --pink: #ff4086;
+  --cream: #fffcf5;
+  color: #073347;
+  background: var(--cream);
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background: var(--cream);
+}
+h1,
+h2,
+h3 {
+  color: #073347;
+}
+h1,
+h2,
+.handwritten,
+.brand-tagline,
+.petal-option,
+.flow-heading h1 {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+.flowerup-logo {
+  padding: 0;
+  border: 0;
+  background: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.wordmark {
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  font-size: 38px;
+  font-weight: 1000;
+  letter-spacing: -3px;
+  line-height: 1.05;
+}
+.wordmark > span {
+  display: inline-block;
+}
+.brand-tagline {
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: #073347;
+}
+.logo-large .wordmark {
+  font-size: 94px;
+  letter-spacing: -7px;
+}
+.logo-large .brand-tagline {
+  font-size: 29px;
+}
+.announcement {
+  background: #fff1cf;
+  color: #385a4a;
+  font-size: 11px;
+}
+.announcement span {
+  color: #073347;
+}
+.nav-cta {
+  border-color: #edbed0;
+  background: #fff2f7;
+  color: #b0225e;
+}
+.primary {
+  background: #e92572;
+  color: white;
+  padding: 17px 30px;
+  font-size: 16px;
+  box-shadow: 0 5px 0 #d6206710;
+}
+.primary:hover:not(:disabled) {
+  background: #cf1d61;
+}
+.primary:focus-visible {
+  outline-color: #073347;
+}
+header {
+  padding-block: 24px;
+}
+nav {
+  font-size: 13px;
+}
+.hero {
+  padding-top: 22px;
+  gap: 6%;
+  grid-template-columns: 1fr 1.08fr;
+  padding-bottom: 38px;
+}
+.hero-copy .eyebrow {
+  font-size: 9px;
+  margin-bottom: 22px;
+  color: #5b7168;
+}
+.hero-copy h1 {
+  font-size: 62px;
+  line-height: 1.02;
+  margin: 27px 0 15px;
+}
+.hero-copy h1 span {
+  color: #e63277;
+}
+.hero-copy > p {
+  font-size: 16px;
+  color: #315064;
+  margin-top: 0;
+}
+.hero-price {
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+  display: table;
+  background: #ffe58a;
+  padding: 4px 17px;
+  transform: rotate(-3deg);
+  border-radius: 50% 35% 40% 30%;
+  margin: 20px 0;
+}
+.hero-price span {
+  font-family: "DM Sans";
+  font-size: 11px;
+}
+.hero .micro {
+  color: #557265;
+}
+.hero-art {
+  min-height: 0;
+  aspect-ratio: 1/1.1;
+  border-radius: 48% 48% 18px 18px;
+  background: #fbf3e6;
+  overflow: visible;
+}
+.hero-art:before {
+  display: none;
+}
+.bouquet-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-bouquet {
+  border-radius: inherit;
+  object-position: center 57%;
+}
+.hero-art .handwritten {
+  left: -24px;
+  bottom: 35px;
+  background: #fff8dcdd;
+  padding: 14px 20px;
+  transform: rotate(-9deg);
+  font-size: 26px;
+  line-height: 1.1;
+  border-radius: 30% 10% 40% 12%;
+}
+.handwritten span {
+  display: block;
+  font-size: 31px;
+  text-align: center;
+  line-height: 0.8;
+}
+.hero-art .price-sticker {
+  top: 24px;
+  left: -18px;
+  right: auto;
+  bottom: auto;
+  width: 137px;
+  height: 95px;
+  background: #ffdf64;
+  border-radius: 35% 46% 34% 47%;
+  font-family: "Patrick Hand";
+  font-size: 20px;
+  transform: rotate(-10deg);
+  box-shadow: none;
+}
+.price-sticker strong {
+  font-family: "Patrick Hand";
+  font-size: 27px;
+}
+.happy-marks {
+  width: 75px;
+  pointer-events: none;
+}
+.hero-marks {
+  position: absolute;
+  top: -20px;
+  right: -24px;
+  transform: rotate(23deg);
+}
+.hero-flower {
+  position: absolute;
+  width: 65px;
+  right: -20px;
+  bottom: 25px;
+  transform: rotate(12deg);
+}
+.benefit-strip {
+  border: 0;
+  padding: 26px 6%;
+  gap: 35px;
+  background: #fff9ef;
+}
+.sustainability-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 410px;
+  margin: 22px auto 0;
+  border-radius: 22px;
+  background: #ffeaf2;
+  padding: 17px 20px;
+  text-align: left;
+  color: #073347;
+}
+.sustainability-badge > svg {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  color: #08775b;
+  transform: rotate(-9deg);
+}
+.sustainability-badge > span {
+  display: block;
+}
+.sustainability-badge strong {
+  font-family: "Patrick Hand";
+  font-size: 23px;
+  line-height: 1.02;
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 400;
+}
+.sustainability-badge span span {
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.sustainability-badge.compact {
+  background: none;
+  margin: 0;
+  padding: 0;
+  max-width: 320px;
+  flex: 1;
+}
+.sustainability-badge.compact > span {
+  display: block;
+}
+.sustainability-badge.compact span span {
+  font-size: 12px;
+}
+.badge-1 > svg {
+  color: #f74785;
+}
+.badge-0 > svg {
+  color: #309a60;
+}
+.how-section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+h2 {
+  font-size: 43px;
+}
+.how-grid article {
+  background: #fff2cc;
+}
+.how-grid article:nth-child(2) {
+  background: #ffedf4;
+}
+.how-grid article:nth-child(3) {
+  background: #e4f2e6;
+}
+.how-grid h3 {
+  color: #073347;
+}
+.how-grid p {
+  color: #47616a;
+}
+.how-grid .step-card-top span:last-child {
+  color: #f4578e;
+}
+.vibes-section {
+  padding-bottom: 45px;
+}
+.vibe-preview {
+  gap: 22px;
+}
+.bouquet-card {
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  min-width: 0;
+  color: #073347;
+}
+.bouquet-card-image {
+  position: relative;
+  aspect-ratio: 1/0.98;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background: #f5eddf;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.bouquet-card .bouquet-photo {
+  object-position: center 43%;
+  transition: transform 0.25s;
+}
+.bouquet-card:hover .bouquet-photo {
+  transform: scale(1.04);
+}
+.bouquet-card.is-selected .bouquet-card-image {
+  border-color: #ff4086;
+  box-shadow: 0 0 0 3px #ff40861c;
+}
+.bouquet-card strong {
+  display: block;
+  font-family: "Patrick Hand";
+  font-size: 24px;
+  line-height: 1.12;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.bouquet-card small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #536977;
+}
+.selection-check {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  background: #f73382;
+  color: white;
+  border: 2px solid white;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: 0.2s;
+}
+.is-selected .selection-check {
+  opacity: 1;
+  transform: scale(1);
+}
+.vibe-preview .bouquet-card > div {
+  border-radius: 22px;
+  background: #f5eddf;
+}
+.kind-note {
+  max-width: 940px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto 55px;
+  padding: 0 5%;
+}
+.kind-note .sustainability-badge {
+  flex: 1;
+  margin: 0;
+  max-width: 460px;
+}
+.kind-note > p {
+  flex: 1;
+  font-size: 12px;
+  color: #55706a;
+}
+.closing {
+  background: #fff0d1;
+  position: relative;
+  padding: 45px 20px;
+}
+.closing-flower {
+  width: 58px;
+  height: 58px;
+}
+.closing h2 {
+  font-size: 43px;
+}
+.closing p {
+  color: #536575;
+}
+footer .wordmark {
+  font-size: 32px;
+}
+footer .brand-tagline {
+  font-size: 13px;
+}
+footer > p {
+  display: none;
+}
+footer > span {
+  color: #62716e;
+}
+.onboarding {
+  --step-color: #f43883;
+}
+.flow-step-1 {
+  --step-color: #ee651e;
+}
+.flow-step-2 {
+  --step-color: #369447;
+}
+.flow-step-3 {
+  --step-color: #ffc400;
+}
+.onboarding header {
+  border-color: #eee9df;
+  padding-block: 16px;
+}
+.onboarding .wordmark {
+  font-size: 31px;
+}
+.onboarding .brand-tagline {
+  font-size: 12px;
+}
+.prototype-badge {
+  color: #57727a;
+}
+.icon-button {
+  border-color: #e0e3dc;
+  color: #234c5b;
+}
+.flow-main {
+  max-width: 780px;
+  padding-top: 25px;
+}
+.progress-indicator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  color: #32576b;
+}
+.progress-caption {
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+.progress-track {
+  height: 7px;
+  flex: 1;
+  background: #eae7df;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress-track > span {
+  display: block;
+  height: 100%;
+  border-radius: 8px;
+  background: var(--step-color);
+  transition: width 0.25s;
+}
+.back {
+  margin-top: 14px;
+  color: #23495c;
+  min-height: 40px;
+}
+.flow-heading {
+  margin: 18px auto 26px;
+}
+.flow-heading h1 {
+  font-size: 47px;
+  line-height: 1.06;
+  max-width: 550px;
+  margin: auto;
+}
+.flow-heading p {
+  color: #335569;
+  font-size: 14px;
+  margin-top: 12px;
+}
+.choice-grid {
+  max-width: 550px;
+  gap: 21px 22px;
+}
+.choice-grid .bouquet-card-image {
+  aspect-ratio: 1/0.83;
+}
+.colour-grid {
+  max-width: 480px;
+  gap: 24px 35px;
+}
+.circular-card {
+  text-align: center;
+}
+.circular-card .bouquet-card-image {
+  border-radius: 50%;
+  aspect-ratio: 1 !important;
+}
+.circular-card .bouquet-photo {
+  transform: scale(1.5);
+  object-position: center 30%;
+}
+.circular-card:hover .bouquet-photo {
+  transform: scale(1.55);
+}
+.circular-card .selection-check {
+  bottom: 14px;
+  right: 24px;
+}
+.circular-card strong {
+  font-size: 24px;
+}
+.surprise-flower {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(9deg);
+  width: 65px;
+  height: 65px;
+  border-radius: 45%;
+  background: #fff6ec;
+  color: #fc4086;
+  font-family: "Patrick Hand";
+  font-size: 48px;
+  line-height: 65px;
+  box-shadow: 0 0 0 7px #fffdedaa;
+}
+.flow-bottom {
+  border: 0;
+  max-width: 550px;
+  margin: 26px auto 0;
+  padding-top: 12px;
+}
+.flow-bottom .primary {
+  background: var(--step-color);
+  min-width: 215px;
+}
+.flow-step-3 .primary {
+  color: #073347;
+}
+.flow-step-0 .primary {
+  background: #e92572;
+}
+.flow-step-1 .primary {
+  background: #ce4d0b;
+}
+.flow-step-2 .primary {
+  background: #278139;
+}
+.flow-bottom > span {
+  color: #59717b;
+  font-size: 10px;
+}
+.flow-footer {
+  color: #376370;
+}
+.flow-footer span {
+  color: #59717b;
+}
+.wheel-wrap {
+  max-width: 360px;
+  margin-top: 20px;
+}
+.petal-wheel {
+  width: 325px;
+  height: 325px;
+  background: #f0ece3;
+  box-shadow: none;
+  border: 0;
+  margin: 28px auto 18px;
+  border-radius: 50%;
+  isolation: isolate;
+}
+.petal-option {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  background: #ffa1c6;
+  color: #073347;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+  transform: scale(0.97);
+}
+.petal-1 {
+  background: #99d8b7;
+}
+.petal-2 {
+  background: #bce3e9;
+}
+.petal-3 {
+  background: #ffe080;
+}
+.petal-option.selected {
+  transform: scale(1.035);
+  filter: saturate(1.3) drop-shadow(0 5px 5px #13364533);
+  z-index: 2;
+  background: #ff7db2;
+}
+.petal-1.selected {
+  background: #71c99d;
+}
+.petal-2.selected {
+  background: #96d4df;
+}
+.petal-3.selected {
+  background: #ffd250;
+}
+.petal-option:hover {
+  filter: brightness(1.03);
+  transform: scale(1.01);
+}
+.petal-option:focus-visible {
+  outline: none;
+  filter: brightness(0.91);
+  box-shadow: inset 0 0 0 6px #073347;
+}
+.petal-option > span {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 82px;
+  font-size: 24px;
+  line-height: 1.05;
+  pointer-events: none;
+}
+.quantity-petals .petal-option > span {
+  font-size: 38px;
+}
+.petal-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fffdf6;
+  box-shadow: 0 4px 10px #34574916;
+  z-index: 3;
+  pointer-events: none;
+}
+.petal-center > svg {
+  width: 48px;
+  height: 48px;
+}
+.wheel-marks {
+  position: absolute;
+  width: 55px;
+  left: -25px;
+  top: 0;
+  z-index: 4;
+  transform: rotate(-23deg);
+}
+.wheel-controls {
+  margin-top: 15px;
+}
+.wheel-controls > button {
+  border-color: #d5ddd5;
+  width: 44px;
+  height: 44px;
+}
+.wheel-controls > span {
+  font-size: 10px;
+  color: #527080;
+}
+.rhythm-note {
+  text-align: center;
+  font-size: 12px;
+  color: #406774;
+  margin-top: 15px;
+}
+.flow-step-2 .sustainability-badge {
+  margin-top: 18px;
+}
+.price-note {
+  color: #375e70;
+  line-height: 1.6;
+}
+.delivery-form input {
+  color: #073347;
+  border-color: #cddcd5;
+  background: white;
+}
+.area-note {
+  background: #e7f3e6;
+  color: #225d45;
+}
+.summary {
+  border-color: #ede5da;
+}
+.summary-hero > .bouquet-photo {
+  width: 105px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.summary-hero h2 {
+  font-family: "Patrick Hand";
+  font-size: 30px;
+  color: #073347;
+}
+.summary-total > strong {
+  color: #d52672;
+}
+.summary dt,
+.privacy-note {
+  color: #5b717c;
+}
+.confirmation-flower {
+  width: 180px;
+  height: 140px;
+  position: relative;
+  margin: 35px auto 25px;
+}
+.confirmation-flower > svg:first-child {
+  width: 110px;
+  height: 110px;
+  transform: rotate(-12deg);
+}
+.confirmation-flower > .happy-marks {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 65px;
+}
+.confetti {
+  position: absolute;
+  inset: -15px;
+  pointer-events: none;
+}
+.confetti i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 15px;
+  border-radius: 4px;
+  background: #ffb900;
+  transform: rotate(calc(var(--i) * 30deg)) translateY(-90px) rotate(25deg);
+  animation: confetti-pop 0.6s ease-out both;
+  animation-delay: calc(var(--i) * 35ms);
+}
+.confetti i:nth-child(3n) {
+  background: #ff488b;
+}
+.confetti i:nth-child(3n + 1) {
+  background: #16a8ad;
+}
+.confirmed .flow-heading h1 {
+  font-family: "Patrick Hand";
+  font-size: 66px;
+  max-width: 500px;
+  line-height: 1.02;
+}
+.confirmation-note {
+  background: #fff0cf;
+}
+.confirmation-body > p {
+  color: #486678;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@keyframes confetti-pop {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media (min-width: 1000px) {
+  .flow-main {
+    position: relative;
+  }
+  .flow-step-0 .choice-grid {
+    max-width: 660px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+  }
+  .flow-step-0 .bouquet-card-image {
+    aspect-ratio: 1/1.5;
+  }
+  .flow-step-0 .bouquet-card strong {
+    font-size: 22px;
+  }
+  .flow-step-0 .flow-heading {
+    margin: 40px auto;
+  }
+  .flow-step-0 .flow-bottom {
+    margin-top: 40px;
+  }
+  .flow-step-1 .choice-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 700px;
+    gap: 20px;
+  }
+  .flow-step-1 .flow-heading {
+    margin: 45px auto;
+  }
+  .flow-step-1 .flow-bottom {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 701px) {
+  .logo-large .wordmark {
+    font-size: 65px;
+    letter-spacing: -5px;
+  }
+  .logo-large .brand-tagline {
+    font-size: 23px;
+  }
+  .hero-copy h1 {
+    font-size: 48px;
+  }
+  .hero-copy > p {
+    font-size: 13px;
+  }
+  .hero-art {
+    min-height: 450px;
+  }
+  .hero .handwritten {
+    font-size: 20px;
+  }
+  .wordmark {
+    font-size: 33px;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    padding: 16px 6%;
+  }
+  .wordmark {
+    font-size: 31px;
+    letter-spacing: -2px;
+  }
+  .brand-tagline {
+    font-size: 12px;
+  }
+  .announcement {
+    font-size: 9px;
+  }
+  .nav-cta {
+    font-size: 10px;
+    padding: 10px 12px;
+    border-color: #f4cada;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 6% 28px;
+    gap: 0;
+    position: relative;
+    text-align: center;
+  }
+  .hero-copy {
+    display: contents;
+  }
+  .hero-copy .eyebrow {
+    order: 0;
+    justify-content: center;
+    margin: 6px 0 16px;
+    font-size: 8px;
+  }
+  .logo-large {
+    order: 1;
+    margin: auto;
+  }
+  .logo-large .wordmark {
+    font-size: 66px;
+    letter-spacing: -5px;
+  }
+  .logo-large .brand-tagline {
+    font-size: 27px;
+  }
+  .hero-copy h1 {
+    order: 2;
+    font-size: 37px;
+    margin: 19px 0 10px;
+  }
+  .hero-copy h1 br {
+    display: none;
+  }
+  .hero-copy h1 span:before {
+    content: " ";
+  }
+  .hero-copy > p {
+    order: 3;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 330px;
+    margin: 0 auto 17px;
+  }
+  .hero-art {
+    order: 4;
+    width: 100%;
+    aspect-ratio: 1/1.04;
+    border-radius: 100px 100px 15px 15px;
+    margin-bottom: 15px;
+    min-height: 0;
+  }
+  .hero-bouquet {
+    object-position: center 57%;
+  }
+  .hero-copy .hero-price {
+    display: none;
+  }
+  .hero .primary {
+    order: 5;
+    width: 100%;
+    padding: 14px 22px;
+    font-size: 16px;
+  }
+  .hero .micro {
+    order: 6;
+    justify-content: center;
+    font-size: 9px;
+    margin-top: 12px;
+  }
+  .hero-art .price-sticker {
+    top: 10px;
+    left: -8px;
+    width: 115px;
+    height: 77px;
+    font-size: 17px;
+  }
+  .price-sticker strong {
+    font-size: 23px;
+  }
+  .hero-art .handwritten {
+    font-size: 22px;
+    left: -10px;
+    bottom: 20px;
+    padding: 10px 12px;
+  }
+  .hero-marks {
+    right: -13px;
+    top: 0;
+    width: 54px;
+  }
+  .hero-flower {
+    width: 45px;
+    right: -12px;
+    bottom: 10px;
+  }
+  .benefit-strip {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    padding: 21px 6%;
+    align-items: start;
+  }
+  .sustainability-badge.compact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .sustainability-badge.compact > svg {
+    width: 30px;
+    height: 30px;
+  }
+  .sustainability-badge.compact span span {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+  .how-section {
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .how-grid h3 {
+    font-family: "Patrick Hand";
+    font-size: 27px;
+  }
+  .how-grid article {
+    padding: 18px 22px;
+  }
+  .vibes-section {
+    padding-bottom: 35px;
+  }
+  .vibe-preview {
+    gap: 20px 14px;
+  }
+  .bouquet-card strong {
+    font-size: 22px;
+  }
+  .bouquet-card small {
+    font-size: 10px;
+  }
+  .vibe-preview .bouquet-card > div {
+    border-radius: 16px;
+  }
+  .kind-note {
+    display: block;
+    margin-bottom: 35px;
+  }
+  .kind-note > p {
+    font-size: 11px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  .kind-note .sustainability-badge {
+    max-width: none;
+  }
+  .closing h2 {
+    font-size: 37px;
+  }
+  .closing-flower {
+    width: 45px;
+    height: 45px;
+  }
+  footer .wordmark {
+    font-size: 28px;
+  }
+  footer > span {
+    font-size: 9px;
+  }
+  .onboarding header {
+    padding: 14px 20px;
+  }
+  .onboarding .wordmark {
+    font-size: 28px;
+  }
+  .onboarding .brand-tagline {
+    font-size: 11px;
+  }
+  .prototype-badge {
+    font-size: 7px;
+  }
+  .flow-main {
+    padding: 20px 21px 28px;
+  }
+  .progress-caption {
+    display: none;
+  }
+  .progress-track {
+    height: 7px;
+  }
+  .progress-indicator {
+    font-size: 11px;
+    gap: 14px;
+  }
+  .back {
+    margin-top: 9px;
+    padding-block: 7px;
+  }
+  .flow-heading {
+    margin: 12px auto 22px;
+  }
+  .flow-heading h1 {
+    font-size: 35px;
+    max-width: 315px;
+  }
+  .flow-heading p {
+    font-size: 12px;
+    line-height: 1.45;
+    max-width: 275px;
+  }
+  .choice-grid {
+    gap: 19px 13px;
+  }
+  .choice-grid .bouquet-card-image {
+    aspect-ratio: 1/1.1;
+    border-radius: 17px;
+  }
+  .choice-grid .bouquet-card strong {
+    font-size: 21px;
+    margin-top: 9px;
+  }
+  .choice-grid .bouquet-card small {
+    font-size: 10px;
+  }
+  .colour-grid {
+    gap: 22px 24px;
+    padding: 0 4px;
+  }
+  .colour-grid .bouquet-card strong {
+    font-size: 20px;
+  }
+  .circular-card .selection-check {
+    bottom: 7px;
+    right: 12px;
+  }
+  .selection-check {
+    width: 25px;
+    height: 25px;
+    right: 7px;
+    bottom: 7px;
+  }
+  .flow-bottom {
+    margin-top: 21px;
+    padding-top: 4px;
+    gap: 12px;
+  }
+  .flow-bottom .primary {
+    min-height: 49px;
+  }
+  .flow-bottom > span {
+    font-size: 9px;
+  }
+  .wheel-wrap {
+    max-width: 310px;
+    margin-top: 18px;
+  }
+  .petal-wheel {
+    width: 285px;
+    height: 285px;
+    margin: 24px auto 15px;
+  }
+  .petal-option > span {
+    width: 73px;
+    font-size: 22px;
+  }
+  .quantity-petals .petal-option > span {
+    font-size: 36px;
+  }
+  .petal-center {
+    width: 74px;
+    height: 74px;
+  }
+  .petal-center > svg {
+    width: 43px;
+    height: 43px;
+  }
+  .wheel-marks {
+    width: 45px;
+    left: -13px;
+    top: 0;
+  }
+  .wheel-controls {
+    margin-top: 10px;
+  }
+  .wheel-controls > button {
+    width: 38px;
+    height: 38px;
+  }
+  .rhythm-note {
+    font-size: 11px;
+    margin-top: 13px;
+  }
+  .sustainability-badge {
+    padding: 14px 16px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+  .sustainability-badge strong {
+    font-size: 21px;
+  }
+  .sustainability-badge span span {
+    font-size: 10px;
+  }
+  .sustainability-badge > svg {
+    width: 33px;
+    height: 33px;
+  }
+  .flow-step-2 .flow-bottom {
+    margin-top: 15px;
+  }
+  .summary-hero > .bouquet-photo {
+    width: 75px;
+    height: 94px;
+  }
+  .summary-hero h2 {
+    font-size: 24px;
+  }
+  .confirmed .flow-heading h1 {
+    font-size: 48px;
+    max-width: 310px;
+  }
+  .confirmation-flower {
+    margin-top: 32px;
+    margin-bottom: 25px;
+  }
+  .confirmation-note {
+    font-size: 14px;
+  }
+  .confirmation-body > p {
+    font-size: 12px;
+  }
+  .flow-footer {
+    font-size: 9px;
+  }
+}
+@media (max-width: 360px) {
+  .onboarding header {
+    padding-inline: 16px;
+  }
+  .flow-main {
+    padding-inline: 16px;
+  }
+  .hero-copy h1 {
+    font-size: 32px;
+  }
+  .logo-large .wordmark {
+    font-size: 57px;
+  }
+  .logo-large .brand-tagline {
+    font-size: 24px;
+  }
+  .wordmark {
+    font-size: 27px;
+  }
+  .brand-tagline {
+    font-size: 11px;
+  }
+  .nav-cta {
+    padding: 9px;
+    font-size: 9px;
+  }
+  .petal-wheel {
+    width: 250px;
+    height: 250px;
+  }
+  .petal-option > span {
+    font-size: 20px;
+    width: 65px;
+  }
+  .petal-center {
+    width: 65px;
+    height: 65px;
+  }
+  .choice-grid .bouquet-card strong {
+    font-size: 18px;
+  }
+  .choice-grid .bouquet-card small {
+    font-size: 9px;
+  }
+  .colour-grid {
+    gap: 19px 18px;
+  }
+  .flow-heading h1 {
+    font-size: 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti i {
+    animation: none;
+  }
+  .progress-track > span {
+    transition: none;
+  }
+}
+.choice-grid .circular-card .bouquet-card-image {
+  border-radius: 50%;
+}
+@media(max-width:360px){.hero-marks{right:0}}
+/* Style step refinement; intentionally scoped away from the other screens. */
+.flow-step-0 .flow-heading {position:relative;isolation:isolate}
+.flow-step-0 .vibe-accents {position:absolute;inset:-16px 0 auto;width:100%;height:130px;pointer-events:none;z-index:-1;opacity:.75}
+.flow-step-0 .bouquet-card {position:relative;transition:transform .2s ease}
+.flow-step-0 .bouquet-card.is-selected {transform:translateY(-6px)}
+.flow-step-0 .bouquet-card.is-selected .bouquet-card-image {border-color:#ff4086;box-shadow:0 0 0 2px #ff4086,0 9px 22px #cf407719}
+.flow-step-0 .bouquet-card:hover .bouquet-photo {transform:none}
+.flow-step-0 .vibe-check {width:38px;height:38px;border:0;background:#fffdf5;box-shadow:0 2px 8px #07334717}
+.flow-step-0 .vibe-check>svg:first-child {width:34px;height:34px}
+.flow-step-0 .vibe-check>svg:last-child {position:absolute;width:15px;height:15px;stroke:#073347;stroke-width:3;left:12px;top:12px}
+.flow-step-0 .vibe-that-is-me {display:block;font-family:'Patrick Hand',cursive;color:#c82167;font-size:21px;line-height:1.1;margin-top:7px;min-height:23px;opacity:0;transform:rotate(-5deg);transition:opacity .2s}
+.flow-step-0 .is-selected .vibe-that-is-me {opacity:1}
+.flow-step-0 .flow-bottom {justify-content:flex-end}
+.flow-step-0 .primary:disabled {background:#e8e3e0;color:#7e777b;box-shadow:none;opacity:1;cursor:not-allowed}
+.flow-step-0 .primary:not(:disabled) {background:#e92572;box-shadow:0 4px 12px #e925721c}
+.flow-step-0 .primary:not(:disabled):hover {background:#d51d65}
+@media(min-width:1000px){
+  .flow-step-0 .flow-main {max-width:940px}
+  .flow-step-0 .progress-indicator {max-width:724px;margin-inline:auto}
+  .flow-step-0 .choice-grid {max-width:832px;gap:17px}
+  .flow-step-0 .flow-heading {max-width:724px;margin:40px auto 35px}
+  .flow-step-0 .flow-bottom {max-width:832px;margin-top:27px}
+}
+@media(max-width:700px){
+  .flow-step-0 .vibe-accents {inset:-8px -8px auto;width:calc(100% + 16px);height:110px}
+  .flow-step-0 .vibe-that-is-me {font-size:18px;min-height:20px;margin-top:5px}
+  .flow-step-0 .choice-grid {row-gap:13px}
+  .flow-step-0 .flow-bottom {margin-top:14px}
+  .flow-step-0 .vibe-check {width:32px;height:32px}
+  .flow-step-0 .vibe-check>svg:first-child {width:29px;height:29px}
+  .flow-step-0 .vibe-check>svg:last-child {left:9px;top:9px}
+}
+@media(min-width:1000px){.flow-step-0 .flow-main{width:min(940px,100%)}}
+/* Colours step only. Keep the other onboarding screens unchanged. */
+.flow-step-1 {--step-color:#f43883}
+.flow-step-1 .flow-heading{position:relative;isolation:isolate}
+.flow-step-1 .palette-accents{position:absolute;inset:-13px 0 auto;width:100%;height:120px;z-index:-1;opacity:.7;pointer-events:none}
+.palette-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 28px;max-width:500px;margin:0 auto;align-items:start}
+.palette-choice{display:flex;flex-direction:column;align-items:center;position:relative;text-align:center;background:none;border:0;padding:0;min-width:0;color:#073347}
+.palette-circle-wrap{position:relative;display:block;width:100%;transition:transform .2s ease}
+.palette-circle{display:block;width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:3px solid transparent;background:#f4eedc;transition:border-color .2s,box-shadow .2s}
+.palette-circle .bouquet-photo{width:100%;height:100%;object-fit:cover;object-position:center 27%;transform:scale(1.55)}
+.discovery-palette{display:block;width:100%;height:100%}
+.palette-choice:hover .palette-circle-wrap{transform:translateY(-2px)}
+.palette-choice.is-selected .palette-circle-wrap{transform:translateY(-5px) scale(1.025)}
+.palette-choice.is-selected .palette-circle{border-color:var(--palette-accent);box-shadow:0 0 0 2px var(--palette-accent),0 8px 20px #173e4910}
+.palette-choice>strong{font-family:'Patrick Hand',cursive;font-size:25px;line-height:1.15;font-weight:400;margin-top:17px}
+.palette-choice.is-selected>strong{-webkit-text-stroke:.35px currentColor}
+.palette-description{display:block;font-size:11px;line-height:1.5;color:#536b77;margin-top:6px;max-width:210px}
+.palette-check{position:absolute;right:7%;bottom:4%;width:39px;height:39px;border-radius:50%;display:grid;place-items:center;background:#fffdf5;box-shadow:0 2px 7px #07334716;opacity:0;transform:scale(.7);transition:opacity .2s,transform .2s}
+.palette-check>svg:first-child{width:35px;height:35px}
+.palette-check>svg:last-child{position:absolute;width:15px;height:15px;stroke:#073347;stroke-width:3}
+.is-selected .palette-check{opacity:1;transform:scale(1)}
+.palette-adventure{font-family:'Patrick Hand',cursive;font-size:19px;color:#477c79;line-height:1.1;margin-top:10px;transform:rotate(-5deg)}
+.flow-step-1 .flow-bottom{justify-content:flex-end;margin-top:30px}
+.flow-step-1 .primary:disabled{background:#e8e3e0;color:#7e777b;opacity:1;box-shadow:none;cursor:not-allowed}
+.flow-step-1 .primary:not(:disabled){background:#e92572;box-shadow:0 4px 12px #e925721c}
+.flow-step-1 .primary:not(:disabled):hover{background:#d51d65}
+.palette-seasonal-note{text-align:center;font-size:10px;line-height:1.6;color:#64777b;margin:23px auto 0;max-width:580px}
+@media(min-width:1000px){
+ .flow-step-1 .flow-main{width:min(1000px,100%);max-width:1000px}
+ .flow-step-1 .progress-indicator,.flow-step-1 .back{max-width:724px;margin-inline:auto}
+ .flow-step-1 .back{width:100%}
+ .flow-step-1 .flow-heading{max-width:724px;margin:28px auto 42px}
+ .flow-step-1 .palette-choices{grid-template-columns:repeat(4,minmax(0,1fr));max-width:900px;gap:28px}
+ .flow-step-1 .flow-bottom{max-width:900px;margin-top:36px}
+}
+@media(max-width:700px){
+ .palette-choices{gap:23px 23px;padding:0 4px}
+ .palette-choice>strong{font-size:22px;margin-top:13px}
+ .palette-description{font-size:10px;margin-top:5px;max-width:165px;min-height:30px}
+ .palette-adventure{font-size:17px;margin-top:7px}
+ .palette-check{width:32px;height:32px;right:5%;bottom:3%}
+ .palette-check>svg:first-child{width:29px;height:29px}
+ .flow-step-1 .palette-accents{inset:-4px -5px auto;width:calc(100% + 10px);height:100px}
+ .flow-step-1 .flow-bottom{margin-top:25px}
+ .palette-seasonal-note{font-size:9px;max-width:300px;margin-top:17px}
+}
+@media(max-width:360px){.palette-choices{gap:21px 18px;padding:0 2px}.palette-choice>strong{font-size:20px}.palette-description{font-size:9px}.palette-adventure{font-size:16px}}
+/* Shared language controls keep locale changes within the current screen. */
+.header-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.language-selector{position:relative;z-index:30}
+.language-trigger{display:flex;align-items:center;gap:7px;min-height:40px;padding:8px 11px;border:1px solid #ddd8cd;border-radius:22px;background:#fffdf6;color:#073347;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.language-trigger:hover,.language-trigger[aria-expanded=true]{border-color:#ed468a;background:#fff0f5}
+.language-menu{position:absolute;top:calc(100% + 9px);right:0;width:178px;padding:7px;border:1px solid #e8ded8;border-radius:17px;background:#fffdf6;box-shadow:0 12px 35px #07334720}
+.language-menu button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:11px 12px;border:0;border-radius:11px;background:transparent;color:#073347;text-align:left;font:inherit;font-size:14px;cursor:pointer}
+.language-menu button:hover,.language-menu button:focus-visible{background:#ffe5ef;outline:2px solid #ef91b3;outline-offset:-2px}
+.language-menu button[aria-checked=true]{background:#ffe5ef;color:#b51b58;font-weight:700}
+.language-trigger:focus-visible{outline:3px solid #ef91b3;outline-offset:3px}
+.field-error{color:#ad2054;font-size:12px;line-height:1.45;font-weight:500}
+.delivery-form input[aria-invalid=true]{border-color:#cf2c65}
+html:not([lang=en]) .frequency-petals .petal-option>span{font-size:20px;line-height:1.12}
+.onboarding .back{display:flex;align-items:center;gap:6px;min-height:38px}
+@media(max-width:700px){
+ .header-actions{gap:8px}
+ header .nav-cta{display:none}
+ .onboarding header .prototype-badge{display:none}
+ .language-trigger{padding:7px 9px}
+ html:not([lang=en]) .frequency-petals .petal-option>span{font-size:18px}
+ .summary-total{gap:14px}
+ .summary-total>strong{white-space:nowrap}
+}
+/* A little flower personality in the compact language menu. */
+.language-trigger{border-color:#efbfd0;background:#fff4f7;box-shadow:1px 2px 0 #f9d870}
+.language-trigger>svg{width:21px;height:21px;transition:transform .2s ease}
+.language-trigger:hover>svg,.language-trigger[aria-expanded=true]>svg{transform:rotate(18deg)}
+.language-menu{width:186px;padding:6px}
+.language-name{display:flex;align-items:center;gap:10px}
+.language-name>svg{width:23px;height:23px;flex-shrink:0;transition:transform .2s ease}
+.language-menu button{min-height:44px;padding:9px 10px}
+.language-menu button:hover .language-name>svg{transform:rotate(15deg) scale(1.1)}
+.language-menu button[aria-checked=true]{background:#fff0f5;color:#073347}
+.language-menu button[aria-checked=true]>svg{color:var(--language-flower)}
+@media(prefers-reduced-motion:reduce){.language-name>svg,.language-trigger>svg{transition:none}.language-menu button:hover .language-name>svg,.language-trigger:hover>svg,.language-trigger[aria-expanded=true]>svg{transform:none}}

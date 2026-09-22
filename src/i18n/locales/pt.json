@@ -1,0 +1,189 @@
+{
+  "tagline": "Põe a tua casa a florir.",
+  "pageTitle": "Flowerup! — Põe a tua casa a florir.",
+  "pageDescription": "Flores frescas, entregues regularmente em tua casa em Lucerna. Um protótipo de subscrição cheio de alegria, a partir de CHF 24.90 por ramo.",
+  "common": {
+    "home": "Página inicial Flowerup!",
+    "language": "Escolher idioma",
+    "continue": "Continuar",
+    "back": "Voltar",
+    "close": "Fechar a seleção",
+    "edit": "Alterar",
+    "cta": "Quero as minhas flores",
+    "from": "A partir de",
+    "perBouquet": "/ ramo",
+    "perDelivery": "por entrega",
+    "city": "Lucerna",
+    "country": "Suíça",
+    "prototype": "LUCERNA · PROTÓTIPO",
+    "bouquetOne": "{count} ramo",
+    "bouquetMany": "{count} ramos"
+  },
+  "home": {
+    "announcement": "Um pouco de felicidade, à tua porta.",
+    "launch": "Começamos em Lucerna ♡",
+    "howLink": "Como funciona",
+    "thoughtfulLink": "Com um pouco mais de cuidado",
+    "find": "Encontra as tuas flores",
+    "eyebrow": "FLORES FRESCAS. BOA DISPOSIÇÃO.",
+    "heroFirst": "Flores frescas.",
+    "heroSecond": "Dias mais felizes.",
+    "intro": "Flores frescas, entregues regularmente em tua casa.",
+    "introEnd": "Para dar mais cor aos teus dias.",
+    "micro": "O teu estilo. O teu ritmo. As tuas flores.",
+    "small": "Ramos pequenos.",
+    "happy": "Grandes alegrias.",
+    "howEyebrow": "MENOS TRABALHO. MAIS FLORES.",
+    "howTitle": "Flores à tua medida.",
+    "howTitleEnd": "Em três passos simples.",
+    "howIntro": "Não precisas de perceber de flores.",
+    "howIntroEnd": "Escolhe o que te faz sorrir.",
+    "howTitles": [
+      "Encontra o teu estilo",
+      "Escolhe o teu ritmo",
+      "Deixa a alegria chegar"
+    ],
+    "howCopies": [
+      "Campestres, românticas, coloridas ou simples. Escolhe as flores que combinam contigo.",
+      "Uma alegria semanal ou um mimo por mês. Abre espaço para um pouco de felicidade.",
+      "Nós tratamos do resto. Flores frescas diretamente à tua porta, em Lucerna."
+    ],
+    "vibesEyebrow": "AS FLORES SÃO PARA TODA A GENTE.",
+    "vibesTitle": "Um pouco campestre? Um pouco romântico?",
+    "vibesIntro": "Seja qual for o teu estilo, há flores para ti.",
+    "kindNote": "É assim que queremos crescer: com flores da época sempre que possível e um abastecimento responsável.",
+    "closing": "A tua casa ligou.",
+    "closingEnd": "Adorava receber umas flores.",
+    "closingNote": "Poucos toques. Muita alegria.",
+    "footer": "Feito com ♡ para Lucerna · Protótipo"
+  },
+  "vibes": {
+    "wild": "Campestre & natural",
+    "romantic": "Suave & romântico",
+    "bright": "Vivo & alegre",
+    "minimal": "Simples & moderno"
+  },
+  "vibeDescriptions": [
+    "Beleza natural",
+    "Elegante & sonhador",
+    "Alegre & colorido",
+    "Simples & contemporâneo"
+  ],
+  "bouquetAlt": [
+    "Ramo leve de flores do campo",
+    "Ramo em tons de rosa suave",
+    "Ramo de cores vivas",
+    "Ramo branco minimalista"
+  ],
+  "thatIsMe": "SOU MESMO EU!",
+  "colours": {
+    "neutral": "Suaves & neutras",
+    "pastel": "Pastel",
+    "bright": "Vivas & coloridas",
+    "surprise": "Surpreende-me"
+  },
+  "colourDescriptions": [
+    "Brancos, cremes & verdes frescos",
+    "Rosa suave, pêssego, lilás & amarelo claro",
+    "Rosa, laranja, amarelo & contrastes alegres",
+    "Deixa a Flowerup! escolher"
+  ],
+  "adventurous": "Apetece-te uma surpresa?",
+  "seasonalNote": "A disponibilidade da época pode dar forma ao teu ramo — faz parte da graça.",
+  "frequencies": {
+    "weekly": "Todas as semanas",
+    "fortnightly": "A cada 2 semanas",
+    "monthly": "Uma vez por mês"
+  },
+  "steps": {
+    "titles": [
+      "Qual é o teu estilo floral?",
+      "Que cores te fazem feliz?",
+      "Com que frequência queres florescer?",
+      "Quantos ramos?",
+      "Onde vamos fazer florescer a alegria?",
+      "O teu Flowerup!",
+      "YOU HAVE BEEN FLOWERUPPED!"
+    ],
+    "subtitles": [
+      "Escolhe o que te faz sorrir.",
+      "Escolhe as tuas cores. Nós pomo-las a florir.",
+      "Flores frescas, ao teu ritmo.",
+      "Mais flores. A mesma porta.",
+      "Primeira paragem: Lucerna, Suíça.",
+      "Mesmo ao teu gosto. Vamos pôr a tua casa a florir?",
+      "A tua casa já está a sorrir."
+    ],
+    "story": "A TUA HISTÓRIA COM FLORES",
+    "progress": "Progresso da seleção",
+    "progressValue": "Passo {step} de {total}",
+    "pause": "Podes pausar, alterar ou saltar uma entrega quando quiseres.",
+    "fewTaps": "Poucos toques para uma casa mais feliz.",
+    "doorstep": "A tua porta é a nossa próxima paragem.",
+    "noPayment": "Sem pagamentos. Só um pouco de alegria.",
+    "footer": "Pensado para o teu dia a dia."
+  },
+  "wheel": {
+    "frequency": "Frequência de entrega",
+    "quantity": "Número de ramos",
+    "previous": "Opção anterior",
+    "next": "Opção seguinte",
+    "hint": "Toca numa pétala. Escolhe a tua alegria."
+  },
+  "sustainability": {
+    "statements": [
+      "Flores da época sempre que possível",
+      "Abastecimento responsável",
+      "Planear as subscrições ajuda a reduzir o desperdício desnecessário de flores"
+    ],
+    "title": "Mais carinho pelo planeta,",
+    "titleEnd": "um ramo de cada vez."
+  },
+  "delivery": {
+    "area": "Um pequeno mimo local. Este protótipo serve a cidade de Lucerna (6000–6009).",
+    "name": "O teu nome",
+    "street": "Rua & número",
+    "postcode": "Código postal",
+    "city": "Cidade",
+    "namePlaceholder": "Alex Silva",
+    "streetPlaceholder": "Blumenstrasse 12",
+    "postcodeHint": "Introduz um código postal de Lucerna entre 6000 e 6009",
+    "privacy": "É só uma demonstração: a tua morada fica na memória desta página e é apagada ao recarregar. Nada é enviado ou encomendado."
+  },
+  "validation": {
+    "name": "Introduz o teu nome.",
+    "street": "Introduz a tua rua e número.",
+    "postcode": "Introduz um código postal de Lucerna entre 6000 e 6009."
+  },
+  "summary": {
+    "subscription": "A TUA SUBSCRIÇÃO Flowerup!",
+    "rhythm": "O teu ritmo",
+    "quantity": "Ramos por entrega",
+    "doorstep": "A tua morada",
+    "estimated": "Estimativa a partir de",
+    "total": "Total do protótipo",
+    "unit": "por entrega · {price} por ramo",
+    "fourNote": " · estimativa para 4 ramos. Quantidade final a combinar.",
+    "fourDetails": "Estimativa para 4 ramos. Cada ramo adicional custaria {price}; quantidade final a combinar.",
+    "disclaimer": "Preços provisórios. Os custos de entrega e as condições finais ainda não estão definidos. É uma demonstração: sem pagamentos nem subscrição real.",
+    "messageLabel": "Adiciona uma mensagem (opcional)",
+    "messagePlaceholder": "Uma pequena mensagem para acompanhar as flores…",
+    "messageTitle": "A tua mensagem",
+    "messageHint": "A tua mensagem fica apenas neste protótipo."
+  },
+  "confirmation": {
+    "match": "Já encontrámos as flores ideais para ti.",
+    "preview": "Foi só um pequeno aperitivo da Flowerup!",
+    "noOrder": "Não foi feita nenhuma encomenda nem cobrado qualquer valor.",
+    "home": "Voltar ao teu cantinho feliz",
+    "poster": {
+      "style": "Estilo",
+      "colours": "Cores",
+      "frequency": "Frequência",
+      "bouquets": "Ramos",
+      "delivery": "Entrega",
+      "noteOne": "As flores tornam-te mais feliz!",
+      "noteTwo": "Flores bonitas. Boa disposição."
+    }
+  }
+}

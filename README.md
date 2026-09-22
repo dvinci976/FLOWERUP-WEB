@@ -22,7 +22,7 @@ The production build is generated in `dist/`, ready for a static host. No enviro
 
 ## Experience
 
-- Responsive homepage with original SVG bouquets and sustainability integrated into the product story.
+- Responsive homepage with a multicolour wordmark, original generated bouquet photography and lightweight sustainability notes.
 - Seven-step onboarding: style, colours, frequency, bouquet quantity, delivery, summary, confirmation.
 - Reusable circular selector: tap, swipe horizontally, use previous/next controls, or use arrow keys while a wheel button is focused.
 - Selections persist when moving forward, back, or editing from the summary. Closing the flow or refreshing resets state. Address data stays in page memory; it is never sent to a server or saved in browser storage.
@@ -35,12 +35,12 @@ The production build is generated in `dist/`, ready for a static host. No enviro
 
 - `src/main.jsx` and `src/App.jsx`: application entry and screen navigation.
 - `src/Home.jsx` and `src/Onboarding.jsx`: homepage and seven-step flow.
-- `src/components/`: reusable Bouquet, Flower, Wheel, Button and Logo components.
+- `src/components/`: reusable FlowerupLogo, PetalWheel, BouquetCard, SustainabilityBadge, ProgressIndicator and shared UI components.
 - `src/data.js`: choices, palettes and currency formatting.
-- `src/styles.css`: responsive styling.
+- `src/styles.css` and `src/redesign.css`: base styling and reference-inspired visual redesign.
 - `public/favicon.svg`: original flower mark.
 
-All application code and illustrations were created from scratch for this repository. No assets or code were copied from another repository. DM Sans and Outfit load through Google Fonts with system sans-serif fallbacks. React, Vite and Lucide are npm dependencies.
+All application code and assets were created for this repository. Bouquet images are generated visual placeholders, not guaranteed delivered products; prompts and provenance are in `public/images/PROVENANCE.md`. No assets or code were copied from another repository. DM Sans, Outfit, Nunito and Patrick Hand load through Google Fonts with system sans-serif fallbacks. React, Vite and Lucide are npm dependencies.
 
 ## Manual verification
 
@@ -53,3 +53,13 @@ All application code and illustrations were created from scratch for this reposi
 7. Complete the demo and verify “You have been Flowerupped!” and the no-order notice.
 
 Before launch, confirm service area, fulfillment, sourcing standards, delivery fees, subscription terms and handling of 4+ bouquets.
+
+### Languages
+
+English, German (Swiss spelling), Italian, French, Spanish and Portuguese are available from the flower language menu on both the homepage and onboarding header. The homepage opens immediately. Browser preferences choose the initial supported language; English is the fallback. A compact flower-themed header menu lets visitors change languages. Manual choices are saved under `flowerup.language` in localStorage. No delivery details are saved there.
+
+`src/i18n/I18nProvider.jsx` provides `useI18n()` with `t(key, variables)`, `language`, and `changeLanguage(code)`. Add future copy to all six JSON dictionaries in `src/i18n/locales/`; use translation keys in components. Selection values remain language-independent IDs, so switching languages preserves the active step, address fields and bouquet preferences. Delivery validation uses translated error keys rather than browser-language messages.
+
+Run `npm test` to check language detection, dictionary coverage, interpolation and delivery validation. Back returns to the previous onboarding step with choices intact; on Step 1 it returns home. Closing the flow retains the language preference but starts a fresh selection next time.
+
+The confirmation headline always remains “YOU HAVE BEEN FLOWERUPPED!” in English as a brand phrase. The rest of the screen is translated. The optional summary message stays in page memory, survives Back and language changes, and appears on confirmation; it is not sent or saved to localStorage.

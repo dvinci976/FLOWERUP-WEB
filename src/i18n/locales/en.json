@@ -1,0 +1,189 @@
+{
+  "tagline": "Make your home bloom.",
+  "pageTitle": "Flowerup! — Make your home bloom.",
+  "pageDescription": "Fresh flowers, delivered regularly to your home in Lucerne. A joyful subscription prototype from CHF 24.90 per bouquet.",
+  "common": {
+    "home": "Flowerup! home",
+    "language": "Choose language",
+    "continue": "Continue",
+    "back": "Back",
+    "close": "Close onboarding",
+    "edit": "Edit",
+    "cta": "Flower me up",
+    "from": "From",
+    "perBouquet": "/ bouquet",
+    "perDelivery": "per delivery",
+    "city": "Lucerne",
+    "country": "Switzerland",
+    "prototype": "LUCERNE · PROTOTYPE",
+    "bouquetOne": "{count} bouquet",
+    "bouquetMany": "{count} bouquets"
+  },
+  "home": {
+    "announcement": "A little happiness, delivered.",
+    "launch": "Starting in Lucerne ♡",
+    "howLink": "How it works",
+    "thoughtfulLink": "A little more thoughtful",
+    "find": "Find your flowers",
+    "eyebrow": "FRESH FLOWERS. GOOD MOOD.",
+    "heroFirst": "Fresh flowers.",
+    "heroSecond": "Brighter days.",
+    "intro": "Fresh flowers, delivered regularly to your home.",
+    "introEnd": "For brighter days.",
+    "micro": "Your vibe. Your rhythm. Your flowers.",
+    "small": "Small bouquets.",
+    "happy": "Big happiness.",
+    "howEyebrow": "LESS EFFORT. MORE FLOWERS.",
+    "howTitle": "Your kind of flowers.",
+    "howTitleEnd": "In three happy little steps.",
+    "howIntro": "No flower expertise required.",
+    "howIntroEnd": "Just follow your happy.",
+    "howTitles": [
+      "Find your vibe",
+      "Set your rhythm",
+      "Let happiness arrive"
+    ],
+    "howCopies": [
+      "Wild, romantic, bright or minimal. Pick the flowers that feel like you.",
+      "A weekly pick-me-up or a monthly treat. Make room for a little joy.",
+      "We take it from here. Fresh flowers, right to your Lucerne doorstep."
+    ],
+    "vibesEyebrow": "THERE’S NO WRONG KIND OF FLOWER PERSON.",
+    "vibesTitle": "A little wild? A little romantic?",
+    "vibesIntro": "Whatever your vibe, there’s a bloom for that.",
+    "kindNote": "Our intention as we grow. Seasonal choices where possible and responsible sourcing guide our approach.",
+    "closing": "Your home called.",
+    "closingEnd": "It would love some flowers.",
+    "closingNote": "A few taps. A whole lot of happy.",
+    "footer": "Made with ♡ for Lucerne · Prototype"
+  },
+  "vibes": {
+    "wild": "Wild & Natural",
+    "romantic": "Soft & Romantic",
+    "bright": "Bright & Happy",
+    "minimal": "Minimal & Modern"
+  },
+  "vibeDescriptions": [
+    "Naturally beautiful",
+    "Elegant & dreamy",
+    "Joyful & colourful",
+    "Clean & contemporary"
+  ],
+  "bouquetAlt": [
+    "Airy wildflower bouquet",
+    "Soft pink bouquet",
+    "Bright colourful bouquet",
+    "Minimal white bouquet"
+  ],
+  "thatIsMe": "THAT’S ME!",
+  "colours": {
+    "neutral": "Soft & Neutral",
+    "pastel": "Pastel",
+    "bright": "Bright & Colourful",
+    "surprise": "Surprise Me"
+  },
+  "colourDescriptions": [
+    "Whites, creams & fresh greens",
+    "Blush, peach, lilac & soft yellow",
+    "Pink, orange, yellow & joyful contrasts",
+    "Let Flowerup! choose"
+  ],
+  "adventurous": "Feeling adventurous?",
+  "seasonalNote": "Seasonal availability may shape your bouquet — that's part of the fun.",
+  "frequencies": {
+    "weekly": "Every week",
+    "fortnightly": "Every 2 weeks",
+    "monthly": "Once a month"
+  },
+  "steps": {
+    "titles": [
+      "What's your flower vibe?",
+      "What colours make you happy?",
+      "How often do you want to bloom?",
+      "How many bouquets?",
+      "Where should we bloom?",
+      "Your Flowerup!",
+      "YOU HAVE BEEN FLOWERUPPED!"
+    ],
+    "subtitles": [
+      "Pick the one that makes you smile.",
+      "Pick your palette. We'll make it bloom.",
+      "Fresh flowers, on your rhythm.",
+      "More flowers. Same doorstep.",
+      "First stop: Lucerne, Switzerland.",
+      "Just the way you like it. Ready to make your home bloom?",
+      "Your home is already smiling."
+    ],
+    "story": "YOUR FLOWER STORY",
+    "progress": "Onboarding progress",
+    "progressValue": "Step {step} of {total}",
+    "pause": "You can pause, change or skip anytime.",
+    "fewTaps": "A few taps to a happier home.",
+    "doorstep": "Your doorstep, our next stop.",
+    "noPayment": "No payment needed. Just a little happy.",
+    "footer": "Made for your everyday."
+  },
+  "wheel": {
+    "frequency": "Delivery frequency",
+    "quantity": "Number of bouquets",
+    "previous": "Previous option",
+    "next": "Next option",
+    "hint": "Tap a petal. Pick your happy."
+  },
+  "sustainability": {
+    "statements": [
+      "Seasonal flowers where possible",
+      "Responsible sourcing",
+      "Subscription planning helps reduce unnecessary flower waste"
+    ],
+    "title": "A kinder planet,",
+    "titleEnd": "one bouquet at a time."
+  },
+  "delivery": {
+    "area": "A little local love. This prototype serves Lucerne city (6000–6009).",
+    "name": "Your name",
+    "street": "Street & house number",
+    "postcode": "Postcode",
+    "city": "City",
+    "namePlaceholder": "Alex Bloom",
+    "streetPlaceholder": "Blumenstrasse 12",
+    "postcodeHint": "Enter a Lucerne city postcode from 6000 to 6009",
+    "privacy": "Demo only — your address stays in this page’s memory and is cleared on refresh. Nothing is sent or ordered."
+  },
+  "validation": {
+    "name": "Please enter your name.",
+    "street": "Please enter your street and house number.",
+    "postcode": "Please enter a Lucerne postcode from 6000 to 6009."
+  },
+  "summary": {
+    "subscription": "YOUR Flowerup! SUBSCRIPTION",
+    "rhythm": "Your rhythm",
+    "quantity": "Bouquets per delivery",
+    "doorstep": "Your doorstep",
+    "estimated": "Estimated from",
+    "total": "Prototype total",
+    "unit": "per delivery · {price} per bouquet",
+    "fourNote": " · estimate for 4 bouquets. Final quantity to be agreed.",
+    "fourDetails": "Estimate for 4 bouquets. Additional bouquets would be {price} each; final quantity to be agreed.",
+    "disclaimer": "Provisional pricing. Delivery fees and final terms are not set. This is a demo — no payment and no real subscription.",
+    "messageLabel": "Add a message (optional)",
+    "messagePlaceholder": "A little note to go with your flowers…",
+    "messageTitle": "Your message",
+    "messageHint": "Your message stays in this prototype only."
+  },
+  "confirmation": {
+    "match": "Your perfect flower match is ready.",
+    "preview": "This was a little preview of Flowerup!",
+    "noOrder": "No order was placed and no payment was taken.",
+    "home": "Back to the happy place",
+    "poster": {
+      "style": "Style",
+      "colours": "Colours",
+      "frequency": "Frequency",
+      "bouquets": "Bouquets",
+      "delivery": "Delivery",
+      "noteOne": "Flowers make a happier you!",
+      "noteTwo": "Good flowers. Good mood."
+    }
+  }
+}

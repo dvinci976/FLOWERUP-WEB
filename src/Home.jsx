@@ -1,206 +1,155 @@
-import { ArrowRight, Check, Heart, Truck, Leaf, MapPin } from "lucide-react";
+import { FlowerGraphics } from "./components/FlowerGraphics";
+import { useI18n } from "./i18n/I18nProvider";
+import { LanguageSelector } from "./components/LanguageSelector";
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right.js";
+import Check from "lucide-react/dist/esm/icons/check.js";
+import Heart from "lucide-react/dist/esm/icons/heart.js";
+import Truck from "lucide-react/dist/esm/icons/truck.js";
+import Leaf from "lucide-react/dist/esm/icons/leaf.js";
+import MapPin from "lucide-react/dist/esm/icons/map-pin.js";
 import { vibes } from "./data";
-import { Bouquet } from "./components/Bouquet";
+import { BouquetPhoto, BouquetCard } from "./components/BouquetCard";
+import { FlowerupLogo } from "./components/FlowerupLogo";
+import { FlowerMark, HappyMarks } from "./components/FlowerMark";
+import { SustainabilityBadge } from "./components/SustainabilityBadge";
 import { Logo, Button } from "./components/UI";
 export function Home({ start }) {
+  const { t } = useI18n();
+  const scrollHome = () => window.scrollTo({
+    top: 0,
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+  });
   return (
     <>
       <div className="announcement">
-        A little happiness, delivered. <span>Starting in Lucerne ♡</span>
+        {t('home.announcement')} <span>{t('home.launch')}</span>
       </div>
       <header>
-        <Logo onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
+        <Logo onClick={scrollHome} />
         <nav>
-          <a href="#how">How it works</a>
-          <a href="#thoughtful">A little more thoughtful</a>
+          <a href="#how">{t('home.howLink')}</a>
+          <a href="#thoughtful">{t('home.thoughtfulLink')}</a>
         </nav>
-        <button className="nav-cta" onClick={start}>
-          Find your flowers <ArrowRight size={16} />
-        </button>
+        <div className="header-actions"><button className="nav-cta" onClick={start}>
+          {t('home.find')} <ArrowRight size={16} />
+        </button><LanguageSelector/></div>
       </header>
       <main>
         <section className="hero">
+          <FlowerGraphics/>
           <div className="hero-copy">
             <div className="eyebrow">
-              <span className="live-dot" /> FRESH FLOWERS. GOOD MOOD.
+              <span className="live-dot" /> {t('home.eyebrow')}
             </div>
+            <FlowerupLogo large onClick={start} />
             <h1>
-              Make your
+              {t('home.heroFirst')}
               <br />
-              home{" "}
-              <span className="bloom">
-                bloom
-                <svg viewBox="0 0 300 20" aria-hidden="true">
-                  <path d="M5 13 Q120 -2 290 10" />
-                </svg>
-              </span>
-              <span className="pink-dot">.</span>
+              <span>{t('home.heroSecond')}</span>
             </h1>
             <p>
-              Fresh flowers selected for your taste and delivered regularly to
-              your home. A little everyday joy, without the big occasion.
+              {t('home.intro')}
+              <br />
+              {t('home.introEnd')}
             </p>
             <div className="hero-price">
-              From CHF 24.90 <span>/ bouquet</span>
+              {t('common.from')} CHF 24.90 <span>{t('common.perBouquet')}</span>
             </div>
-            <Button onClick={start}>Flower me up</Button>
+            <Button onClick={start}>{t('common.cta')}</Button>
             <div className="micro">
-              <Check size={15} /> Your vibe. Your rhythm. Your flowers.
+              <Check size={15} /> {t('home.micro')}
             </div>
           </div>
           <div className="hero-art">
-            <div className="art-caption">
-              YOUR EVERYDAY, BUT A LITTLE BRIGHTER.
-            </div>
-            <div className="happy-stamp">
-              hello,
-              <br />
-              <strong>happy home.</strong>
-              <span>☺</span>
-            </div>
-            <Bouquet variant={2} hero />
+            <BouquetPhoto
+              variant={2}
+              className="hero-bouquet"
+              fetchPriority="high"
+            />
             <div className="handwritten">
-              a little bloom goes a long way <span>↗</span>
+              {t('home.small')}
+              <br />
+              {t('home.happy')}<span>♡</span>
             </div>
             <div className="price-sticker">
-              a fresh start
-              <br />
-              <strong>24.90</strong>
-              <span>CHF / BOUQUET</span>
+              {t('common.from')}<strong>CHF 24.90</strong>
             </div>
-            <span className="art-spark">✧</span>
+            <HappyMarks className="hero-marks" />
+            <FlowerMark className="hero-flower" color="#ff94bd" />
           </div>
         </section>
-        <div className="benefit-strip">
-          <span>
-            <Heart /> Made for your taste
-          </span>
-          <span>
-            <Truck /> Delivered to your doorstep
-          </span>
-          <span>
-            <Leaf /> Thoughtfully planned
-          </span>
-          <span className="lucerne">
-            <MapPin /> First stop: Lucerne
-          </span>
+        <div className="benefit-strip" id="thoughtful">
+          {[0, 1, 2].map((i) => (
+            <SustainabilityBadge key={i} variant={i} compact />
+          ))}
         </div>
         <section id="how" className="how-section">
           <div className="section-heading">
             <div>
-              <div className="eyebrow">LESS EFFORT. MORE FLOWERS.</div>
+              <div className="eyebrow">{t('home.howEyebrow')}</div>
               <h2>
-                Your kind of flowers.
+                {t('home.howTitle')}
                 <br />
-                In three happy little steps.
+                {t('home.howTitleEnd')}
               </h2>
             </div>
             <p>
-              No flower expertise required.
+              {t('home.howIntro')}
               <br />
-              Just follow your happy.
+              {t('home.howIntroEnd')}
             </p>
           </div>
           <div className="how-grid">
-            {[
-              [
-                "01",
-                "Find your vibe",
-                "Wild, romantic, bright or minimal. Pick the flowers that feel like you.",
-                "✿",
-              ],
-              [
-                "02",
-                "Set your rhythm",
-                "A weekly pick-me-up or a monthly treat. Make room for a little joy.",
-                "↻",
-              ],
-              [
-                "03",
-                "Let happiness arrive",
-                "We take it from here. Fresh flowers, right to your Lucerne doorstep.",
-                "⌂",
-              ],
-            ].map(([n, title, copy, icon]) => (
+            {['✿','↻','⌂'].map((icon,i) => {
+              const n=String(i+1).padStart(2,'0');
+              return (
               <article key={n}>
                 <div className="step-card-top">
                   <span>{n}</span>
                   <span>{icon}</span>
                 </div>
-                <h3>{title}</h3>
-                <p>{copy}</p>
+                <h3>{t(`home.howTitles.${i}`)}</h3>
+                <p>{t(`home.howCopies.${i}`)}</p>
               </article>
-            ))}
+            );})}
           </div>
         </section>
         <section className="vibes-section">
-          <div className="eyebrow">THERE’S NO WRONG KIND OF FLOWER PERSON.</div>
-          <h2>A little wild? A little romantic?</h2>
-          <p>Whatever your vibe, there’s a bloom for that.</p>
+          <div className="eyebrow">{t('home.vibesEyebrow')}</div>
+          <h2>{t('home.vibesTitle')}</h2>
+          <p>{t('home.vibesIntro')}</p>
           <div className="vibe-preview">
             {vibes.map((v, i) => (
-              <button key={v} onClick={() => start(v)}>
-                <div>
-                  <Bouquet variant={i} />
-                  <span className="small-circle">
-                    <ArrowRight size={19} />
-                  </span>
-                </div>
-                <h3>{v}</h3>
-              </button>
+              <BouquetCard
+                key={v}
+                label={t(`vibes.${v}`)}
+                index={i}
+                onClick={() => start(v)}
+              />
             ))}
           </div>
         </section>
-        <section id="thoughtful" className="sustainability">
-          <div className="leaf-drawing">
-            ✳
-            <span>
-              small choices,
-              <br />a little more care.
-            </span>
-          </div>
-          <div>
-            <div className="eyebrow">GOOD FLOWERS. THOUGHTFUL CHOICES.</div>
-            <h2>
-              More joy.
-              <br />A little less waste.
-            </h2>
-            <p>
-              Beautiful flowers should come with a little consideration. Here’s
-              what we’re working towards as Flowerup! takes root.
-            </p>
-            <ul>
-              <li>
-                <Check /> Seasonal flowers where possible
-              </li>
-              <li>
-                <Check /> A commitment to responsible sourcing
-              </li>
-              <li>
-                <Check /> Subscription planning to help reduce unnecessary
-                flower waste
-              </li>
-            </ul>
-            <small>
-              Our approach, not a certification. We’ll share more as we grow.
-            </small>
-          </div>
-        </section>
+        <div className="kind-note">
+          <SustainabilityBadge variant={2} />
+          <p>
+            {t('home.kindNote')}
+          </p>
+        </div>
         <section className="closing">
-          <span>✿</span>
+          <FlowerMark className="closing-flower" />
           <h2>
-            Your home called.
+            {t('home.closing')}
             <br />
-            It would love some flowers.
+            {t('home.closingEnd')}
           </h2>
-          <Button onClick={start}>Flower me up</Button>
-          <p>A few taps. A whole lot of happy.</p>
+          <Button onClick={start}>{t('common.cta')}</Button>
+          <p>{t('home.closingNote')}</p>
         </section>
       </main>
       <footer>
-        <Logo onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} />
-        <p>Make your home bloom.</p>
-        <span>Made with ♡ for Lucerne · Prototype</span>
+        <Logo onClick={scrollHome} />
+        <p>{t('tagline')}</p>
+        <span>{t('home.footer')}</span>
       </footer>
     </>
   );

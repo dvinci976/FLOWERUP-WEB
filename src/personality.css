@@ -1,0 +1,250 @@
+/* Flower power: shared poster typography, organic colour fields and tactile surfaces. */
+:root{--flower-pink:#ed367c;--flower-orange:#ff8750;--flower-yellow:#ffd439;--flower-teal:#80d1cd;--flower-grass:#9bd18b;--flower-ink:#073347}
+h1,h2,.flow-heading h1{font-family:'Nunito',sans-serif;font-weight:1000;letter-spacing:-.055em;line-height:1.03}
+.hero h1{font-size:clamp(40px,5vw,70px);font-weight:1000}
+.hero h1 span{color:#c41e5e}
+.flowerup-logo .wordmark{letter-spacing:-.075em}
+.primary{box-shadow:3px 5px 0 #073347;border:2px solid #073347;transition:transform .18s,box-shadow .18s}
+.primary:hover{transform:translateY(-3px);box-shadow:4px 8px 0 #073347}
+.primary:active{transform:translate(2px,3px);box-shadow:0 1px 0 #073347}
+.primary:disabled{box-shadow:none;transform:none}
+.hero{position:relative;isolation:isolate;overflow:visible}
+.hero-art{border-radius:48% 48% 8% 8%;background:#ffd439;transform:rotate(2deg);border:7px solid #ffd439}
+.hero-art .hero-bouquet{border-radius:inherit}
+.price-sticker{background:#ffd439;border:2px solid #073347;box-shadow:3px 4px 0 #073347;transform:rotate(-10deg)}
+.hero .handwritten{background:#fff8e8;padding:12px 18px;border-radius:52% 38% 48% 30%;transform:rotate(-9deg);color:#073347}
+.benefit-strip{background:#8fd0bf;border-radius:45px 12px 45px 12px;border:0;padding:26px;margin-top:38px}
+.how-section{background:#ffe3eb;border-radius:75px 20px 70px 20px;padding:55px 40px;margin-top:65px}
+.how-grid article{border:2px solid #073347;border-radius:30px 30px 12px 30px;background:#fffaf0;box-shadow:4px 5px 0 #073347}
+.how-grid article:nth-child(2){background:#ffd439;transform:rotate(2deg)}
+.how-grid article:nth-child(3){background:#8fd0bf;transform:rotate(-2deg)}
+.closing{background:#ffd439;border-radius:45% 45% 0 0 / 18% 18% 0 0;padding-top:65px}
+.closing h2{font-size:clamp(35px,5vw,60px)}
+.flower-graphics{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;color:#f4a0bb}
+.graphic-bloom{position:absolute;width:230px;left:-130px;top:110px;transform:rotate(-12deg)}
+.graphic-wave{position:absolute;width:150px;right:-45px;top:40px;color:#efac19;transform:rotate(-15deg)}
+.graphic-heart{position:absolute;width:70px;right:10px;bottom:90px;color:#35a598;transform:rotate(15deg)}
+.flow-main{position:relative;isolation:isolate}
+.onboarding{--field:#fffaf0;background:var(--field)}
+.flow-step-0{--field:#fff4e7;--step-color:#ed367c}
+.flow-step-1{--field:#fff5c9;--step-color:#ed367c}
+.flow-step-2{--field:#fce4ee;--step-color:#ed367c}
+.flow-step-3{--field:#d9f0e5;--step-color:#15836f}
+.flow-step-4{--field:#fff0d8;--step-color:#d95029}
+.flow-step-5{--field:#d8eeec;--step-color:#168c88}
+.flow-step-6{--field:#fff0bf;--step-color:#ed367c}
+.onboarding header{background:#fffcf5eF;position:relative;z-index:10}
+.flow-heading{margin-top:30px;margin-bottom:40px}
+.flow-heading h1{font-size:clamp(32px,4.5vw,52px);max-width:680px;margin-inline:auto}
+.flow-heading p{font-size:15px;line-height:1.5;margin-top:16px}
+.progress-track{background:#07334715;height:9px}
+.flow-step-0 .choice-grid{gap:24px;align-items:start;padding:10px 10px 24px}
+.bouquet-card{--card-tilt:-2deg;transform:rotate(var(--card-tilt));transition:transform .2s}
+.bouquet-card:nth-child(even){--card-tilt:2deg; margin-top:16px}
+.bouquet-card-image{border-radius:44% 44% 20px 20px;background:#f7bfcd}
+.flow-step-0 .bouquet-card-image{border-radius:44% 44% 18px 18px;border:3px solid #fffdf5;box-shadow:4px 6px 0 #ed367c25}
+.flow-step-0 .bouquet-card:nth-child(2) .bouquet-card-image{border-radius:30px 55px 25px 50px}
+.flow-step-0 .bouquet-card:nth-child(3) .bouquet-card-image{border-radius:55px 30px 50px 25px}
+.flow-step-0 .bouquet-card.is-selected{transform:translateY(-8px) rotate(0deg)}
+.flow-step-0 .bouquet-card.is-selected .bouquet-card-image{border-color:#ed367c;box-shadow:4px 7px 0 #ed367c}
+.flow-step-0 .vibe-that-is-me{background:#ffd439;color:#073347;padding:3px 10px;border-radius:50%;font-size:19px}
+.palette-circle-wrap{isolation:isolate}
+.palette-circle-wrap:before{content:'';position:absolute;inset:-7px -9px 2px 3px;background:var(--palette-accent);opacity:.38;border-radius:42% 55% 40% 58%;transform:rotate(-10deg);z-index:-1}
+.palette-choice:nth-child(even){padding-top:15px}
+.palette-circle{border-width:4px}
+.palette-choice.is-selected .palette-circle{box-shadow:0 0 0 3px var(--palette-accent),5px 8px 0 #07334724}
+.palette-choice>strong{font-family:'Nunito',sans-serif;font-weight:900;font-size:22px}
+.palette-adventure{background:#fffdf5;transform:rotate(-6deg);padding:2px 10px;border-radius:50%}
+.petal-wheel{width:370px;height:370px;max-width:85vw;max-height:85vw;background:transparent;margin-top:30px;margin-bottom:28px}
+.petal-option{clip-path:none!important;border-radius:60% 60% 45% 45%;transform:scale(.91);border:3px solid var(--field)}
+.petal-option.selected{transform:scale(1.055);filter:saturate(1.3);box-shadow:3px 5px 0 #07334733}
+.petal-option:hover{transform:scale(1.025)}
+.petal-option.selected:hover{transform:scale(1.065)}
+.petal-center{width:90px;height:90px;background:#fff9e9;box-shadow:2px 4px 0 #07334725}
+.petal-center>svg{width:70px;height:70px}
+.petal-option>span{font-family:'Nunito',sans-serif;font-weight:900;font-size:21px}
+.quantity-petals .petal-option>span{font-size:46px}
+.sustainability-badge:not(.compact){background:#fff9ed;border-radius:30px 12px 30px 12px;border:1px solid #07334720}
+.delivery-form{position:relative;background:#fffdf5;border:2px solid #073347;border-radius:48px 18px 42px 18px;padding:24px;box-shadow:6px 7px 0 #ffd439}
+.delivery-doodle{display:block;width:180px;height:95px;margin:-12px auto 10px;transform:rotate(-4deg)}
+.delivery-form input{background:#fffdf5;border:1.5px solid #60747b;border-radius:13px;min-height:48px}
+.summary{padding:26px;background:#fffaf0;border:2px solid #073347;border-radius:12px;box-shadow:8px 9px 0 #45a99d;position:relative}
+.summary:before{content:'';display:block;height:9px;margin:-26px -26px 25px;background:repeating-linear-gradient(125deg,#ef5286 0 15px,#fffaf0 15px 30px,#249c9c 30px 45px,#fffaf0 45px 60px);border-radius:10px 10px 0 0}
+.summary-hero>.bouquet-photo{border:5px solid white;box-shadow:2px 3px 0 #07334725;transform:rotate(-5deg)}
+.summary-total{background:#ffd439;border-radius:15px;padding:16px;margin-top:20px}
+.flow-step-6 .flow-heading h1{font-size:clamp(40px,6vw,68px);text-transform:uppercase;color:#c62364;text-shadow:2px 3px 0 #fffdf5;max-width:720px}
+.flow-step-6 .confirmation-note{background:#fffaf0;border:2px solid #073347;border-radius:32px 12px 32px 12px;box-shadow:5px 6px 0 #ef719d}
+.confirmation-flower{animation:flower-pop .65s both}
+.confetti i{animation-iteration-count:1!important;animation-duration:1.2s!important}
+@keyframes flower-pop{from{transform:scale(.6) rotate(-20deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+@media(min-width:1000px){.flow-step-0 .bouquet-card:nth-child(even){margin-top:30px}.hero .graphic-bloom{width:300px;left:-170px;top:20px}}
+@media(max-width:700px){
+ .hero-art{border-width:5px;margin:15px 6px}
+ .hero h1{font-size:36px}
+ .how-section{padding:35px 22px;border-radius:40px 12px 40px 12px}
+ .benefit-strip{padding:22px 15px;border-radius:25px 8px}
+ .flow-heading{margin-bottom:28px}
+ .flow-heading h1{font-size:34px}
+ .flow-step-0 .choice-grid{gap:18px;padding:8px 4px 16px}
+ .flow-step-0 .vibe-that-is-me{font-size:15px}
+ .palette-choice>strong{font-size:18px}
+ .palette-circle-wrap:before{inset:-5px -4px 2px 2px}
+ .graphic-bloom{width:160px;left:-125px;top:125px}
+ .graphic-wave{width:90px;right:-58px}
+ .graphic-heart{width:35px;right:-15px;bottom:150px}
+ .petal-wheel{width:310px;height:310px}
+ .petal-center{width:76px;height:76px}.petal-center>svg{width:57px;height:57px}
+ .petal-option>span{font-size:18px;width:82px}
+ .delivery-form{padding:19px;border-radius:30px 12px}
+ .summary{padding:18px;box-shadow:5px 6px 0 #45a99d}
+ .summary:before{margin:-18px -18px 20px}
+ .summary-total{padding:12px;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.celebration-title>span:nth-child(3n+1){color:#be245d}
+.celebration-title>span:nth-child(3n+2){color:#007d80}
+.celebration-title>span:nth-child(3n){color:#b94f1d}
+.hero .graphic-heart{bottom:10px}
+@media(min-width:1000px){.onboarding .graphic-bloom{width:270px;left:-160px}.onboarding .graphic-wave{width:160px;right:-80px}}
+/* Navigation stays within reach even on long bouquet and address screens. */
+.onboarding header{position:sticky;top:0;z-index:30;flex-wrap:wrap;gap:12px;background:#fffcf5;border-bottom:1px solid #07334720}
+.onboarding-navigation{display:flex;align-items:center;gap:18px;width:100%;flex-basis:100%}
+.onboarding-back{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:9px 16px;background:#fff0f5;border:2px solid #073347;border-radius:24px;color:#073347;font:inherit;font-size:14px;font-weight:800;white-space:nowrap;cursor:pointer;box-shadow:2px 2px 0 #f58bb1;flex-shrink:0}
+.onboarding-back:hover{background:#ffd5e5}
+.onboarding-back:active{transform:translateY(2px);box-shadow:none}
+.onboarding-back:focus-visible{outline:3px solid #ed367c;outline-offset:3px}
+.onboarding-navigation .progress-indicator{flex:1;min-width:0;margin:0;max-width:none}
+.onboarding-navigation .progress-caption{display:none}
+.flow-heading h1{scroll-margin-top:160px}
+@media(max-width:700px){.onboarding header{padding-top:12px;padding-bottom:12px;gap:10px}.onboarding-navigation{gap:14px}.onboarding-back{padding:8px 13px;font-size:13px}.onboarding .flow-main{padding-top:5px}}
+/* Previous and next actions form one predictable navigation pair. */
+.step-actions{display:flex;align-items:stretch;justify-content:flex-end;gap:14px;width:100%}
+.step-actions .onboarding-back{min-height:50px;box-shadow:none;background:#fffaf0}
+.step-actions .primary{margin:0;min-width:0}
+.flow-bottom{flex-wrap:wrap;gap:12px}
+.flow-bottom>span{width:100%;text-align:right}
+.confirmation-body .step-actions{margin-top:24px}
+@media(max-width:700px){.step-actions{gap:12px}.step-actions .primary{flex:1;width:auto}.step-actions .onboarding-back{flex:0 0 auto;padding-inline:16px}.flow-bottom>span{text-align:center}}
+/* Recognizable garden illustrations, fully inside their own breathing space. */
+.flower-graphics{position:relative;inset:auto;z-index:0;display:flex;justify-content:space-between;align-items:center;height:52px;margin:0 8px;overflow:visible;pointer-events:none}
+.garden-flower{display:block;width:50px;height:52px;flex:none;transform:rotate(-9deg)}
+.garden-flower:last-child{transform:rotate(12deg)}
+.onboarding .flower-graphics+.flow-heading{margin-top:4px}
+.hero>.flower-graphics{position:absolute;top:0;left:0;right:0;margin:0;height:50px}
+.hero>.flower-graphics .garden-flower{width:42px;height:46px}
+.hero>.flower-graphics .garden-flower:last-child{visibility:hidden}
+.hero .hero-marks{width:70px;right:12px;top:12px;left:auto;transform:rotate(12deg)}
+.wheel-marks.garden-bee{width:58px;left:0;top:-36px}
+.confirmation-flower>.garden-bee{width:64px;right:-52px;top:4px}
+@media(max-width:700px){.flower-graphics{height:42px;margin-inline:4px}.garden-flower{width:40px;height:42px}.hero>.flower-graphics{display:none}.hero .hero-marks{width:52px;right:10px;top:10px}.wheel-marks.garden-bee{width:48px;left:6px;top:-30px}}
+/* Bring back the large flower silhouette; keep the smaller garden details. */
+.oversized-flower-crop{position:absolute;left:-8px;top:65px;width:66px;height:245px;overflow:hidden;z-index:-1;pointer-events:none}
+.oversized-flower-crop>svg{position:absolute;width:240px;height:240px;left:-178px;transform:rotate(-12deg)}
+.hero>.flower-graphics .oversized-flower-crop{top:30px;left:-40px;width:95px;height:300px}
+.hero>.flower-graphics .oversized-flower-crop>svg{width:300px;height:300px;left:-210px}
+.closing{background:#f8e9e5}
+@media(max-width:700px){.oversized-flower-crop{left:-4px;top:75px;width:28px;height:175px}.oversized-flower-crop>svg{width:170px;height:170px;left:-145px}}
+/* Less cropping leaves the flower centre and its petal silhouette visible. */
+.oversized-flower-crop{width:78px;height:160px;top:65px}
+.oversized-flower-crop>svg{width:155px;height:155px;left:-77px}
+.hero>.flower-graphics .oversized-flower-crop{left:-35px;width:115px;height:210px;top:30px}
+.hero>.flower-graphics .oversized-flower-crop>svg{width:205px;height:205px;left:-90px}
+/* Separate teardrop petals: crisp silhouettes, quiet depth, horizontal labels. */
+.clear-petals{width:360px;height:360px;max-width:86vw;max-height:86vw;margin-block:32px 20px}
+.clear-petals .petal-option{width:41%;height:41%;border-radius:50% 50% 17% 50%;border:2px solid transparent;transform:translate(-50%,-50%) rotate(var(--petal-turn));transform-origin:center;box-shadow:none;filter:none;display:grid;place-items:center}
+.clear-petals .petal-option>span{position:static;transform:rotate(var(--label-turn));width:100px;max-width:82%;font-family:'Nunito',sans-serif;font-size:18px;line-height:1.2;font-weight:800}
+.clear-petals .petal-option.selected{transform:translate(-50%,-50%) rotate(var(--petal-turn)) scale(1.045);border-color:#073347;box-shadow:0 3px 0 #07334720;filter:none}
+.clear-petals .petal-option:hover{transform:translate(-50%,-50%) rotate(var(--petal-turn)) scale(1.035);filter:brightness(1.025)}
+.clear-petals .petal-option:focus-visible{outline:3px solid #073347;outline-offset:4px;filter:none}
+.clear-petals .petal-center{width:64px;height:64px;box-shadow:none;background:#fffaf0}
+.clear-petals .petal-center>svg{width:42px;height:42px}
+.clear-petals.frequency-petals .petal-center{top:49%}
+.clear-petals.quantity-petals .petal-option>span{font-size:39px}
+html:not([lang=en]) .clear-petals.frequency-petals .petal-option>span{font-size:17px;line-height:1.2}
+@media(max-width:700px){
+ .oversized-flower-crop{width:50px;height:110px;left:-4px;top:65px}
+ .oversized-flower-crop>svg{width:105px;height:105px;left:-55px}
+ .clear-petals{width:310px;height:310px}
+ .clear-petals .petal-option>span{font-size:16px;width:90px}
+ html:not([lang=en]) .clear-petals.frequency-petals .petal-option>span{font-size:15px}
+ .clear-petals .petal-center{width:55px;height:55px}
+ .clear-petals .petal-center>svg{width:36px;height:36px}
+}
+.oversized-flower-crop{width:95px}
+.oversized-flower-crop>svg{left:-60px}
+@media(max-width:700px){.oversized-flower-crop{width:70px}.oversized-flower-crop>svg{left:-35px}}
+/* A little more bloom: scalloped petals and a flower-shaped selection sticker. */
+.clear-petals .petal-option{border-radius:43% 57% 18% 57%;background:#ffa2c6;border:0;overflow:visible}
+.clear-petals .petal-option:before{content:'';position:absolute;inset:0;background:inherit;border-radius:inherit;z-index:-1;transform:rotate(-11deg);transition:transform .22s}
+.clear-petals .petal-1{background:#9cd7b7}
+.clear-petals .petal-2{background:#aedce3}
+.clear-petals .petal-3{background:#ffdc70}
+.clear-petals .petal-option.selected{border:0;box-shadow:3px 4px 0 #07334735;background:#ff80b4}
+.clear-petals .petal-1.selected{background:#71c99d}
+.clear-petals .petal-2.selected{background:#8dccda}
+.clear-petals .petal-3.selected{background:#ffd439}
+.clear-petals .petal-option.selected:before{transform:rotate(9deg)}
+.clear-petals .petal-option>span{font-family:'Patrick Hand',cursive;font-size:23px;font-weight:400;letter-spacing:-.02em}
+.clear-petals.quantity-petals .petal-option>span{font-size:48px}
+.clear-petals .petal-pick{position:absolute;top:8%;right:9%;width:32px;height:32px;display:grid;place-items:center;transform:rotate(var(--label-turn));pointer-events:none}
+.petal-pick>svg:first-child{width:32px;height:32px;filter:drop-shadow(1px 2px 0 #07334725)}
+.petal-pick>svg:last-child{position:absolute;stroke:#073347;stroke-width:3}
+.clear-petals .petal-center>svg{animation:petal-hello .4s ease-out both}
+@keyframes petal-hello{from{transform:rotate(-20deg) scale(.8)}to{transform:rotate(0) scale(1)}}
+html:not([lang=en]) .clear-petals.frequency-petals .petal-option>span{font-size:21px}
+@media(max-width:700px){.clear-petals .petal-option>span{font-size:21px}.clear-petals.quantity-petals .petal-option>span{font-size:43px}html:not([lang=en]) .clear-petals.frequency-petals .petal-option>span{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.clear-petals .petal-option:before{transition:none}.clear-petals .petal-center>svg{animation:none}}
+/* Phase A consistency: cream canvas, colour in flowers and decisions. */
+:root{--cream:#fffdf6;--flower-canvas:#fffdf6}
+body,.onboarding{background:var(--flower-canvas)}
+.onboarding[class*="flow-step-"]{--field:var(--flower-canvas);--step-color:#ed367c}
+.onboarding header{background:var(--flower-canvas)}
+.onboarding .primary:not(:disabled){background:#df216b;color:#fff;border:2px solid #073347;box-shadow:3px 5px 0 #073347}
+.onboarding .primary:not(:disabled):hover{background:#c71c5e;box-shadow:4px 7px 0 #073347}
+.onboarding .primary:disabled{background:#e8e3e0;color:#625e60;box-shadow:none;border-color:transparent;cursor:not-allowed}
+.onboarding .step-actions .primary{min-height:50px;white-space:normal;line-height:1.3}
+.onboarding .step-actions .primary>svg{flex-shrink:0}
+.onboarding .step-actions .onboarding-back{background:var(--flower-canvas)}
+.onboarding .oversized-flower-crop{left:calc((100% - 100vw)/2);top:155px}
+.onboarding .flow-heading{position:relative;z-index:1}
+.onboarding .flow-heading h1{overflow-wrap:break-word}
+.summary-total{background:#ffefaa}
+@media(max-width:700px){
+ .onboarding .oversized-flower-crop{top:160px;width:53px}
+ .onboarding .oversized-flower-crop>svg{left:-52px}
+ .onboarding .step-actions .primary{padding-inline:16px;font-size:14px}
+ .summary-total>div{min-width:0}
+ .summary-total small{line-height:1.5}
+}
+@media(max-width:700px){
+ .hero-art{width:calc(100% - 24px);max-width:calc(100% - 24px);margin-inline:12px}
+ .palette-description{font-size:11px;line-height:1.5;min-height:33px}
+ .palette-seasonal-note{font-size:11px;line-height:1.5}
+ .benefit-strip .sustainability-badge{font-size:11px;line-height:1.45}
+ .wheel-controls>span{font-size:12px;line-height:1.4}
+ .hero .micro{font-size:11px}
+ .privacy-note{font-size:12px;line-height:1.55}
+}
+@media(min-width:701px) and (max-width:1000px){
+ .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+ .hero-art{min-height:0;width:calc(100% - 16px);margin-inline:0 16px}
+ header>nav{display:none}
+ .hero>.flower-graphics{right:20px;left:8px}
+}
+.hero>.flower-graphics>.garden-flower{display:none}
+/* Soft coloured chapter backgrounds, with cream surfaces for reading. */
+.onboarding.flow-step-0{--field:#fff4e7;background:var(--field)}
+.onboarding.flow-step-1{--field:#fff5c9;background:var(--field)}
+.onboarding.flow-step-2{--field:#fce4ee;background:var(--field)}
+.onboarding.flow-step-3{--field:#d9f0e5;background:var(--field)}
+.onboarding.flow-step-4{--field:#fff0d8;background:var(--field)}
+.onboarding.flow-step-5{--field:#d8eeec;background:var(--field)}
+.summary-message{display:flex;flex-direction:column;gap:9px;margin-top:25px;text-align:left}
+.summary-message>span{font-weight:800;font-size:14px;color:#073347}
+.summary-message textarea{display:block;box-sizing:border-box;width:100%;resize:vertical;min-height:95px;padding:13px 14px;border:1.5px solid #60747b;border-radius:15px;background:#fffdf6;color:#073347;font:inherit;font-size:16px;line-height:1.5}
+.summary-message textarea::placeholder{color:#62727b}
+.summary-message textarea:focus-visible{outline:3px solid #ed367c;outline-offset:3px}
+.summary-message small{font-size:11px;line-height:1.5;color:#526974}
+.poster-message{margin-top:20px;padding:13px 15px;background:#fce7ee;border-radius:16px 6px 16px 6px}
+.poster-message strong{font-size:11px;letter-spacing:.04em;color:#526974}
+.poster-message p{font-family:'Patrick Hand',cursive;font-size:22px;line-height:1.3;margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}

@@ -1,12 +1,5 @@
-import { ArrowRight } from "lucide-react";
-export function Logo({ onClick }) {
-  return (
-    <button className="logo" onClick={onClick} aria-label="Flowerup home">
-      FLOWER<span>UP!</span>
-      <span className="logo-flower">✿</span>
-    </button>
-  );
-}
+import ArrowRight from "lucide-react/dist/esm/icons/arrow-right.js";
+export { FlowerupLogo as Logo } from "./FlowerupLogo";
 export function Button({ children, onClick, type = "button", ...props }) {
   return (
     <button type={type} className="primary" onClick={onClick} {...props}>

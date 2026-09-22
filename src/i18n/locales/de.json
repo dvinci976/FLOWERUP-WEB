@@ -1,0 +1,189 @@
+{
+  "tagline": "Bring dein Zuhause zum Blühen.",
+  "pageTitle": "Flowerup! — Bring dein Zuhause zum Blühen.",
+  "pageDescription": "Frische Blumen, regelmässig zu dir nach Hause in Luzern geliefert. Ein fröhlicher Abo-Prototyp ab CHF 24.90 pro Strauss.",
+  "common": {
+    "home": "Flowerup! Startseite",
+    "language": "Sprache wählen",
+    "continue": "Weiter",
+    "back": "Zurück",
+    "close": "Auswahl schliessen",
+    "edit": "Ändern",
+    "cta": "Blumenglück für mich",
+    "from": "Ab",
+    "perBouquet": "/ Strauss",
+    "perDelivery": "pro Lieferung",
+    "city": "Luzern",
+    "country": "Schweiz",
+    "prototype": "LUZERN · PROTOTYP",
+    "bouquetOne": "{count} Strauss",
+    "bouquetMany": "{count} Sträusse"
+  },
+  "home": {
+    "announcement": "Ein kleines Glück, direkt zu dir.",
+    "launch": "Wir starten in Luzern ♡",
+    "howLink": "So funktioniert’s",
+    "thoughtfulLink": "Mit etwas mehr Achtsamkeit",
+    "find": "Finde deine Blumen",
+    "eyebrow": "FRISCHE BLUMEN. GUTE LAUNE.",
+    "heroFirst": "Frische Blumen.",
+    "heroSecond": "Fröhlichere Tage.",
+    "intro": "Frische Blumen, regelmässig zu dir nach Hause geliefert.",
+    "introEnd": "Für mehr Freude im Alltag.",
+    "micro": "Dein Stil. Dein Rhythmus. Deine Blumen.",
+    "small": "Kleine Sträusse.",
+    "happy": "Grosses Glück.",
+    "howEyebrow": "WENIGER AUFWAND. MEHR BLUMEN.",
+    "howTitle": "Blumen, die zu dir passen.",
+    "howTitleEnd": "In drei einfachen Schritten.",
+    "howIntro": "Du musst kein Blumenprofi sein.",
+    "howIntroEnd": "Wähl einfach, was dir Freude macht.",
+    "howTitles": [
+      "Finde deinen Stil",
+      "Wähle deinen Rhythmus",
+      "Freu dich auf Blumenglück"
+    ],
+    "howCopies": [
+      "Wild, romantisch, bunt oder schlicht. Wähle die Blumen, die zu dir passen.",
+      "Ein wöchentlicher Lichtblick oder eine Freude im Monat. Mach Platz für ein bisschen Glück.",
+      "Den Rest übernehmen wir. Frische Blumen direkt an deine Haustür in Luzern."
+    ],
+    "vibesEyebrow": "BLUMEN SIND FÜR ALLE DA.",
+    "vibesTitle": "Ein bisschen wild? Ein bisschen romantisch?",
+    "vibesIntro": "Für jeden Stil gibt’s die passenden Blüten.",
+    "kindNote": "Daran orientieren wir uns beim Wachsen: saisonale Blumen, wo möglich, und verantwortungsvolle Beschaffung.",
+    "closing": "Dein Zuhause hat angerufen.",
+    "closingEnd": "Es hätte gern ein paar Blumen.",
+    "closingNote": "Ein paar Klicks. Ganz viel Freude.",
+    "footer": "Mit ♡ für Luzern gemacht · Prototyp"
+  },
+  "vibes": {
+    "wild": "Wild & natürlich",
+    "romantic": "Zart & romantisch",
+    "bright": "Bunt & fröhlich",
+    "minimal": "Schlicht & modern"
+  },
+  "vibeDescriptions": [
+    "Natürlich schön",
+    "Elegant & verträumt",
+    "Fröhlich & farbenfroh",
+    "Klar & zeitgemäss"
+  ],
+  "bouquetAlt": [
+    "Luftiger Wildblumenstrauss",
+    "Zartrosa Blumenstrauss",
+    "Leuchtend bunter Blumenstrauss",
+    "Schlichter weisser Blumenstrauss"
+  ],
+  "thatIsMe": "DAS BIN ICH!",
+  "colours": {
+    "neutral": "Sanft & neutral",
+    "pastel": "Pastell",
+    "bright": "Bunt & leuchtend",
+    "surprise": "Überrasch mich"
+  },
+  "colourDescriptions": [
+    "Weiss, Creme & frisches Grün",
+    "Zartrosa, Pfirsich, Flieder & sanftes Gelb",
+    "Pink, Orange, Gelb & fröhliche Kontraste",
+    "Flowerup! sucht für dich aus"
+  ],
+  "adventurous": "Lust auf eine Überraschung?",
+  "seasonalNote": "Was gerade Saison hat, prägt deinen Strauss – genau das macht ihn spannend.",
+  "frequencies": {
+    "weekly": "Jede Woche",
+    "fortnightly": "Alle 2 Wochen",
+    "monthly": "Einmal im Monat"
+  },
+  "steps": {
+    "titles": [
+      "Welcher Blumenstil passt zu dir?",
+      "Welche Farben machen dich glücklich?",
+      "Wie oft möchtest du aufblühen?",
+      "Wie viele Sträusse?",
+      "Wo dürfen wir aufblühen?",
+      "Dein Flowerup!",
+      "YOU HAVE BEEN FLOWERUPPED!"
+    ],
+    "subtitles": [
+      "Wähle, was dich zum Lächeln bringt.",
+      "Wähle deine Farben. Wir lassen sie blühen.",
+      "Frische Blumen in deinem Rhythmus.",
+      "Mehr Blumen. Dieselbe Haustür.",
+      "Erster Halt: Luzern, Schweiz.",
+      "Genau nach deinem Geschmack. Bereit für ein blühendes Zuhause?",
+      "Dein Zuhause lächelt schon."
+    ],
+    "story": "DEIN BLUMENGLÜCK",
+    "progress": "Fortschritt deiner Auswahl",
+    "progressValue": "Schritt {step} von {total}",
+    "pause": "Du kannst jederzeit pausieren, ändern oder eine Lieferung auslassen.",
+    "fewTaps": "Ein paar Klicks für ein fröhlicheres Zuhause.",
+    "doorstep": "Deine Haustür ist unser nächster Halt.",
+    "noPayment": "Keine Zahlung nötig. Einfach ein bisschen Freude.",
+    "footer": "Für deinen Alltag gemacht."
+  },
+  "wheel": {
+    "frequency": "Lieferrhythmus",
+    "quantity": "Anzahl Sträusse",
+    "previous": "Vorherige Option",
+    "next": "Nächste Option",
+    "hint": "Tippe auf ein Blütenblatt. Wähle dein Glück."
+  },
+  "sustainability": {
+    "statements": [
+      "Saisonale Blumen, wo möglich",
+      "Verantwortungsvolle Beschaffung",
+      "Abo-Planung hilft, unnötige Blumenabfälle zu vermeiden"
+    ],
+    "title": "Ein achtsamer Umgang mit der Erde,",
+    "titleEnd": "Strauss für Strauss."
+  },
+  "delivery": {
+    "area": "Ein bisschen lokale Freude. Dieser Prototyp bedient die Stadt Luzern (6000–6009).",
+    "name": "Dein Name",
+    "street": "Strasse & Hausnummer",
+    "postcode": "Postleitzahl",
+    "city": "Ort",
+    "namePlaceholder": "Alex Blum",
+    "streetPlaceholder": "Blumenstrasse 12",
+    "postcodeHint": "Gib eine Luzerner Postleitzahl von 6000 bis 6009 ein",
+    "privacy": "Nur eine Demo: Deine Adresse bleibt im Speicher dieser Seite und wird beim Neuladen gelöscht. Es wird nichts übermittelt oder bestellt."
+  },
+  "validation": {
+    "name": "Bitte gib deinen Namen ein.",
+    "street": "Bitte gib deine Strasse und Hausnummer ein.",
+    "postcode": "Bitte gib eine Luzerner Postleitzahl von 6000 bis 6009 ein."
+  },
+  "summary": {
+    "subscription": "DEIN Flowerup! ABO",
+    "rhythm": "Dein Rhythmus",
+    "quantity": "Sträusse pro Lieferung",
+    "doorstep": "Deine Lieferadresse",
+    "estimated": "Geschätzt ab",
+    "total": "Prototyp-Gesamtpreis",
+    "unit": "pro Lieferung · {price} pro Strauss",
+    "fourNote": " · Schätzung für 4 Sträusse. Die endgültige Anzahl wird noch vereinbart.",
+    "fourDetails": "Schätzung für 4 Sträusse. Jeder weitere Strauss würde {price} kosten; die endgültige Anzahl wird noch vereinbart.",
+    "disclaimer": "Vorläufige Preise. Lieferkosten und endgültige Bedingungen stehen noch nicht fest. Dies ist eine Demo – ohne Zahlung oder echtes Abo.",
+    "messageLabel": "Nachricht hinzufügen (optional)",
+    "messagePlaceholder": "Ein paar liebe Worte zu deinen Blumen …",
+    "messageTitle": "Deine Nachricht",
+    "messageHint": "Deine Nachricht bleibt nur in diesem Prototyp."
+  },
+  "confirmation": {
+    "match": "Dein perfektes Blumenglück steht fest.",
+    "preview": "Das war ein kleiner Vorgeschmack auf Flowerup!",
+    "noOrder": "Es wurde nichts bestellt und keine Zahlung vorgenommen.",
+    "home": "Zurück zum Blumenglück",
+    "poster": {
+      "style": "Stil",
+      "colours": "Farben",
+      "frequency": "Rhythmus",
+      "bouquets": "Sträusse",
+      "delivery": "Lieferung",
+      "noteOne": "Blumen machen dich glücklich!",
+      "noteTwo": "Schöne Blumen. Gute Laune."
+    }
+  }
+}

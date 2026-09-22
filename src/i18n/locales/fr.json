@@ -1,0 +1,189 @@
+{
+  "tagline": "Faites fleurir votre intérieur.",
+  "pageTitle": "Flowerup! — Faites fleurir votre intérieur.",
+  "pageDescription": "Des fleurs fraîches livrées régulièrement chez vous, à Lucerne. Un prototype d’abonnement tout en joie, dès CHF 24.90 le bouquet.",
+  "common": {
+    "home": "Accueil Flowerup!",
+    "language": "Choisir la langue",
+    "continue": "Continuer",
+    "back": "Retour",
+    "close": "Fermer la sélection",
+    "edit": "Modifier",
+    "cta": "Je veux des fleurs",
+    "from": "Dès",
+    "perBouquet": "/ bouquet",
+    "perDelivery": "par livraison",
+    "city": "Lucerne",
+    "country": "Suisse",
+    "prototype": "LUCERNE · PROTOTYPE",
+    "bouquetOne": "{count} bouquet",
+    "bouquetMany": "{count} bouquets"
+  },
+  "home": {
+    "announcement": "Un peu de bonheur, livré chez vous.",
+    "launch": "Première étape : Lucerne ♡",
+    "howLink": "Comment ça marche",
+    "thoughtfulLink": "Un peu plus d’attention",
+    "find": "Trouvez vos fleurs",
+    "eyebrow": "DES FLEURS FRAÎCHES. DE LA BONNE HUMEUR.",
+    "heroFirst": "Des fleurs fraîches.",
+    "heroSecond": "Des journées plus belles.",
+    "intro": "Des fleurs fraîches, livrées régulièrement chez vous.",
+    "introEnd": "Pour égayer vos journées.",
+    "micro": "Votre style. Votre rythme. Vos fleurs.",
+    "small": "Petits bouquets.",
+    "happy": "Grand bonheur.",
+    "howEyebrow": "MOINS D’EFFORTS. PLUS DE FLEURS.",
+    "howTitle": "Des fleurs à votre image.",
+    "howTitleEnd": "En trois étapes toutes simples.",
+    "howIntro": "Pas besoin de s’y connaître en fleurs.",
+    "howIntroEnd": "Suivez simplement vos envies.",
+    "howTitles": [
+      "Trouvez votre style",
+      "Choisissez votre rythme",
+      "Laissez venir le bonheur"
+    ],
+    "howCopies": [
+      "Sauvage, romantique, coloré ou épuré. Choisissez les fleurs qui vous ressemblent.",
+      "Une petite joie chaque semaine ou un plaisir mensuel. Faites une place au bonheur.",
+      "On s’occupe du reste. Des fleurs fraîches directement à votre porte, à Lucerne."
+    ],
+    "vibesEyebrow": "LES FLEURS, C’EST POUR TOUT LE MONDE.",
+    "vibesTitle": "Un peu sauvage ? Un peu romantique ?",
+    "vibesIntro": "À chaque style, ses fleurs.",
+    "kindNote": "C’est le cap que nous suivons : des fleurs de saison quand c’est possible et un approvisionnement responsable.",
+    "closing": "Votre intérieur a appelé.",
+    "closingEnd": "Il aimerait bien quelques fleurs.",
+    "closingNote": "Quelques clics. Beaucoup de bonheur.",
+    "footer": "Créé avec ♡ pour Lucerne · Prototype"
+  },
+  "vibes": {
+    "wild": "Sauvage & naturel",
+    "romantic": "Doux & romantique",
+    "bright": "Vif & joyeux",
+    "minimal": "Épuré & moderne"
+  },
+  "vibeDescriptions": [
+    "Naturellement beau",
+    "Élégant & rêveur",
+    "Joyeux & coloré",
+    "Sobre & contemporain"
+  ],
+  "bouquetAlt": [
+    "Bouquet aérien de fleurs des champs",
+    "Bouquet rose tout en douceur",
+    "Bouquet aux couleurs vives",
+    "Bouquet blanc épuré"
+  ],
+  "thatIsMe": "C’EST MOI !",
+  "colours": {
+    "neutral": "Doux & neutre",
+    "pastel": "Pastel",
+    "bright": "Vif & coloré",
+    "surprise": "Surprenez-moi"
+  },
+  "colourDescriptions": [
+    "Blancs, crèmes & verts frais",
+    "Rose poudré, pêche, lilas & jaune doux",
+    "Rose, orange, jaune & contrastes joyeux",
+    "Laissez Flowerup! choisir"
+  ],
+  "adventurous": "Envie de vous laisser surprendre ?",
+  "seasonalNote": "Les fleurs de saison peuvent faire évoluer votre bouquet — c’est aussi ce qui fait son charme.",
+  "frequencies": {
+    "weekly": "Chaque semaine",
+    "fortnightly": "Toutes les 2 semaines",
+    "monthly": "Une fois par mois"
+  },
+  "steps": {
+    "titles": [
+      "Quel est votre style floral ?",
+      "Quelles couleurs vous rendent heureux ?",
+      "À quel rythme voulez-vous fleurir ?",
+      "Combien de bouquets ?",
+      "Où fait-on fleurir le bonheur ?",
+      "Votre Flowerup!",
+      "YOU HAVE BEEN FLOWERUPPED!"
+    ],
+    "subtitles": [
+      "Choisissez celui qui vous fait sourire.",
+      "Choisissez vos couleurs. On les fera fleurir.",
+      "Des fleurs fraîches, à votre rythme.",
+      "Plus de fleurs. Toujours à votre porte.",
+      "Première étape : Lucerne, Suisse.",
+      "Tout à votre goût. On fait fleurir votre intérieur ?",
+      "Votre intérieur sourit déjà."
+    ],
+    "story": "VOTRE HISTOIRE FLEURIE",
+    "progress": "Progression de votre sélection",
+    "progressValue": "Étape {step} sur {total}",
+    "pause": "Vous pouvez mettre en pause, modifier ou sauter une livraison à tout moment.",
+    "fewTaps": "Quelques clics pour un intérieur plus joyeux.",
+    "doorstep": "Votre porte, notre prochaine étape.",
+    "noPayment": "Aucun paiement. Juste un peu de bonheur.",
+    "footer": "Pensé pour votre quotidien."
+  },
+  "wheel": {
+    "frequency": "Fréquence de livraison",
+    "quantity": "Nombre de bouquets",
+    "previous": "Option précédente",
+    "next": "Option suivante",
+    "hint": "Touchez un pétale. Choisissez votre bonheur."
+  },
+  "sustainability": {
+    "statements": [
+      "Des fleurs de saison quand c’est possible",
+      "Un approvisionnement responsable",
+      "La planification des abonnements aide à limiter le gaspillage de fleurs"
+    ],
+    "title": "Plus d’attention pour la planète,",
+    "titleEnd": "un bouquet à la fois."
+  },
+  "delivery": {
+    "area": "Un petit bonheur tout près de chez vous. Ce prototype dessert la ville de Lucerne (6000–6009).",
+    "name": "Votre nom",
+    "street": "Rue & numéro",
+    "postcode": "Code postal",
+    "city": "Ville",
+    "namePlaceholder": "Alex Martin",
+    "streetPlaceholder": "Blumenstrasse 12",
+    "postcodeHint": "Saisissez un code postal de Lucerne entre 6000 et 6009",
+    "privacy": "Démo uniquement : votre adresse reste dans la mémoire de cette page et disparaît au rechargement. Rien n’est transmis ni commandé."
+  },
+  "validation": {
+    "name": "Veuillez saisir votre nom.",
+    "street": "Veuillez saisir votre rue et votre numéro.",
+    "postcode": "Veuillez saisir un code postal de Lucerne entre 6000 et 6009."
+  },
+  "summary": {
+    "subscription": "VOTRE ABONNEMENT Flowerup!",
+    "rhythm": "Votre rythme",
+    "quantity": "Bouquets par livraison",
+    "doorstep": "Votre adresse",
+    "estimated": "Estimation dès",
+    "total": "Total du prototype",
+    "unit": "par livraison · {price} le bouquet",
+    "fourNote": " · estimation pour 4 bouquets. Quantité finale à convenir.",
+    "fourDetails": "Estimation pour 4 bouquets. Chaque bouquet supplémentaire coûterait {price} ; quantité finale à convenir.",
+    "disclaimer": "Prix provisoires. Les frais de livraison et les conditions définitives restent à fixer. Ceci est une démo : aucun paiement ni abonnement réel.",
+    "messageLabel": "Ajouter un message (facultatif)",
+    "messagePlaceholder": "Un petit mot pour accompagner vos fleurs…",
+    "messageTitle": "Votre message",
+    "messageHint": "Votre message reste uniquement dans ce prototype."
+  },
+  "confirmation": {
+    "match": "Vos fleurs idéales sont trouvées.",
+    "preview": "C’était un petit aperçu de Flowerup!",
+    "noOrder": "Aucune commande n’a été passée et aucun paiement n’a été effectué.",
+    "home": "Retour à votre coin de bonheur",
+    "poster": {
+      "style": "Style",
+      "colours": "Couleurs",
+      "frequency": "Fréquence",
+      "bouquets": "Bouquets",
+      "delivery": "Livraison",
+      "noteOne": "Les fleurs vous rendent heureux !",
+      "noteTwo": "De belles fleurs. La bonne humeur."
+    }
+  }
+}

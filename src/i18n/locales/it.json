@@ -1,0 +1,189 @@
+{
+  "tagline": "Fai fiorire la tua casa.",
+  "pageTitle": "Flowerup! — Fai fiorire la tua casa.",
+  "pageDescription": "Fiori freschi, consegnati regolarmente a casa tua a Lucerna. Un prototipo di abbonamento pieno di allegria, da CHF 24.90 a bouquet.",
+  "common": {
+    "home": "Home Flowerup!",
+    "language": "Scegli la lingua",
+    "continue": "Continua",
+    "back": "Indietro",
+    "close": "Chiudi la selezione",
+    "edit": "Modifica",
+    "cta": "Voglio i miei fiori",
+    "from": "Da",
+    "perBouquet": "/ bouquet",
+    "perDelivery": "a consegna",
+    "city": "Lucerna",
+    "country": "Svizzera",
+    "prototype": "LUCERNA · PROTOTIPO",
+    "bouquetOne": "{count} bouquet",
+    "bouquetMany": "{count} bouquet"
+  },
+  "home": {
+    "announcement": "Un po’ di felicità, a domicilio.",
+    "launch": "Si parte da Lucerna ♡",
+    "howLink": "Come funziona",
+    "thoughtfulLink": "Un pensiero in più",
+    "find": "Trova i tuoi fiori",
+    "eyebrow": "FIORI FRESCHI. BUONUMORE.",
+    "heroFirst": "Fiori freschi.",
+    "heroSecond": "Giornate più felici.",
+    "intro": "Fiori freschi, consegnati regolarmente a casa tua.",
+    "introEnd": "Per dare colore alle tue giornate.",
+    "micro": "Il tuo stile. Il tuo ritmo. I tuoi fiori.",
+    "small": "Piccoli bouquet.",
+    "happy": "Grande felicità.",
+    "howEyebrow": "MENO PENSIERI. PIÙ FIORI.",
+    "howTitle": "I fiori che fanno per te.",
+    "howTitleEnd": "In tre semplici passi.",
+    "howIntro": "Non serve essere esperti di fiori.",
+    "howIntroEnd": "Scegli quello che ti fa sorridere.",
+    "howTitles": [
+      "Trova il tuo stile",
+      "Scegli il tuo ritmo",
+      "Lascia arrivare la felicità"
+    ],
+    "howCopies": [
+      "Spontanei, romantici, vivaci o essenziali. Scegli i fiori in cui ti riconosci.",
+      "Una coccola ogni settimana o una sorpresa al mese. Fai spazio a un po’ di gioia.",
+      "Al resto pensiamo noi. Fiori freschi direttamente alla tua porta, a Lucerna."
+    ],
+    "vibesEyebrow": "I FIORI SONO PER TUTTI.",
+    "vibesTitle": "Un po’ spontaneo? Un po’ romantico?",
+    "vibesIntro": "Qualunque sia il tuo stile, c’è un fiore per te.",
+    "kindNote": "È la direzione in cui vogliamo crescere: fiori di stagione quando possibile e approvvigionamento responsabile.",
+    "closing": "La tua casa ha chiamato.",
+    "closingEnd": "Vorrebbe un po’ di fiori.",
+    "closingNote": "Pochi tocchi. Tanta felicità.",
+    "footer": "Fatto con ♡ per Lucerna · Prototipo"
+  },
+  "vibes": {
+    "wild": "Spontaneo & naturale",
+    "romantic": "Delicato & romantico",
+    "bright": "Vivace & allegro",
+    "minimal": "Essenziale & moderno"
+  },
+  "vibeDescriptions": [
+    "Belli per natura",
+    "Eleganti & da sogno",
+    "Allegri & colorati",
+    "Semplici & contemporanei"
+  ],
+  "bouquetAlt": [
+    "Bouquet arioso di fiori di campo",
+    "Bouquet rosa delicato",
+    "Bouquet dai colori vivaci",
+    "Bouquet bianco essenziale"
+  ],
+  "thatIsMe": "SONO IO!",
+  "colours": {
+    "neutral": "Delicati & neutri",
+    "pastel": "Pastello",
+    "bright": "Vivaci & colorati",
+    "surprise": "Sorprendimi"
+  },
+  "colourDescriptions": [
+    "Bianco, crema & verde fresco",
+    "Rosa cipria, pesca, lilla & giallo tenue",
+    "Rosa, arancio, giallo & contrasti allegri",
+    "Lascia scegliere a Flowerup!"
+  ],
+  "adventurous": "Voglia di una sorpresa?",
+  "seasonalNote": "La disponibilità stagionale può dare forma al tuo bouquet: è anche questo il bello.",
+  "frequencies": {
+    "weekly": "Ogni settimana",
+    "fortnightly": "Ogni 2 settimane",
+    "monthly": "Una volta al mese"
+  },
+  "steps": {
+    "titles": [
+      "Qual è il tuo stile floreale?",
+      "Quali colori ti rendono felice?",
+      "Quanto spesso vuoi fiorire?",
+      "Quanti bouquet?",
+      "Dove facciamo sbocciare la felicità?",
+      "Il tuo Flowerup!",
+      "YOU HAVE BEEN FLOWERUPPED!"
+    ],
+    "subtitles": [
+      "Scegli quello che ti fa sorridere.",
+      "Scegli la tua palette. Noi la faremo fiorire.",
+      "Fiori freschi, al tuo ritmo.",
+      "Più fiori. La stessa porta.",
+      "Prima tappa: Lucerna, Svizzera.",
+      "Proprio come piace a te. Facciamo fiorire la tua casa?",
+      "La tua casa sta già sorridendo."
+    ],
+    "story": "LA TUA STORIA DI FIORI",
+    "progress": "Avanzamento della selezione",
+    "progressValue": "Passaggio {step} di {total}",
+    "pause": "Puoi mettere in pausa, modificare o saltare una consegna quando vuoi.",
+    "fewTaps": "Pochi tocchi per una casa più felice.",
+    "doorstep": "La tua porta è la nostra prossima tappa.",
+    "noPayment": "Nessun pagamento. Solo un po’ di felicità.",
+    "footer": "Pensato per la tua quotidianità."
+  },
+  "wheel": {
+    "frequency": "Frequenza delle consegne",
+    "quantity": "Numero di bouquet",
+    "previous": "Opzione precedente",
+    "next": "Opzione successiva",
+    "hint": "Tocca un petalo. Scegli la tua felicità."
+  },
+  "sustainability": {
+    "statements": [
+      "Fiori di stagione quando possibile",
+      "Approvvigionamento responsabile",
+      "La pianificazione degli abbonamenti aiuta a ridurre gli sprechi di fiori"
+    ],
+    "title": "Più cura per il pianeta,",
+    "titleEnd": "un bouquet alla volta."
+  },
+  "delivery": {
+    "area": "Un piccolo gesto locale. Questo prototipo serve la città di Lucerna (6000–6009).",
+    "name": "Il tuo nome",
+    "street": "Via & numero civico",
+    "postcode": "Codice postale",
+    "city": "Città",
+    "namePlaceholder": "Alex Rossi",
+    "streetPlaceholder": "Blumenstrasse 12",
+    "postcodeHint": "Inserisci un codice postale di Lucerna tra 6000 e 6009",
+    "privacy": "Solo una demo: l’indirizzo resta nella memoria di questa pagina e si cancella ricaricandola. Non viene inviato nulla e non parte alcun ordine."
+  },
+  "validation": {
+    "name": "Inserisci il tuo nome.",
+    "street": "Inserisci la via e il numero civico.",
+    "postcode": "Inserisci un codice postale di Lucerna tra 6000 e 6009."
+  },
+  "summary": {
+    "subscription": "IL TUO ABBONAMENTO Flowerup!",
+    "rhythm": "Il tuo ritmo",
+    "quantity": "Bouquet per consegna",
+    "doorstep": "Il tuo indirizzo",
+    "estimated": "Stima a partire da",
+    "total": "Totale del prototipo",
+    "unit": "a consegna · {price} a bouquet",
+    "fourNote": " · stima per 4 bouquet. Quantità finale da concordare.",
+    "fourDetails": "Stima per 4 bouquet. Ogni bouquet aggiuntivo costerebbe {price}; quantità finale da concordare.",
+    "disclaimer": "Prezzi provvisori. Spese di consegna e condizioni definitive non sono ancora stabilite. È una demo: nessun pagamento e nessun abbonamento reale.",
+    "messageLabel": "Aggiungi un messaggio (facoltativo)",
+    "messagePlaceholder": "Un piccolo pensiero da accompagnare ai fiori…",
+    "messageTitle": "Il tuo messaggio",
+    "messageHint": "Il messaggio resta solo in questo prototipo."
+  },
+  "confirmation": {
+    "match": "Abbiamo trovato i fiori che fanno per te.",
+    "preview": "Questo era un piccolo assaggio di Flowerup!",
+    "noOrder": "Non è stato effettuato alcun ordine né alcun pagamento.",
+    "home": "Torna al tuo angolo felice",
+    "poster": {
+      "style": "Stile",
+      "colours": "Colori",
+      "frequency": "Frequenza",
+      "bouquets": "Mazzi",
+      "delivery": "Consegna",
+      "noteOne": "Con i fiori sei più felice!",
+      "noteTwo": "Bei fiori. Buon umore."
+    }
+  }
+}

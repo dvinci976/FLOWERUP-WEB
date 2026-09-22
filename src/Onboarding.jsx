@@ -1,41 +1,42 @@
+import { ConfirmationPoster } from "./components/ConfirmationPoster";
+import { FlowerGraphics, DeliveryDoodle } from "./components/FlowerGraphics";
+import { useI18n } from "./i18n/I18nProvider";
+import { LanguageSelector } from "./components/LanguageSelector";
+import { validateDelivery } from "./deliveryValidation";
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Check, Plus, MapPin, X } from "lucide-react";
-import { vibes, colours, palettes, frequencies, money } from "./data";
-import { Bouquet } from "./components/Bouquet";
+import ArrowLeft from "lucide-react/dist/esm/icons/arrow-left.js";
+import Check from "lucide-react/dist/esm/icons/check.js";
+import Plus from "lucide-react/dist/esm/icons/plus.js";
+import MapPin from "lucide-react/dist/esm/icons/map-pin.js";
+import X from "lucide-react/dist/esm/icons/x.js";
+import { vibes, colours, frequencies, money } from "./data";
+import { PaletteChoice } from "./components/PaletteChoice";
+import { BouquetPhoto, BouquetCard } from "./components/BouquetCard";
+import { SustainabilityBadge } from "./components/SustainabilityBadge";
+import { ProgressIndicator } from "./components/ProgressIndicator";
+import { FlowerMark, HappyMarks } from "./components/FlowerMark";
 import { Logo, Button } from "./components/UI";
-import { Wheel } from "./components/Wheel";
-const titles = [
-  "What’s your flower vibe?",
-  "What colours make you happy?",
-  "How often?",
-  "How many bouquets?",
-  "Where should happiness arrive?",
-  "Your little bundle of happy.",
-  "You have been Flowerupped!",
-];
-const subtitles = [
-  "Go with your first instinct. We’ll take it from here.",
-  "Pick your palette. We’ll find the blooms.",
-  "A little joy, on repeat. Choose your delivery rhythm.",
-  "More flowers. Same doorstep.",
-  "First stop: Lucerne, Switzerland.",
-  "Just the way you like it. Ready to make your home bloom?",
-  "Your home is already smiling.",
-];
+import { PetalWheel } from "./components/PetalWheel";
 export function Onboarding({ close, initialVibe }) {
+  const { t } = useI18n();
+  const [errors, setErrors] = useState({});
   const [step, setStep] = useState(0);
   const [data, setData] = useState({
     vibe: initialVibe || "",
     colour: "",
-    frequency: "Every 2 weeks",
+    frequency: "fortnightly",
     quantity: "1",
     name: "",
     street: "",
     postcode: "",
     city: "Lucerne",
+    message: "",
   });
   const titleRef = useRef(null);
-  const patch = (key, value) => setData((d) => ({ ...d, [key]: value }));
+  const patch = (key, value) => {
+    setData((d) => ({ ...d, [key]: value }));
+    setErrors((previous) => { const next = {...previous}; delete next[key]; return next; });
+  };
   useEffect(() => {
     titleRef.current?.focus();
     window.scrollTo(0, 0);
@@ -45,300 +46,194 @@ export function Onboarding({ close, initialVibe }) {
   const next = () => setStep((s) => s + 1);
   const canContinue = step === 0 ? data.vibe : step === 1 ? data.colour : true;
   return (
-    <div className="onboarding">
+    <div className={`onboarding flow-step-${step}`}>
       <header>
         <Logo onClick={close} />
-        <span className="prototype-badge">LUCERNE · PROTOTYPE</span>
+        <span className="prototype-badge">{t("common.prototype")}</span>
+        <div className="header-actions"><LanguageSelector/>
         <button
           className="icon-button"
-          aria-label="Close onboarding"
+          aria-label={t("common.close")}
           onClick={close}
         >
           <X />
-        </button>
+        </button></div>
+        <div className="onboarding-navigation">
+
+          <ProgressIndicator step={step}/>
+        </div>
       </header>
       <main className={`flow-main ${step === 6 ? "confirmed" : ""}`}>
-        <div className="progress-label">
-          <span>
-            {step === 6
-              ? "ALL THE HAPPY. NONE OF THE HASSLE."
-              : `YOUR FLOWER STORY · STEP ${step + 1} OF 7`}
-          </span>
-          <span>{step + 1}/7</span>
-        </div>
-        <div className="progress" aria-label={`Step ${step + 1} of 7`}>
-          {titles.map((_, i) => (
-            <span key={i} className={i <= step ? "done" : ""} />
-          ))}
-        </div>
-        {step > 0 && step < 6 && (
-          <button className="back" onClick={() => setStep((s) => s - 1)}>
-            <ArrowLeft size={16} /> Back
-          </button>
-        )}
-        <div className="flow-heading">
-          {step === 6 && (
-            <div className="confirmation-flower">
-              ✿<span>✧</span>
-              <i>✦</i>
-            </div>
-          )}
-          <h1 ref={titleRef} tabIndex={-1}>
-            {titles[step]}
-          </h1>
-          <p>{subtitles[step]}</p>
-        </div>
+        {step !== 6 && <FlowerGraphics variant={step}/>}
+
+        {step !== 6 && <div className="flow-heading">
+          <h1 ref={titleRef} tabIndex={-1}>{t(`steps.titles.${step}`)}</h1>
+          <p>{t(`steps.subtitles.${step}`)}</p>
+        </div>}
         {step === 0 && (
           <div className="choice-grid">
             {vibes.map((v, i) => (
-              <button
+              <BouquetCard
                 key={v}
-                aria-pressed={data.vibe === v}
-                className={`visual-choice ${data.vibe === v ? "active" : ""}`}
+                label={t(`vibes.${v}`)}
+                index={i}
+                vibeFeedback
+                selected={data.vibe === v}
                 onClick={() => patch("vibe", v)}
-              >
-                <div className={`choice-art tone-${i}`}>
-                  <Bouquet variant={i} />
-                </div>
-                <div className="choice-label">
-                  {v}
-                  <span>
-                    {data.vibe === v ? <Check size={15} /> : <Plus size={15} />}
-                  </span>
-                </div>
-              </button>
+              />
             ))}
           </div>
         )}
         {step === 1 && (
-          <div className="choice-grid">
+          <div className="palette-choices">
             {colours.map((c, i) => (
-              <button
-                key={c}
-                aria-pressed={data.colour === c}
-                className={`visual-choice colour-choice ${data.colour === c ? "active" : ""}`}
-                onClick={() => patch("colour", c)}
-              >
-                <div className={`swatches tone-${i}`}>
-                  {palettes[i].map((p, j) => (
-                    <span
-                      key={p}
-                      style={{
-                        background: p,
-                        transform: `rotate(${j * 30 - 20}deg)`,
-                      }}
-                    >
-                      ✿
-                    </span>
-                  ))}
-                </div>
-                <div className="choice-label">
-                  {c}
-                  <span>
-                    {data.colour === c ? (
-                      <Check size={15} />
-                    ) : (
-                      <Plus size={15} />
-                    )}
-                  </span>
-                </div>
-              </button>
+              <PaletteChoice key={c} label={t(`colours.${c}`)} index={i} selected={data.colour === c} onClick={() => patch("colour", c)}/>
             ))}
           </div>
         )}
         {step === 2 && (
-          <Wheel
-            label="Delivery frequency"
+          <PetalWheel
+            label={t("wheel.frequency")}
+            optionLabel={option => t(`frequencies.${option}`)}
             options={frequencies}
             value={data.frequency}
             onChange={(v) => patch("frequency", v)}
           />
         )}
+        {step === 2 && (
+          <>
+            <p className="rhythm-note">
+              {t('steps.pause')}
+            </p>
+            <SustainabilityBadge variant={2} />
+          </>
+        )}
         {step === 3 && (
           <>
-            <Wheel
-              label="Number of bouquets"
+            <PetalWheel
+              label={t("wheel.quantity")}
               options={["1", "2", "3", "4+"]}
               value={data.quantity}
               onChange={(v) => patch("quantity", v)}
             />
             <p className="price-note">
-              {data.quantity === "4+" ? "From " : ""}
-              {money(total)} per delivery
-              {data.quantity === "4+"
-                ? " · estimate for 4 bouquets. Final quantity to be agreed."
-                : ""}
+              {data.quantity === '4+' ? `${t('common.from')} ` : ''}{money(total)} {t('common.perDelivery')}
+              {data.quantity === '4+' ? t('summary.fourNote') : ''}
             </p>
           </>
         )}
         {step === 4 && (
-          <form
-            id="delivery-form"
-            className="delivery-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              next();
-            }}
-          >
-            <div className="area-note">
-              <MapPin size={20} />
-              <span>
-                A little local love. This prototype serves Lucerne city
-                (6000–6009).
-              </span>
-            </div>
-            <label>
-              Your name
-              <input
-                autoComplete="name"
-                required
-                value={data.name}
-                onChange={(e) => patch("name", e.target.value)}
-                placeholder="Alex Bloom"
-                maxLength={100}
-                pattern=".*\S.*"
-              />
-            </label>
-            <label>
-              Street & house number
-              <input
-                autoComplete="street-address"
-                required
-                value={data.street}
-                onChange={(e) => patch("street", e.target.value)}
-                placeholder="Blumenstrasse 12"
-                maxLength={200}
-                pattern=".*\S.*"
-              />
-            </label>
+          <form id="delivery-form" className="delivery-form" noValidate onSubmit={event => {
+            event.preventDefault();
+            const nextErrors = validateDelivery(data);
+            setErrors(nextErrors);
+            if (Object.keys(nextErrors).length) {
+              event.currentTarget.elements.namedItem(Object.keys(nextErrors)[0])?.focus();
+              return;
+            }
+            next();
+          }}>
+            <DeliveryDoodle/>
+            <div className="area-note"><MapPin size={20}/><span>{t('delivery.area')}</span></div>
+            {['name','street'].map(field => <label key={field}>
+              {t(`delivery.${field}`)}
+              <input name={field} autoComplete={field==='name'?'name':'street-address'} required value={data[field]} onChange={event=>patch(field,event.target.value)} placeholder={t(`delivery.${field}Placeholder`)} maxLength={field==='name'?100:200} aria-invalid={Boolean(errors[field])} aria-describedby={errors[field]?`${field}-error`:undefined}/>
+              {errors[field] && <span className="field-error" id={`${field}-error`} role="alert">{t(errors[field])}</span>}
+            </label>)}
             <div className="form-row">
-              <label>
-                Postcode
-                <input
-                  autoComplete="postal-code"
-                  required
-                  inputMode="numeric"
-                  pattern="600[0-9]"
-                  title="Enter a Lucerne city postcode from 6000 to 6009"
-                  maxLength={4}
-                  value={data.postcode}
-                  onChange={(e) => patch("postcode", e.target.value)}
-                  placeholder="6003"
-                />
+              <label>{t('delivery.postcode')}
+                <input name="postcode" autoComplete="postal-code" required inputMode="numeric" pattern="600[0-9]" title={t('delivery.postcodeHint')} maxLength={4} value={data.postcode} onChange={event=>patch('postcode',event.target.value)} placeholder="6003" aria-invalid={Boolean(errors.postcode)} aria-describedby={errors.postcode?'postcode-error':undefined}/>
+                {errors.postcode && <span className="field-error" id="postcode-error" role="alert">{t(errors.postcode)}</span>}
               </label>
-              <label>
-                City
-                <input value="Lucerne" readOnly autoComplete="address-level2" />
-              </label>
+              <label>{t('delivery.city')}<input value={t('common.city')} readOnly autoComplete="address-level2"/></label>
             </div>
-            <p className="privacy-note">
-              Demo only — your address stays in this page’s memory and is
-              cleared on refresh. Nothing is sent or ordered.
-            </p>
+            <p className="privacy-note">{t('delivery.privacy')}</p>
           </form>
         )}
         {step === 5 && (
           <div className="summary">
             <div className="summary-hero">
-              <Bouquet variant={vibes.indexOf(data.vibe)} />
+              <BouquetPhoto variant={vibes.indexOf(data.vibe)} />
               <div>
-                <span className="eyebrow">YOUR FLOWERUP! SUBSCRIPTION</span>
-                <h2>{data.vibe}</h2>
-                <p>{data.colour}</p>
+                <span className="eyebrow">{t('summary.subscription')}</span>
+                <h2>{t(`vibes.${data.vibe}`)}</h2>
+                <p>{t(`colours.${data.colour}`)}</p>
               </div>
               <button className="edit" onClick={() => setStep(0)}>
-                Edit
+                {t('common.edit')}
               </button>
             </div>
             <dl>
               <div>
-                <dt>Your rhythm</dt>
+                <dt>{t('summary.rhythm')}</dt>
                 <dd>
-                  {data.frequency}{" "}
+                  {t(`frequencies.${data.frequency}`)}{" "}
                   <button className="edit" onClick={() => setStep(2)}>
-                    Edit
+                    {t('common.edit')}
                   </button>
                 </dd>
               </div>
               <div>
-                <dt>Bouquets per delivery</dt>
+                <dt>{t('summary.quantity')}</dt>
                 <dd>
                   {data.quantity}{" "}
                   <button className="edit" onClick={() => setStep(3)}>
-                    Edit
+                    {t('common.edit')}
                   </button>
                 </dd>
               </div>
               <div>
-                <dt>Your doorstep</dt>
+                <dt>{t('summary.doorstep')}</dt>
                 <dd>
                   {data.name}
                   <br />
                   {data.street}
                   <br />
-                  {data.postcode} Lucerne{" "}
+                  {data.postcode} {t('common.city')}{' '}
                   <button className="edit" onClick={() => setStep(4)}>
-                    Edit
+                    {t('common.edit')}
                   </button>
                 </dd>
               </div>
             </dl>
+            <label className="summary-message">
+              <span>{t('summary.messageLabel')}</span>
+              <textarea rows={3} maxLength={300} value={data.message} onChange={event => patch('message', event.target.value)} placeholder={t('summary.messagePlaceholder')} aria-describedby="message-hint"/>
+              <small id="message-hint">{t('summary.messageHint')}</small>
+            </label>
             <div className="summary-total">
               <div>
                 <strong>
                   {data.quantity === "4+"
-                    ? "Estimated from"
-                    : "Prototype total"}
+                    ? t('summary.estimated')
+                    : t('summary.total')}
                 </strong>
-                <small>per delivery · {money(24.9)} per bouquet</small>
+                <small>{t('summary.unit', {price:money(24.9)})}</small>
               </div>
               <strong>{money(total)}</strong>
             </div>
             {data.quantity === "4+" && (
               <p className="privacy-note">
-                Estimate for 4 bouquets. Additional bouquets would be CHF 24.90
-                each; final quantity to be agreed.
+                {t('summary.fourDetails', {price:money(24.9)})}
               </p>
             )}
             <p className="privacy-note">
-              Provisional pricing. Delivery fees and final terms are not set.
-              This is a demo — no payment and no real subscription.
+              {t('summary.disclaimer')}
             </p>
           </div>
         )}
-        {step === 6 && (
-          <div className="confirmation-body">
-            <div className="confirmation-note">
-              <Check />
-              <div>
-                <strong>Your perfect flower match is ready.</strong>
-                <p>
-                  {data.vibe} · {data.colour}
-                  <br />
-                  {data.quantity} bouquet{quantity > 1 ? "s" : ""} ·{" "}
-                  {data.frequency.toLowerCase()}
-                  <br />
-                  Lucerne, Switzerland
-                </p>
-              </div>
-            </div>
-            <p>
-              This was a little preview of Flowerup!
-              <br />
-              No order was placed and no payment was taken.
-            </p>
-            <Button onClick={close}>Back to the happy place</Button>
-          </div>
-        )}
+        {step === 6 && <ConfirmationPoster data={data} titleRef={titleRef} onBack={() => setStep(5)} onHome={close}/>}
         {step < 6 && (
           <div className="flow-bottom">
-            <span>
+            {step !== 0 && step !== 1 && <span>
               {step < 4
-                ? "A few taps to a happier home."
+                ? t('steps.fewTaps')
                 : step === 4
-                  ? "Your doorstep, our next stop."
-                  : "No payment needed. Just a little happy."}
-            </span>
+                  ? t('steps.doorstep')
+                  : t('steps.noPayment')}
+            </span>}
+            <div className="step-actions">
+              <button type="button" className="onboarding-back" onClick={() => step === 0 ? close() : setStep(s => s-1)}><ArrowLeft size={19} aria-hidden="true"/> {t('common.back')}</button>
             <Button
               disabled={!canContinue}
               type={step === 4 ? "submit" : "button"}
@@ -352,13 +247,15 @@ export function Onboarding({ close, initialVibe }) {
                     }
               }
             >
-              {step === 5 ? "Flower me up" : "Continue"}
+              {step === 5 ? t('common.cta') : t('common.continue')}
             </Button>
+            </div>
           </div>
         )}
+        {step === 1 && <p className="palette-seasonal-note">{t('seasonalNote')}</p>}
       </main>
       <div className="flow-footer">
-        FLOWERUP! <span>Made for your everyday.</span> ✿
+        Flowerup! <span>{t('steps.footer')}</span> ✿
       </div>
     </div>
   );
