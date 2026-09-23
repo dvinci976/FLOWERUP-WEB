@@ -93,7 +93,8 @@
   "frequencies": {
     "weekly": "Chaque semaine",
     "fortnightly": "Toutes les 2 semaines",
-    "monthly": "Une fois par mois"
+    "monthly": "Une fois par mois",
+    "one_time": "Flowerup! pour une fois"
   },
   "steps": {
     "titles": [
@@ -162,10 +163,10 @@
     "doorstep": "Votre adresse",
     "estimated": "Estimation dès",
     "total": "Total du prototype",
-    "unit": "par livraison · {price} le bouquet",
+    "unit": "{price} par bouquet · livraison incluse · par livraison",
     "fourNote": " · estimation pour 4 bouquets. Quantité finale à convenir.",
     "fourDetails": "Estimation pour 4 bouquets. Chaque bouquet supplémentaire coûterait {price} ; quantité finale à convenir.",
-    "disclaimer": "Prix provisoires. Les frais de livraison et les conditions définitives restent à fixer. Ceci est une démo : aucun paiement ni abonnement réel.",
+    "disclaimer": "Prix provisoires du prototype · livraison incluse. Conditions définitives à confirmer. Ceci est une démo — aucun paiement ni commande réelle.",
     "messageLabel": "Ajouter un message (facultatif)",
     "messagePlaceholder": "Un petit mot pour accompagner vos fleurs…",
     "messageTitle": "Votre message",
@@ -185,5 +186,72 @@
       "noteOne": "Les fleurs vous rendent heureux !",
       "noteTwo": "De belles fleurs. La bonne humeur."
     }
+  },
+  "founders": {
+    "launch": "LA PREMIÈRE FLORAISON",
+    "badge": "Flowerup!\nLUCERNE\nPREMIÈRES FLEURS",
+    "inviteTitle": "Et si on le faisait vraiment ? 🌸",
+    "firstHomes": "Votre maison pourrait être parmi les premières à Lucerne à vivre l’expérience Flowerupped.",
+    "price": "{price} par bouquet",
+    "deliveryIncluded": "Livraison comprise",
+    "noPayment": "Rien à payer aujourd’hui. Nous vous préviendrons lorsque Flowerup! sera prêt à fleurir dans votre quartier.",
+    "yes": "J’EN SUIS ! 🌸",
+    "later": "Peut-être plus tard",
+    "hello": "Bonjour, les pionniers Flowerup! ♡",
+    "signupTitle": "Soyez parmi les premiers à fleurir.",
+    "signupCopy": "Participez à notre lancement à Lucerne. Nous vous préviendrons lorsque Flowerup! sera prêt pour votre quartier.",
+    "yourBloom": "Mon Flowerup!",
+    "provisional": "Prix provisoire",
+    "preview": "Rien à payer aujourd’hui. Rien n’est envoyé pendant cet aperçu.",
+    "submit": "FLOWER ME UP! 🌸",
+    "noSpam": "Rien à payer aujourd’hui. Juste des fleurs, quand nous serons prêts à fleurir.",
+    "successTitle": "TU EN FAIS PARTIE ! 🌸",
+    "successCopy": "On te préviendra quand Flowerup! sera prêt à fleurir dans ton quartier.",
+    "lastThing": "Une toute dernière chose...",
+    "intentTitle": "Si Flowerup! se lançait demain, est-ce que tu t’inscrirais {offer} par bouquet, livraison incluse ?",
+    "honest": "Chaque réponse nous aide. Choisissez celle qui vous correspond.",
+    "thanksTitle": "Merci, les amoureux des fleurs ! ♡",
+    "thanksCopy": "Vous nous aidez à faire grandir Flowerup! dès les premiers jours.",
+    "seeYou": "À bientôt pour la première floraison.",
+    "progress": "Progression de la Première Floraison",
+    "fields": {
+      "firstName": "Prénom",
+      "email": "E-mail",
+      "postcode": "Code postal"
+    },
+    "errors": {
+      "firstName": "Oups, il nous manque votre prénom 🌸",
+      "email": "Cette adresse e-mail ne semble pas tout à fait correcte.",
+      "postcode": "Indiquez votre code postal suisse à 4 chiffres."
+    },
+    "answers": {
+      "absolutely": "Absolument !",
+      "maybe": "Peut-être",
+      "not_yet": "Pas encore"
+    },
+    "stages": {
+      "signup": "Votre invitation",
+      "intent": "Une dernière chose",
+      "thanks": "Merci"
+    },
+    "invitationBadge": "LA PREMIÈRE FLORAISON",
+    "invitationPriceNote": "par bouquet · livraison comprise",
+    "signupAccent": "fleurir",
+    "partOfBloom": "Bienvenue dans la Première Floraison.",
+    "intentOffer": "dès {price}"
+  },
+  "oneTime": {
+    "flirt": "Envie d’un petit flirt floral ? 🌸",
+    "offer": "Essaie une fois — {price}, livraison incluse",
+    "cta": "UNE PETITE FLORAISON 🌼",
+    "selected": "Flowerup! pour une fois sélectionné · sans abonnement",
+    "recurringOffer": "Flowerup! en abonnement — {price} par bouquet · livraison incluse",
+    "delivered": "livraison incluse",
+    "unit": "{price} par bouquet · livraison incluse",
+    "confirmation": "Ta petite touche de bonheur est presque prête à fleurir.",
+    "name": "Une petite floraison",
+    "once": "Une seule fois",
+    "orderType": "Type de commande",
+    "switchRecurring": "Choisir plutôt Flowerup! en abonnement"
   }
 }

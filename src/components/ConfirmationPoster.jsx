@@ -1,4 +1,4 @@
-import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left.js';
+import { FoundersInvitation } from "../founders/FoundersLaunch";
 import Palette from 'lucide-react/dist/esm/icons/palette.js';
 import CalendarDays from 'lucide-react/dist/esm/icons/calendar-days.js';
 import MapPin from 'lucide-react/dist/esm/icons/map-pin.js';
@@ -6,7 +6,6 @@ import Flower2 from 'lucide-react/dist/esm/icons/flower-2.js';
 import Layers from 'lucide-react/dist/esm/icons/layers.js';
 import { useI18n } from '../i18n/I18nProvider';
 import { BouquetPhoto } from './BouquetCard';
-import { Button } from './UI';
 import { vibes } from '../data';
 import './ConfirmationPoster.css';
 const inks = ['#df2874','#ed712b','#d49800','#008d96','#368b52','#f1646c','#073347'];
@@ -30,7 +29,7 @@ function PosterGarden() {
     <div className="poster-scatter">{Array.from({length:12},(_,i)=><i key={i} style={{'--i':i,'--scatter-x':`${i%2 ? 94-(i%3)*2 : 3+(i%3)*2}%`,'--scatter-y':`${12+(i*13)%75}%`,'--petal-ink':inks[i%inks.length]}}/>)}</div>
   </div>;
 }
-export function ConfirmationPoster({data, titleRef, onBack, onHome}) {
+export function ConfirmationPoster({data, titleRef, onBack, onHome, onFoundersStart}) {
   const { t } = useI18n();
   const confirmationHeadline = 'YOU HAVE BEEN FLOWERUPPED!';
   const fields = [
@@ -47,7 +46,7 @@ export function ConfirmationPoster({data, titleRef, onBack, onHome}) {
         <span className="poster-intro" aria-hidden="true">YOU HAVE BEEN</span>
         <span className="poster-big-word" aria-hidden="true">{[...'FLOWERUPPED!'].map((letter,i)=><span key={i} style={{color:inks[i%inks.length], '--letter-tilt':`${[-3,2,-2,3,-2,1][i%6]}deg`}}>{letter}</span>)}</span>
       </h1>
-      <p className="poster-subtitle">{t('steps.subtitles.6')} <span aria-hidden="true">♡</span>
+      <p className="poster-subtitle">{t(data.orderType === 'one_time' ? 'oneTime.confirmation' : 'steps.subtitles.6')} <span aria-hidden="true">♡</span>
         <svg viewBox="0 0 340 16" aria-hidden="true"><path d="M5 9Q153 0 334 8M56 14Q170 6 290 12" stroke="#ef709b" strokeWidth="3" fill="none" strokeLinecap="round"/></svg>
       </p>
       <aside className="poster-note poster-note-one">{t('confirmation.poster.noteOne')} <span aria-hidden="true">♡</span></aside>
@@ -64,10 +63,8 @@ export function ConfirmationPoster({data, titleRef, onBack, onHome}) {
       </article>
       <aside className="poster-note poster-note-two">{t('confirmation.poster.noteTwo')} <span aria-hidden="true">♡</span></aside>
       <p className="poster-prototype">{t('confirmation.preview')}<br/>{t('confirmation.noOrder')}</p>
-      <div className="step-actions poster-actions">
-        <button type="button" className="onboarding-back" onClick={onBack}><ArrowLeft size={19} aria-hidden="true"/>{t('common.back')}</button>
-        <Button onClick={onHome}>{t('confirmation.home')}</Button>
-      </div>
+      <FoundersInvitation data={data} onStart={onFoundersStart} onLater={onHome}/>
+
     </div>
   </section>;
 }

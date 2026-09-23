@@ -93,7 +93,8 @@
   "frequencies": {
     "weekly": "Every week",
     "fortnightly": "Every 2 weeks",
-    "monthly": "Once a month"
+    "monthly": "Once a month",
+    "one_time": "One-time Flowerup!"
   },
   "steps": {
     "titles": [
@@ -162,10 +163,10 @@
     "doorstep": "Your doorstep",
     "estimated": "Estimated from",
     "total": "Prototype total",
-    "unit": "per delivery · {price} per bouquet",
+    "unit": "{price} per bouquet · delivery included · per delivery",
     "fourNote": " · estimate for 4 bouquets. Final quantity to be agreed.",
     "fourDetails": "Estimate for 4 bouquets. Additional bouquets would be {price} each; final quantity to be agreed.",
-    "disclaimer": "Provisional pricing. Delivery fees and final terms are not set. This is a demo — no payment and no real subscription.",
+    "disclaimer": "Provisional prototype pricing · delivery included. Final terms to be confirmed. This is a demo — no payment and no real order.",
     "messageLabel": "Add a message (optional)",
     "messagePlaceholder": "A little note to go with your flowers…",
     "messageTitle": "Your message",
@@ -185,5 +186,72 @@
       "noteOne": "Flowers make a happier you!",
       "noteTwo": "Good flowers. Good mood."
     }
+  },
+  "founders": {
+    "launch": "THE FIRST BLOOM",
+    "badge": "Flowerup!\nLUCERNE\nFOUNDING BLOOM",
+    "inviteTitle": "Want to make it real? 🌸",
+    "firstHomes": "Be one of the first homes in Lucerne to get Flowerupped.",
+    "price": "{price} per bouquet",
+    "deliveryIncluded": "Delivery included",
+    "noPayment": "No payment today. We'll let you know when Flowerup! is ready to bloom in your neighbourhood.",
+    "yes": "I’M IN! 🌸",
+    "later": "Maybe later",
+    "hello": "Hello, Flowerup! founder ♡",
+    "signupTitle": "Be one of the first to bloom.",
+    "signupCopy": "Join our Lucerne launch and we'll let you know when Flowerup! is ready for your neighbourhood.",
+    "yourBloom": "My Flowerup!",
+    "provisional": "Provisional price",
+    "preview": "No payment today. During this preview, nothing is submitted.",
+    "submit": "FLOWER ME UP! 🌸",
+    "noSpam": "No payment today. Just flowers when we're ready to bloom.",
+    "successTitle": "YOU'RE IN! 🌸",
+    "successCopy": "We'll let you know when Flowerup! is ready to bloom in your neighbourhood.",
+    "lastThing": "One last little thing...",
+    "intentTitle": "If Flowerup! launched tomorrow, would you sign up {offer} per bouquet, delivered?",
+    "honest": "Every answer helps. Tell us what feels right for you.",
+    "thanksTitle": "Thank you, flower lover! ♡",
+    "thanksCopy": "You're helping us grow Flowerup! from the very beginning.",
+    "seeYou": "See you when we bloom.",
+    "progress": "The First Bloom progress",
+    "fields": {
+      "firstName": "First name",
+      "email": "Email",
+      "postcode": "Postcode"
+    },
+    "errors": {
+      "firstName": "Oops — we need your first name 🌸",
+      "email": "That email doesn't look quite right.",
+      "postcode": "Give us your 4-digit Swiss postcode."
+    },
+    "answers": {
+      "absolutely": "Absolutely!",
+      "maybe": "Maybe",
+      "not_yet": "Not yet"
+    },
+    "stages": {
+      "signup": "Your invitation",
+      "intent": "One last thing",
+      "thanks": "Thank you"
+    },
+    "invitationBadge": "THE FIRST BLOOM",
+    "invitationPriceNote": "per bouquet · delivered",
+    "signupAccent": "bloom",
+    "partOfBloom": "You're part of The First Bloom.",
+    "intentOffer": "from {price}"
+  },
+  "oneTime": {
+    "flirt": "Just flirting with flowers? 🌸",
+    "offer": "Try us once — {price} delivered",
+    "cta": "ONE LITTLE BLOOM 🌼",
+    "selected": "One-time Flowerup! selected · no subscription",
+    "recurringOffer": "Recurring Flowerup! — {price} per bouquet · delivery included",
+    "delivered": "delivered",
+    "unit": "{price} per bouquet · delivery included",
+    "confirmation": "Your little burst of happiness is almost ready to bloom.",
+    "name": "One Little Bloom",
+    "once": "One-time",
+    "orderType": "Order type",
+    "switchRecurring": "Choose recurring Flowerup! instead"
   }
 }

@@ -1,3 +1,5 @@
+import { pricing } from './pricing';
+import { money } from './data';
 import { FlowerGraphics } from "./components/FlowerGraphics";
 import { useI18n } from "./i18n/I18nProvider";
 import { LanguageSelector } from "./components/LanguageSelector";
@@ -53,7 +55,7 @@ export function Home({ start }) {
               {t('home.introEnd')}
             </p>
             <div className="hero-price">
-              {t('common.from')} CHF 24.90 <span>{t('common.perBouquet')}</span>
+              {t('common.from')} {money(pricing.recurringPrice)} <span>{t('common.perBouquet')}</span>
             </div>
             <Button onClick={start}>{t('common.cta')}</Button>
             <div className="micro">
@@ -72,7 +74,7 @@ export function Home({ start }) {
               {t('home.happy')}<span>♡</span>
             </div>
             <div className="price-sticker">
-              {t('common.from')}<strong>CHF 24.90</strong>
+              {t('common.from')}<strong>{money(pricing.recurringPrice)}</strong>
             </div>
             <HappyMarks className="hero-marks" />
             <FlowerMark className="hero-flower" color="#ff94bd" />

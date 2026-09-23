@@ -44,7 +44,7 @@ export function PetalWheel({ options, value, onChange, label, optionLabel = (opt
         <div className="petal-center">
           <FlowerMark />
           <span className="sr-only" aria-live="polite">
-            {optionLabel(value)}
+            {value ? optionLabel(value) : t("wheel.hint")}
           </span>
         </div>
         {options.map((option, i) => {

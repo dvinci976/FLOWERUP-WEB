@@ -93,7 +93,8 @@
   "frequencies": {
     "weekly": "Ogni settimana",
     "fortnightly": "Ogni 2 settimane",
-    "monthly": "Una volta al mese"
+    "monthly": "Una volta al mese",
+    "one_time": "Flowerup! una volta"
   },
   "steps": {
     "titles": [
@@ -162,10 +163,10 @@
     "doorstep": "Il tuo indirizzo",
     "estimated": "Stima a partire da",
     "total": "Totale del prototipo",
-    "unit": "a consegna · {price} a bouquet",
+    "unit": "{price} a mazzo · consegna inclusa · a consegna",
     "fourNote": " · stima per 4 bouquet. Quantità finale da concordare.",
     "fourDetails": "Stima per 4 bouquet. Ogni bouquet aggiuntivo costerebbe {price}; quantità finale da concordare.",
-    "disclaimer": "Prezzi provvisori. Spese di consegna e condizioni definitive non sono ancora stabilite. È una demo: nessun pagamento e nessun abbonamento reale.",
+    "disclaimer": "Prezzi provvisori del prototipo · consegna inclusa. Condizioni finali da confermare. È una demo — nessun pagamento e nessun ordine reale.",
     "messageLabel": "Aggiungi un messaggio (facoltativo)",
     "messagePlaceholder": "Un piccolo pensiero da accompagnare ai fiori…",
     "messageTitle": "Il tuo messaggio",
@@ -185,5 +186,72 @@
       "noteOne": "Con i fiori sei più felice!",
       "noteTwo": "Bei fiori. Buon umore."
     }
+  },
+  "founders": {
+    "launch": "LA PRIMA FIORITURA",
+    "badge": "Flowerup!\nLUCERNA\nPRIME FIORITURE",
+    "inviteTitle": "Lo facciamo sbocciare davvero? 🌸",
+    "firstHomes": "La tua casa può essere tra le prime a Lucerna a vivere la magia Flowerupped.",
+    "price": "{price} a mazzo",
+    "deliveryIncluded": "Consegna inclusa",
+    "noPayment": "Oggi non paghi nulla. Ti avviseremo quando Flowerup! sarà pronto a fiorire nel tuo quartiere.",
+    "yes": "CI STO! 🌸",
+    "later": "Magari più tardi",
+    "hello": "Ciao, pioniere Flowerup! ♡",
+    "signupTitle": "Tra i primi a fiorire.",
+    "signupCopy": "Partecipa al lancio a Lucerna: ti avviseremo quando Flowerup! sarà pronto per il tuo quartiere.",
+    "yourBloom": "Il mio Flowerup!",
+    "provisional": "Prezzo provvisorio",
+    "preview": "Nessun pagamento oggi. In questa anteprima non viene inviato nulla.",
+    "submit": "FLOWER ME UP! 🌸",
+    "noSpam": "Nessun pagamento oggi. Solo fiori, quando saremo pronti a sbocciare.",
+    "successTitle": "CI SEI ANCHE TU! 🌸",
+    "successCopy": "Ti avviseremo quando Flowerup! sarà pronto a fiorire nel tuo quartiere.",
+    "lastThing": "Solo un’ultima cosa...",
+    "intentTitle": "Se Flowerup! partisse domani, ti iscriveresti {offer} a mazzo, consegna inclusa?",
+    "honest": "Ogni risposta ci aiuta. Scegli quella che senti più tua.",
+    "thanksTitle": "Grazie, amante dei fiori! ♡",
+    "thanksCopy": "Ci stai aiutando a far crescere Flowerup! fin dall’inizio.",
+    "seeYou": "Ci vediamo alla prima fioritura.",
+    "progress": "Avanzamento della Prima Fioritura",
+    "fields": {
+      "firstName": "Nome",
+      "email": "Email",
+      "postcode": "Codice postale"
+    },
+    "errors": {
+      "firstName": "Ops, ci serve il tuo nome 🌸",
+      "email": "Questa email non sembra del tutto corretta.",
+      "postcode": "Inserisci il tuo codice postale svizzero di 4 cifre."
+    },
+    "answers": {
+      "absolutely": "Assolutamente sì!",
+      "maybe": "Forse",
+      "not_yet": "Non ancora"
+    },
+    "stages": {
+      "signup": "Il tuo invito",
+      "intent": "Un’ultima cosa",
+      "thanks": "Grazie"
+    },
+    "invitationBadge": "LA PRIMA FIORITURA",
+    "invitationPriceNote": "a mazzo · consegna inclusa",
+    "signupAccent": "fiorire",
+    "partOfBloom": "Fai parte della Prima Fioritura.",
+    "intentOffer": "a partire da {price}"
+  },
+  "oneTime": {
+    "flirt": "Stai solo flirtando con i fiori? 🌸",
+    "offer": "Provaci una volta — {price} con consegna inclusa",
+    "cta": "UNA PICCOLA FIORITURA 🌼",
+    "selected": "Flowerup! una volta selezionato · senza abbonamento",
+    "recurringOffer": "Flowerup! in abbonamento — {price} a mazzo · consegna inclusa",
+    "delivered": "con consegna inclusa",
+    "unit": "{price} a mazzo · consegna inclusa",
+    "confirmation": "La tua piccola esplosione di felicità è quasi pronta a sbocciare.",
+    "name": "Una piccola fioritura",
+    "once": "Una volta sola",
+    "orderType": "Tipo di ordine",
+    "switchRecurring": "Preferisco Flowerup! in abbonamento"
   }
 }

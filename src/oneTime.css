@@ -1,0 +1,12 @@
+/* A secondary discovery; the recurring frequency wheel stays the hero. */
+.one-time-discovery{position:relative;max-width:470px;margin:24px auto 28px;text-align:center;padding:14px 22px 17px;background:#fffaf1;border-radius:48% 32% 40% 30% / 15% 25% 20% 30%}
+.one-time-discovery>p{font-family:'Patrick Hand',cursive;font-size:27px;line-height:1.2;color:#b52764;transform:rotate(-2deg);margin:0 0 7px}
+.one-time-discovery>span{display:block;font-size:14px;line-height:1.5;color:#073347}
+.one-time-choice{display:flex;gap:9px;align-items:center;justify-content:center;max-width:100%;margin:13px auto 0;padding:11px 18px;min-height:48px;border:2px solid #073347;border-radius:43% 30% 38% 27% / 23% 30% 25% 35%;background:#ffdf79;color:#073347;box-shadow:3px 4px 0 #9ed7cb;font:inherit;font-size:13px;font-weight:800;cursor:pointer;transition:transform .18s,box-shadow .18s}
+.one-time-choice>svg{width:25px;height:25px;flex:none}.one-time-choice>span{min-width:0}
+.one-time-choice:hover{transform:translateY(-2px) rotate(-1deg)}.one-time-choice:active{transform:translateY(2px)}
+.one-time-choice:focus-visible{outline:3px solid #d72973;outline-offset:5px}
+.one-time-choice.selected{background:#f7c4da;box-shadow:3px 4px 0 #073347}
+.one-time-discovery>small{display:block;margin-top:12px;font-size:12px;font-weight:700;color:#073347}
+@media(max-width:700px){.one-time-discovery{margin:20px auto 23px;padding:12px 12px 16px}.one-time-discovery>p{font-size:25px}.one-time-discovery>span{font-size:13px}.one-time-choice{font-size:12px;padding-inline:13px}}
+@media(prefers-reduced-motion:reduce){.one-time-choice{transition:none}.one-time-choice:hover,.one-time-choice:active{transform:none}}

@@ -1,5 +1,5 @@
 import { useI18n } from "../i18n/I18nProvider";
-export function ProgressIndicator({ step, total = 7 }) {
+export function ProgressIndicator({ step, total = 7, showNumbers = true }) {
   const { t } = useI18n();
   return (
     <div className="progress-indicator">
@@ -15,9 +15,9 @@ export function ProgressIndicator({ step, total = 7 }) {
       >
         <span style={{ width: `${((step + 1) / total) * 100}%` }} />
       </div>
-      <span>
+      {showNumbers && <span>
         {step + 1}/{total}
-      </span>
+      </span>}
     </div>
   );
 }

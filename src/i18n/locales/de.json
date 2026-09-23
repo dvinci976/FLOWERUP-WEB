@@ -93,7 +93,8 @@
   "frequencies": {
     "weekly": "Jede Woche",
     "fortnightly": "Alle 2 Wochen",
-    "monthly": "Einmal im Monat"
+    "monthly": "Einmal im Monat",
+    "one_time": "Einmaliges Flowerup!"
   },
   "steps": {
     "titles": [
@@ -162,10 +163,10 @@
     "doorstep": "Deine Lieferadresse",
     "estimated": "Geschätzt ab",
     "total": "Prototyp-Gesamtpreis",
-    "unit": "pro Lieferung · {price} pro Strauss",
+    "unit": "{price} pro Strauss · Lieferung inklusive · pro Lieferung",
     "fourNote": " · Schätzung für 4 Sträusse. Die endgültige Anzahl wird noch vereinbart.",
     "fourDetails": "Schätzung für 4 Sträusse. Jeder weitere Strauss würde {price} kosten; die endgültige Anzahl wird noch vereinbart.",
-    "disclaimer": "Vorläufige Preise. Lieferkosten und endgültige Bedingungen stehen noch nicht fest. Dies ist eine Demo – ohne Zahlung oder echtes Abo.",
+    "disclaimer": "Vorläufige Prototyp-Preise · Lieferung inklusive. Die endgültigen Bedingungen stehen noch nicht fest. Dies ist eine Demo — keine Zahlung und keine echte Bestellung.",
     "messageLabel": "Nachricht hinzufügen (optional)",
     "messagePlaceholder": "Ein paar liebe Worte zu deinen Blumen …",
     "messageTitle": "Deine Nachricht",
@@ -185,5 +186,72 @@
       "noteOne": "Blumen machen dich glücklich!",
       "noteTwo": "Schöne Blumen. Gute Laune."
     }
+  },
+  "founders": {
+    "launch": "DAS ERSTE AUFBLÜHEN",
+    "badge": "Flowerup!\nLUZERN\nBLUMENPIONIER",
+    "inviteTitle": "Soll es wirklich blühen? 🌸",
+    "firstHomes": "Dein Zuhause könnte eines der ersten in Luzern sein, die Flowerupped werden.",
+    "price": "{price} pro Strauss",
+    "deliveryIncluded": "Lieferung inklusive",
+    "noPayment": "Heute zahlst du nichts. Wir melden uns, sobald Flowerup! in deinem Quartier aufblüht.",
+    "yes": "ICH BIN DABEI! 🌸",
+    "later": "Vielleicht später",
+    "hello": "Hallo, Flowerup! Blumenpionier ♡",
+    "signupTitle": "Sei von Anfang an dabei.",
+    "signupCopy": "Sei beim Start in Luzern dabei. Wir melden uns, sobald Flowerup! für dein Quartier bereit ist.",
+    "yourBloom": "Mein Flowerup!",
+    "provisional": "Vorläufiger Preis",
+    "preview": "Heute zahlst du nichts. In dieser Vorschau wird nichts übermittelt.",
+    "submit": "FLOWER ME UP! 🌸",
+    "noSpam": "Heute keine Zahlung. Nur Blumen, sobald wir bereit sind.",
+    "successTitle": "DU BIST DABEI! 🌸",
+    "successCopy": "Wir geben dir Bescheid, sobald Flowerup! in deiner Nachbarschaft aufblüht.",
+    "lastThing": "Noch eine kleine Frage...",
+    "intentTitle": "Wenn Flowerup! morgen starten würde, wärst du {offer} pro Strauss inklusive Lieferung dabei?",
+    "honest": "Jede Antwort hilft. Sag uns einfach, was sich für dich richtig anfühlt.",
+    "thanksTitle": "Danke, Blumenmensch! ♡",
+    "thanksCopy": "Du hilfst uns, Flowerup! von Anfang an wachsen zu lassen.",
+    "seeYou": "Bis wir gemeinsam aufblühen.",
+    "progress": "Fortschritt beim ersten Aufblühen",
+    "fields": {
+      "firstName": "Vorname",
+      "email": "E-Mail",
+      "postcode": "Postleitzahl"
+    },
+    "errors": {
+      "firstName": "Ups – verrätst du uns deinen Vornamen? 🌸",
+      "email": "Diese E-Mail-Adresse sieht noch nicht ganz richtig aus.",
+      "postcode": "Gib uns deine vierstellige Schweizer Postleitzahl."
+    },
+    "answers": {
+      "absolutely": "Auf jeden Fall!",
+      "maybe": "Vielleicht",
+      "not_yet": "Noch nicht"
+    },
+    "stages": {
+      "signup": "Deine Einladung",
+      "intent": "Eine letzte Frage",
+      "thanks": "Danke"
+    },
+    "invitationBadge": "DAS ERSTE AUFBLÜHEN",
+    "invitationPriceNote": "pro Strauss · Lieferung inklusive",
+    "signupAccent": "Anfang",
+    "partOfBloom": "Du gehörst zum ersten Aufblühen.",
+    "intentOffer": "ab {price}"
+  },
+  "oneTime": {
+    "flirt": "Erst mal mit Blumen flirten? 🌸",
+    "offer": "Probier’s einmal — {price} inklusive Lieferung",
+    "cta": "EIN KLEINES AUFBLÜHEN 🌼",
+    "selected": "Einmaliges Flowerup! gewählt · ohne Abo",
+    "recurringOffer": "Flowerup! im Abo — {price} pro Strauss · Lieferung inklusive",
+    "delivered": "inklusive Lieferung",
+    "unit": "{price} pro Strauss · Lieferung inklusive",
+    "confirmation": "Dein kleiner Glücksmoment ist fast bereit aufzublühen.",
+    "name": "Ein kleines Aufblühen",
+    "once": "Einmalig",
+    "orderType": "Bestellart",
+    "switchRecurring": "Lieber Flowerup! im Abo wählen"
   }
 }

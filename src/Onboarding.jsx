@@ -1,9 +1,14 @@
+import { journeyProgress, nextScreen, previousScreen } from './journey';
+import { getOrder, pricing } from './pricing';
+import './oneTime.css';
+import { FoundersLaunch, FoundersProgress } from "./founders/FoundersLaunch";
+import { foundersReducer, initialFoundersState } from "./founders/state";
 import { ConfirmationPoster } from "./components/ConfirmationPoster";
 import { FlowerGraphics, DeliveryDoodle } from "./components/FlowerGraphics";
 import { useI18n } from "./i18n/I18nProvider";
 import { LanguageSelector } from "./components/LanguageSelector";
 import { validateDelivery } from "./deliveryValidation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useReducer } from "react";
 import ArrowLeft from "lucide-react/dist/esm/icons/arrow-left.js";
 import Check from "lucide-react/dist/esm/icons/check.js";
 import Plus from "lucide-react/dist/esm/icons/plus.js";
@@ -19,9 +24,10 @@ import { Logo, Button } from "./components/UI";
 import { PetalWheel } from "./components/PetalWheel";
 export function Onboarding({ close, initialVibe }) {
   const { t } = useI18n();
+  const [founders, dispatchFounders] = useReducer(foundersReducer, initialFoundersState);
   const [errors, setErrors] = useState({});
   const [step, setStep] = useState(0);
-  const [data, setData] = useState({
+  const [selection, setData] = useState({
     vibe: initialVibe || "",
     colour: "",
     frequency: "fortnightly",
@@ -32,6 +38,8 @@ export function Onboarding({ close, initialVibe }) {
     city: "Lucerne",
     message: "",
   });
+  const data = { ...selection, ...getOrder(selection) };
+  const isOneTime = data.orderType === "one_time";
   const titleRef = useRef(null);
   const patch = (key, value) => {
     setData((d) => ({ ...d, [key]: value }));
@@ -40,13 +48,18 @@ export function Onboarding({ close, initialVibe }) {
   useEffect(() => {
     titleRef.current?.focus();
     window.scrollTo(0, 0);
-  }, [step]);
-  const quantity = parseInt(data.quantity);
-  const total = quantity * 24.9;
-  const next = () => setStep((s) => s + 1);
-  const canContinue = step === 0 ? data.vibe : step === 1 ? data.colour : true;
+  }, [step, founders.stage]);
+  useEffect(() => {
+    if (step === 6 && !founders.stage) dispatchFounders({type:'view'});
+  }, [step, founders.stage]);
+  const startFounders = () => dispatchFounders({type:'start', firstName:data.name.trim().split(/\s+/)[0], postcode:data.postcode});
+  const total = data.total;
+  const progress = journeyProgress(step, isOneTime);
+  const next = () => setStep((s) => nextScreen(s, isOneTime));
+  const chooseOneTime = () => { patch("frequency", "one_time"); setStep(3); };
+  const canContinue = step === 0 ? data.vibe : step === 1 ? data.colour : step === 2 ? (isOneTime || frequencies.includes(data.frequency)) : true;
   return (
-    <div className={`onboarding flow-step-${step}`}>
+    <div className={`onboarding flow-step-${step} ${founders.stage ? "founders-active" : ""}`}>
       <header>
         <Logo onClick={close} />
         <span className="prototype-badge">{t("common.prototype")}</span>
@@ -60,15 +73,16 @@ export function Onboarding({ close, initialVibe }) {
         </button></div>
         <div className="onboarding-navigation">
 
-          <ProgressIndicator step={step}/>
+          {founders.stage ? <FoundersProgress stage={founders.stage}/> : <ProgressIndicator {...progress} showNumbers={!(isOneTime && step === 2)}/>}
         </div>
       </header>
       <main className={`flow-main ${step === 6 ? "confirmed" : ""}`}>
+        {founders.stage ? <FoundersLaunch data={data} state={founders} dispatch={dispatchFounders} titleRef={titleRef} onHome={close}/> : <>
         {step !== 6 && <FlowerGraphics variant={step}/>}
 
         {step !== 6 && <div className="flow-heading">
-          <h1 ref={titleRef} tabIndex={-1}>{t(`steps.titles.${step}`)}</h1>
-          <p>{t(`steps.subtitles.${step}`)}</p>
+          <h1 ref={titleRef} tabIndex={-1}>{t(step === 2 && isOneTime ? "oneTime.name" : `steps.titles.${step}`)}</h1>
+          <p>{t(step === 2 && isOneTime ? "oneTime.selected" : `steps.subtitles.${step}`)}</p>
         </div>}
         {step === 0 && (
           <div className="choice-grid">
@@ -91,7 +105,7 @@ export function Onboarding({ close, initialVibe }) {
             ))}
           </div>
         )}
-        {step === 2 && (
+        {step === 2 && !isOneTime && (
           <PetalWheel
             label={t("wheel.frequency")}
             optionLabel={option => t(`frequencies.${option}`)}
@@ -102,10 +116,18 @@ export function Onboarding({ close, initialVibe }) {
         )}
         {step === 2 && (
           <>
-            <p className="rhythm-note">
-              {t('steps.pause')}
-            </p>
-            <SustainabilityBadge variant={2} />
+            {!isOneTime && <p className="rhythm-note">
+              {t('oneTime.recurringOffer', {price:money(pricing.recurringPrice)})}<br/>{t('steps.pause')}
+            </p>}
+            <div className="one-time-discovery">
+              <p>{t('oneTime.flirt')}</p>
+              <span>{t('oneTime.offer', {price:money(pricing.oneTimePrice)})}</span>
+              <button type="button" className={`one-time-choice ${isOneTime ? 'selected' : ''}`} aria-pressed={isOneTime} onClick={chooseOneTime}>
+                <FlowerMark color="#dd367d"/><span>{t('oneTime.cta')}</span>{isOneTime && <Check size={20} aria-hidden="true"/>}
+              </button>
+              {isOneTime && <><small role="status">{t('oneTime.selected')}</small><button type="button" className="founders-text-button" onClick={()=>patch('frequency','')}>{t('oneTime.switchRecurring')}</button></>}
+            </div>
+            <SustainabilityBadge variant={isOneTime ? 0 : 2} />
           </>
         )}
         {step === 3 && (
@@ -117,7 +139,7 @@ export function Onboarding({ close, initialVibe }) {
               onChange={(v) => patch("quantity", v)}
             />
             <p className="price-note">
-              {data.quantity === '4+' ? `${t('common.from')} ` : ''}{money(total)} {t('common.perDelivery')}
+              {data.quantity === '4+' ? `${t('common.from')} ` : ''}{money(total)} {t(isOneTime ? 'oneTime.delivered' : 'common.perDelivery')}
               {data.quantity === '4+' ? t('summary.fourNote') : ''}
             </p>
           </>
@@ -155,7 +177,7 @@ export function Onboarding({ close, initialVibe }) {
             <div className="summary-hero">
               <BouquetPhoto variant={vibes.indexOf(data.vibe)} />
               <div>
-                <span className="eyebrow">{t('summary.subscription')}</span>
+                <span className="eyebrow">{t(isOneTime ? 'oneTime.name' : 'summary.subscription')}</span>
                 <h2>{t(`vibes.${data.vibe}`)}</h2>
                 <p>{t(`colours.${data.colour}`)}</p>
               </div>
@@ -165,18 +187,18 @@ export function Onboarding({ close, initialVibe }) {
             </div>
             <dl>
               <div>
-                <dt>{t('summary.rhythm')}</dt>
+                <dt>{t(isOneTime ? 'oneTime.orderType' : 'summary.rhythm')}</dt>
                 <dd>
-                  {t(`frequencies.${data.frequency}`)}{" "}
+                  {t(isOneTime ? "oneTime.once" : `frequencies.${data.frequency}`)}{" "}
                   <button className="edit" onClick={() => setStep(2)}>
                     {t('common.edit')}
                   </button>
                 </dd>
               </div>
               <div>
-                <dt>{t('summary.quantity')}</dt>
+                <dt>{t(isOneTime ? 'confirmation.poster.bouquets' : 'summary.quantity')}</dt>
                 <dd>
-                  {data.quantity}{" "}
+                  {isOneTime ? t(data.quantity === "1" ? "common.bouquetOne" : "common.bouquetMany", {count:data.quantity}) : data.quantity}{" "}
                   <button className="edit" onClick={() => setStep(3)}>
                     {t('common.edit')}
                   </button>
@@ -208,13 +230,13 @@ export function Onboarding({ close, initialVibe }) {
                     ? t('summary.estimated')
                     : t('summary.total')}
                 </strong>
-                <small>{t('summary.unit', {price:money(24.9)})}</small>
+                <small>{t(isOneTime ? 'oneTime.unit' : 'summary.unit', {price:money(data.pricePerBouquet)})}</small>
               </div>
               <strong>{money(total)}</strong>
             </div>
             {data.quantity === "4+" && (
               <p className="privacy-note">
-                {t('summary.fourDetails', {price:money(24.9)})}
+                {t('summary.fourDetails', {price:money(data.pricePerBouquet)})}
               </p>
             )}
             <p className="privacy-note">
@@ -222,7 +244,7 @@ export function Onboarding({ close, initialVibe }) {
             </p>
           </div>
         )}
-        {step === 6 && <ConfirmationPoster data={data} titleRef={titleRef} onBack={() => setStep(5)} onHome={close}/>}
+        {step === 6 && <ConfirmationPoster data={data} titleRef={titleRef} onBack={() => setStep(5)} onHome={close} onFoundersStart={startFounders}/>}
         {step < 6 && (
           <div className="flow-bottom">
             {step !== 0 && step !== 1 && <span>
@@ -233,7 +255,7 @@ export function Onboarding({ close, initialVibe }) {
                   : t('steps.noPayment')}
             </span>}
             <div className="step-actions">
-              <button type="button" className="onboarding-back" onClick={() => step === 0 ? close() : setStep(s => s-1)}><ArrowLeft size={19} aria-hidden="true"/> {t('common.back')}</button>
+              <button type="button" className="onboarding-back" onClick={() => step === 0 ? close() : setStep(s => previousScreen(s, isOneTime))}><ArrowLeft size={19} aria-hidden="true"/> {t('common.back')}</button>
             <Button
               disabled={!canContinue}
               type={step === 4 ? "submit" : "button"}
@@ -253,6 +275,7 @@ export function Onboarding({ close, initialVibe }) {
           </div>
         )}
         {step === 1 && <p className="palette-seasonal-note">{t('seasonalNote')}</p>}
+        </>}
       </main>
       <div className="flow-footer">
         Flowerup! <span>{t('steps.footer')}</span> ✿
