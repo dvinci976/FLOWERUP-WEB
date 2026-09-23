@@ -202,7 +202,6 @@
     "signupCopy": "Partecipa al lancio a Lucerna: ti avviseremo quando Flowerup! sarà pronto per il tuo quartiere.",
     "yourBloom": "Il mio Flowerup!",
     "provisional": "Prezzo provvisorio",
-    "preview": "Nessun pagamento oggi. In questa anteprima non viene inviato nulla.",
     "submit": "FLOWER ME UP! 🌸",
     "noSpam": "Nessun pagamento oggi. Solo fiori, quando saremo pronti a sbocciare.",
     "successTitle": "CI SEI ANCHE TU! 🌸",
@@ -238,7 +237,14 @@
     "invitationPriceNote": "a mazzo · consegna inclusa",
     "signupAccent": "fiorire",
     "partOfBloom": "Fai parte della Prima Fioritura.",
-    "intentOffer": "a partire da {price}"
+    "intentOffer": "a partire da {price}",
+    "planting": "Stiamo piantando il tuo posto… 🌱",
+    "signupError": "Ops — questo fiore non è arrivato. Riprova, per favore. 🌸",
+    "savingPetal": "Salviamo il tuo petalo… 🌸",
+    "intentError": "Il tuo posto è salvo, ma l’ultimo petalo è volato via. Riproviamo?",
+    "detailsSaved": "I tuoi dati sono già salvati. Continua con l’ultima piccola domanda.",
+    "answerSaved": "La tua risposta è salvata. Tocca il tuo fiore per continuare.",
+    "privacy": "Salveremo nome, email, codice postale e preferenze floreali per aggiornarti sulla Prima Fioritura."
   },
   "oneTime": {
     "flirt": "Stai solo flirtando con i fiori? 🌸",

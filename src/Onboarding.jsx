@@ -1,3 +1,5 @@
+import { supabase } from './lib/supabase';
+import { createCaptureApi, createCaptureController, acquisitionSource } from './founders/capture';
 import { journeyProgress, nextScreen, previousScreen } from './journey';
 import { getOrder, pricing } from './pricing';
 import './oneTime.css';
@@ -23,8 +25,13 @@ import { FlowerMark, HappyMarks } from "./components/FlowerMark";
 import { Logo, Button } from "./components/UI";
 import { PetalWheel } from "./components/PetalWheel";
 export function Onboarding({ close, initialVibe }) {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const [founders, dispatchFounders] = useReducer(foundersReducer, initialFoundersState);
+  const captureRef = useRef(null);
+  if (!captureRef.current) captureRef.current = createCaptureController(createCaptureApi(supabase), dispatchFounders);
+  const [source] = useState(() => acquisitionSource(window.location.search));
+  const saving = founders.signupStatus === 'saving' || founders.intentStatus === 'saving';
+  const safeClose = () => { if (!saving) close(); };
   const [errors, setErrors] = useState({});
   const [step, setStep] = useState(0);
   const [selection, setData] = useState({
@@ -61,13 +68,14 @@ export function Onboarding({ close, initialVibe }) {
   return (
     <div className={`onboarding flow-step-${step} ${founders.stage ? "founders-active" : ""}`}>
       <header>
-        <Logo onClick={close} />
+        <Logo onClick={safeClose} />
         <span className="prototype-badge">{t("common.prototype")}</span>
         <div className="header-actions"><LanguageSelector/>
         <button
           className="icon-button"
           aria-label={t("common.close")}
-          onClick={close}
+          onClick={safeClose}
+          disabled={saving}
         >
           <X />
         </button></div>
@@ -77,7 +85,7 @@ export function Onboarding({ close, initialVibe }) {
         </div>
       </header>
       <main className={`flow-main ${step === 6 ? "confirmed" : ""}`}>
-        {founders.stage ? <FoundersLaunch data={data} state={founders} dispatch={dispatchFounders} titleRef={titleRef} onHome={close}/> : <>
+        {founders.stage ? <FoundersLaunch data={data} state={founders} dispatch={dispatchFounders} titleRef={titleRef} onHome={safeClose} onSubmit={()=>captureRef.current.submit(founders,data,language,source)} onAnswer={value=>captureRef.current.answer(value)}/> : <>
         {step !== 6 && <FlowerGraphics variant={step}/>}
 
         {step !== 6 && <div className="flow-heading">

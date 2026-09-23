@@ -1,5 +1,5 @@
 import { getOrder, pricing } from '../pricing';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left.js';
 import { useI18n } from '../i18n/I18nProvider';
 import { FlowerMark } from '../components/FlowerMark';
@@ -62,30 +62,20 @@ function ConfiguredBloom({ data }) {
     </div>
   </aside>;
 }
-export function FoundersLaunch({ data, state, dispatch, titleRef, onHome }) {
+export function FoundersLaunch({ data, state, dispatch, titleRef, onHome, onSubmit, onAnswer }) {
   const { t } = useI18n();
   const intentOffer = t('founders.intentOffer', {price:money(pricing.marketingFromPrice)});
   const intentQuestion = t('founders.intentTitle', {offer:intentOffer});
   const intentParts = t('founders.intentTitle', {offer:'|OFFER|'}).split('|OFFER|');
   const formRef = useRef(null);
-  const [bloomingIntent, setBloomingIntent] = useState(null);
-  useEffect(() => {
-    if (!bloomingIntent || state.stage !== 'intent') {
-      if (bloomingIntent) setBloomingIntent(null);
-      return;
-    }
-    const timer = setTimeout(() => {
-      dispatch({ type: 'answer', value: bloomingIntent });
-      setBloomingIntent(null);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, [bloomingIntent, dispatch, state.stage]);
+  const saving = state.signupStatus === 'saving' || state.intentStatus === 'saving';
+  const bloomingIntent = state.intentStatus === 'saving' ? state.purchaseIntent : null;
   const signupTitle = t('founders.signupTitle').split(t('founders.signupAccent')); 
   useEffect(() => {
     const firstError = Object.keys(state.errors)[0];
     if (firstError) formRef.current?.elements.namedItem(firstError)?.focus();
   }, [state.errors]);
-  const back = <button type="button" className="onboarding-back" onClick={()=>dispatch({type:'back'})}><ArrowLeft size={18} aria-hidden="true"/>{t('common.back')}</button>;
+  const back = <button type="button" className="onboarding-back" disabled={saving} onClick={()=>dispatch({type:'back'})}><ArrowLeft size={18} aria-hidden="true"/>{t('common.back')}</button>;
   return <section className={`founders-screen founders-${state.stage}`}>
     <div className="founders-garden" aria-hidden="true"><GardenFlower kind="daisy"/><FlowerMark color="#f6a3c3"/><GardenFlower kind="tulip"/></div>
     <div className="founders-content">
@@ -95,17 +85,19 @@ export function FoundersLaunch({ data, state, dispatch, titleRef, onHome }) {
         </div>
         <div className="founders-signup-grid">
           <ConfiguredBloom data={data}/>
-          <form ref={formRef} className="founders-form" noValidate onSubmit={event=>{event.preventDefault();dispatch({type:'submit'});}}>
+          <form ref={formRef} className="founders-form" aria-busy={state.signupStatus === 'saving'} noValidate onSubmit={event=>{event.preventDefault();onSubmit();}}>
             <span className="signup-form-flower" aria-hidden="true"><FlowerMark color="#f16ca2"/></span>
             <svg className="signup-form-heart" viewBox="0 0 80 90" aria-hidden="true"><path d="M42 77C-12 30 7 0 30 25C44-8 85 7 42 77Z" fill="none" stroke="#159d99" strokeWidth="4" strokeLinecap="round"/></svg>
             {['firstName','email','postcode'].map(field=><label key={field} htmlFor={`founders-${field}`}>
               <span>{t(`founders.fields.${field}`)}</span>
-              <input id={`founders-${field}`} name={field} type={field==='email'?'email':'text'} inputMode={field==='postcode'?'numeric':field==='email'?'email':'text'} autoComplete={{firstName:'given-name',email:'email',postcode:'postal-code'}[field]} autoCapitalize={field==='email'?'none':undefined} spellCheck={field==='email'?false:undefined} required maxLength={field==='postcode'?4:field==='email'?254:80} value={state[field]} onChange={event=>dispatch({type:'change',field,value:event.target.value})} aria-invalid={Boolean(state.errors[field])} aria-describedby={state.errors[field]?`founders-${field}-error`:undefined}/>
+              <input id={`founders-${field}`} name={field} type={field==='email'?'email':'text'} inputMode={field==='postcode'?'numeric':field==='email'?'email':'text'} autoComplete={{firstName:'given-name',email:'email',postcode:'postal-code'}[field]} autoCapitalize={field==='email'?'none':undefined} spellCheck={field==='email'?false:undefined} readOnly={Boolean(state.signupId)} disabled={saving} required maxLength={field==='postcode'?4:field==='email'?254:80} value={state[field]} onChange={event=>dispatch({type:'change',field,value:event.target.value})} aria-invalid={Boolean(state.errors[field])} aria-describedby={state.errors[field]?`founders-${field}-error`:undefined}/>
               {state.errors[field]&&<span className="field-error" role="alert" id={`founders-${field}-error`}>{t(state.errors[field])}</span>}
             </label>)}
-            <div className="step-actions founders-actions">{back}<Button type="submit">{t('founders.submit')}</Button></div>
+            <div className="step-actions founders-actions">{back}<Button type="submit" disabled={saving}>{t(state.signupStatus === 'saving' ? 'founders.planting' : state.signupId ? 'common.continue' : 'founders.submit')}</Button></div>
+            {state.saveError && <p className="capture-error" role="alert">{t(state.saveError)}</p>}
+            {state.signupId && <p className="founders-small">{t('founders.detailsSaved')}</p>}
             <p className="founders-small">{t('founders.noSpam')}</p>
-            <p className="signup-preview-note">{t('founders.preview')}</p>
+            <p className="signup-preview-note">{t('founders.privacy')}</p>
           </form>
         </div>
       </> : <div className="founders-moment">
@@ -116,8 +108,8 @@ export function FoundersLaunch({ data, state, dispatch, titleRef, onHome }) {
           <p className="intent-promise">{t('founders.successCopy')}</p>
           <p className="founders-handwritten founders-last-thing">{t('founders.lastThing')}</p>
           <h2 className="intent-question">{intentParts[0]}<mark className="intent-marketing-offer">{intentOffer}</mark>{intentParts[1]}</h2>
-          <div className="intent-choices" role="group" aria-label={intentQuestion}>
-            {purchaseIntents.map(intent=><button type="button" key={intent} className={`intent-choice intent-${intent}${bloomingIntent===intent?' is-blooming':''}`} aria-pressed={(bloomingIntent || state.purchaseIntent)===intent} disabled={Boolean(bloomingIntent)} onClick={()=>setBloomingIntent(intent)}>
+          <div className="intent-choices" aria-busy={saving} role="group" aria-label={intentQuestion}>
+            {purchaseIntents.map(intent=><button type="button" key={intent} className={`intent-choice intent-${intent}${bloomingIntent===intent?' is-blooming':''}`} aria-pressed={(bloomingIntent || state.purchaseIntent)===intent} disabled={saving || (state.intentStatus === 'saved' && state.purchaseIntent !== intent)} onClick={()=>onAnswer(intent)}>
               <svg className="intent-flower-shape" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
                 <g fill="currentColor">
                   {[0,45,90,135,180,225,270,315].map(angle=><ellipse key={angle} cx="100" cy="53" rx="25" ry="47" transform={`rotate(${angle} 100 100)`}/>)}
@@ -128,6 +120,8 @@ export function FoundersLaunch({ data, state, dispatch, titleRef, onHome }) {
               <strong>{t(`founders.answers.${intent}`)}</strong>
             </button>)}
           </div>
+          <p className="capture-status" role="status">{state.intentStatus === 'saving' ? t('founders.savingPetal') : state.intentStatus === 'saved' ? t('founders.answerSaved') : ''}</p>
+          {state.saveError && <p className="capture-error" role="alert">{t(state.saveError)}</p>}
           <svg className="intent-heart" viewBox="0 0 80 90" aria-hidden="true"><path d="M42 77C-12 30 7 0 30 25C44-8 85 7 42 77Z" fill="none" stroke="currentColor" strokeWidth="4"/></svg>
           <div className="founders-back-only">{back}</div>
         </> : <>

@@ -249,3 +249,7 @@
 @media(prefers-reduced-motion:reduce){.intent-flower-shape{transition:none}}
 
 .intent-question .intent-marketing-offer{text-transform:uppercase;white-space:normal}
+.capture-error{color:#9e2254;font-size:14px;line-height:1.5;text-align:center;margin:12px auto;max-width:540px}
+.capture-status{font-size:13px;line-height:1.5;min-height:20px;text-align:center;color:#42626e}
+.founders-form input[readonly]{background:#f5f1e9}
+.founders-intent .intent-choice:disabled{cursor:default}

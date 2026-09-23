@@ -202,7 +202,6 @@
     "signupCopy": "Únete al lanzamiento en Lucerna y te avisaremos cuando Flowerup! esté listo para tu barrio.",
     "yourBloom": "¡Mi Flowerup!",
     "provisional": "Precio provisional",
-    "preview": "Hoy no pagas nada. Durante esta vista previa no se envía nada.",
     "submit": "¡FLOWER ME UP! 🌸",
     "noSpam": "Hoy no pagas nada. Solo flores cuando estemos listos para florecer.",
     "successTitle": "¡YA ESTÁS DENTRO! 🌸",
@@ -238,7 +237,14 @@
     "invitationPriceNote": "por ramo · entrega incluida",
     "signupAccent": "florecer",
     "partOfBloom": "Formas parte de Las Primeras Flores.",
-    "intentOffer": "desde {price}"
+    "intentOffer": "desde {price}",
+    "planting": "Estamos plantando tu lugar… 🌱",
+    "signupError": "Uy — esta flor no llegó. Inténtalo de nuevo. 🌸",
+    "savingPetal": "Guardando tu pétalo… 🌸",
+    "intentError": "Tu lugar está guardado, pero el último pétalo se escapó. ¿Lo intentas otra vez?",
+    "detailsSaved": "Tus datos ya están guardados. Continúa con la última preguntita.",
+    "answerSaved": "Tu respuesta está guardada. Toca tu flor para continuar.",
+    "privacy": "Guardaremos tu nombre, email, código postal y preferencias florales para informarte sobre Las Primeras Flores."
   },
   "oneTime": {
     "flirt": "¿Solo un pequeño flechazo floral? 🌸",

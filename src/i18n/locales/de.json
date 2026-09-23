@@ -202,7 +202,6 @@
     "signupCopy": "Sei beim Start in Luzern dabei. Wir melden uns, sobald Flowerup! für dein Quartier bereit ist.",
     "yourBloom": "Mein Flowerup!",
     "provisional": "Vorläufiger Preis",
-    "preview": "Heute zahlst du nichts. In dieser Vorschau wird nichts übermittelt.",
     "submit": "FLOWER ME UP! 🌸",
     "noSpam": "Heute keine Zahlung. Nur Blumen, sobald wir bereit sind.",
     "successTitle": "DU BIST DABEI! 🌸",
@@ -238,7 +237,14 @@
     "invitationPriceNote": "pro Strauss · Lieferung inklusive",
     "signupAccent": "Anfang",
     "partOfBloom": "Du gehörst zum ersten Aufblühen.",
-    "intentOffer": "ab {price}"
+    "intentOffer": "ab {price}",
+    "planting": "Wir pflanzen deinen Platz… 🌱",
+    "signupError": "Hoppla — diese Blüte ist nicht angekommen. Versuch es bitte noch einmal. 🌸",
+    "savingPetal": "Dein Blütenblatt wird gespeichert… 🌸",
+    "intentError": "Dein Platz ist gesichert, aber das letzte Blütenblatt ist davongeflogen. Noch ein Versuch?",
+    "detailsSaved": "Deine Angaben sind bereits gespeichert. Weiter zur letzten kleinen Frage.",
+    "answerSaved": "Deine Antwort ist gespeichert. Tippe auf deine Blume, um weiterzugehen.",
+    "privacy": "Wir speichern deinen Namen, deine E-Mail-Adresse, Postleitzahl und Blumenwünsche, um dich über das erste Aufblühen zu informieren."
   },
   "oneTime": {
     "flirt": "Erst mal mit Blumen flirten? 🌸",

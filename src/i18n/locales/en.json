@@ -202,7 +202,6 @@
     "signupCopy": "Join our Lucerne launch and we'll let you know when Flowerup! is ready for your neighbourhood.",
     "yourBloom": "My Flowerup!",
     "provisional": "Provisional price",
-    "preview": "No payment today. During this preview, nothing is submitted.",
     "submit": "FLOWER ME UP! 🌸",
     "noSpam": "No payment today. Just flowers when we're ready to bloom.",
     "successTitle": "YOU'RE IN! 🌸",
@@ -238,7 +237,14 @@
     "invitationPriceNote": "per bouquet · delivered",
     "signupAccent": "bloom",
     "partOfBloom": "You're part of The First Bloom.",
-    "intentOffer": "from {price}"
+    "intentOffer": "from {price}",
+    "planting": "Planting your spot… 🌱",
+    "signupError": "Oops — that bloom didn’t land. Please try again. 🌸",
+    "savingPetal": "Saving your petal… 🌸",
+    "intentError": "Your spot is saved, but that last petal got away. Try once more?",
+    "detailsSaved": "Your details are already saved. Continue to your last little question.",
+    "answerSaved": "Your answer is saved. Tap your flower to continue.",
+    "privacy": "We’ll save your name, email, postcode and flower preferences to keep you updated about The First Bloom."
   },
   "oneTime": {
     "flirt": "Just flirting with flowers? 🌸",
