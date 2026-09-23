@@ -48,7 +48,7 @@ All application code and assets were created for this repository. Bouquet images
 2. Use wheel options, previous/next controls and keyboard arrows.
 3. Go back and verify choices remain selected.
 4. Try an empty delivery form and an out-of-area postcode; verify progression is prevented.
-5. Enter a Lucerne address and review the summary. 1/2/3 bouquets cost CHF 24.90/49.80/74.70 per delivery; `4+` estimates from CHF 99.60.
+5. Enter a Lucerne address and review the summary. 1/2/3 bouquets cost CHF 24.90/44.90/64.90 per delivery; `4+` estimates from CHF 84.90.
 6. Edit from the summary; verify the address remains when returning.
 7. Complete the demo and verify “You have been Flowerupped!” and the no-order notice.
 
@@ -76,7 +76,7 @@ Create `.env.local` using `.env.example` as a template and supply your project's
 
 Signup calls `create_first_bloom_signup({p_signup: ...})` and stores the returned UUID in React state. It never selects from `first_bloom_signups`. Choosing `absolutely`, `maybe` or `not_yet` inserts `{signup_id, purchase_intent}` into `first_bloom_intents` without requesting returned rows. The existing SECURITY INVOKER RPC and RLS remain authoritative; this implementation adds no database permissions or policies. The reviewed SQL is kept for reference in `docs/phase-c-signup-rpc-proposal.sql` and has already been applied by the project owner.
 
-Captured fields: first name, email, postcode, language at submission, style, palette, order type, frequency, numeric bouquet quantity, actual price per bouquet and source. Source is a sanitized, bounded `utm_source` label or `direct`; no full URL is stored. `4+` is stored as the estimate 4. Street address and bouquet message are not sent. No personal data is stored in localStorage; only the chosen language persists there. No automated emails or payments are configured.
+Captured fields: first name, email, postcode, language at submission, style, palette, order type, frequency, numeric bouquet quantity, base price per bouquet, delivery total, discount amount and source. Source is a sanitized, bounded `utm_source` label or `direct`; no full URL is stored. `4+` is stored as the estimate 4. Street address and bouquet message are not sent. No personal data is stored in localStorage; only the chosen language persists there. No automated emails or payments are configured.
 
 Both saves must succeed before their next screen appears. Failures retain inputs and allow retry. An intent retry always reuses the successful signup UUID and never invokes signup. Saved signup fields become read-only on Back; returning forward reuses the saved record. A saved intent cannot be changed through this insert-only flow. Pending actions block duplicate clicks and exit navigation. SDK automatic write retries are disabled.
 
@@ -98,10 +98,10 @@ Automated checks: `npm test`. Production check: `npm run build`. Preview: `npm r
 
 The frequency wheel remains recurring-only. Beneath it, **ONE LITTLE BLOOM** selects a one-time order and immediately opens quantity, then continues through the same quantity, delivery, summary, confirmation and First Bloom flow.
 
-`src/pricing.js` is the shared provisional CHF price configuration: recurring CHF 24.90 or one-time CHF 34.90 per bouquet, delivery included, no quantity discounts. `getOrder` derives `orderType`, `frequency`, `pricePerBouquet`, numeric `bouquetQuantity`, `quantityIsEstimate` and `total` from the current choices. These fields accompany the in-memory onboarding data; changing frequency automatically recalculates them. `4+` remains an estimate for four bouquets, with the final quantity to be agreed. First Bloom signup captures these preferences in Supabase only when submitted.
+`src/pricing.js` is the shared provisional CHF price configuration: recurring CHF 24.90 or one-time CHF 34.90 per bouquet, delivery included, recurring additional bouquets cost CHF 20 each at the same address; one-time has no discount. `getOrder` derives `orderType`, `frequency`, `pricePerBouquet`, numeric `bouquetQuantity`, `quantityIsEstimate` and `total` from the current choices. These fields accompany the in-memory onboarding data; changing frequency automatically recalculates them. `4+` remains an estimate for four bouquets, with the final quantity to be agreed. First Bloom signup captures these preferences in Supabase only when submitted.
 
 To test locally:
-1. Choose a style and palette. On frequency, select weekly, every two weeks or monthly. Continue to quantity and check CHF 24.90 / 49.80 / 74.70 / 99.60 for 1 / 2 / 3 / 4+.
+1. Choose a style and palette. On frequency, select weekly, every two weeks or monthly. Continue to quantity and check CHF 24.90 / 44.90 / 64.90 / 84.90 for 1 / 2 / 3 / 4+.
 2. Go Back and choose **ONE LITTLE BLOOM**. No recurring petal should remain selected. Quantity should now show CHF 34.90 / 69.80 / 104.70 / 139.60.
 3. Continue with a prototype Lucerne address (6000–6009). Check the one-time summary, confirmation and First Bloom configuration, then submit the local signup form to see the shared purchase-intent question.
 4. Back navigation and language switching should preserve selections and prices. Return to frequency and select a recurring petal to restore recurring prices and copy.
@@ -111,3 +111,7 @@ To test locally:
 Navigation uses `src/journey.js`: recurring has seven numbered screens and one-time has six. Quantity → Back restores the one-time selection state without the frequency wheel; choosing recurring clears frequency and requires a new petal selection. The revisited one-time choice is not an additional numbered step.
 
 The First Bloom purchase-intent question always tests the marketing entry offer (`marketingFromPrice`), regardless of the configured order type. Personal summaries continue to use the configured recurring or one-time price.
+
+## Phase C.1 — More flowers, same doorstep
+
+`getOrder` calculates totals in integer rappen. Recurring deliveries cost CHF 24.90 for the first bouquet and CHF 20 for each additional bouquet to the same address. One-time bouquets remain CHF 34.90 each. `pricePerBouquet` is the base price, not the effective average. `deliveryTotal` and `discountAmount` feed the UI and RPC payload (`delivery_total`, `discount_amount`). The legacy `total` property aliases `deliveryTotal`. The existing 4+ option estimates four bouquets; final quantity remains to be agreed. Marketing prices remain unchanged.

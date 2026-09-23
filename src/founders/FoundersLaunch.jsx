@@ -56,9 +56,10 @@ function ConfiguredBloom({ data }) {
         ['style',t(`vibes.${data.vibe}`)],['colours',t(`colours.${data.colour}`)],
         ['frequency',t(`frequencies.${data.frequency}`)],['bouquets',data.quantity],
       ].map(([key,value])=><div key={key}><dt>{t(`confirmation.poster.${key}`)}</dt><dd>{value}</dd></div>)}</dl>
-      <strong className="configured-price">{data.quantity==='4+' ? `${t('common.from')} ` : ''}{money(order.total)} <span>{t(order.orderType === 'one_time' ? 'oneTime.delivered' : 'common.perDelivery')}</span></strong>
+      <strong className="configured-price">{data.quantity==='4+' ? `${t('common.from')} ` : ''}{money(order.deliveryTotal)} <span>{t(order.orderType === 'one_time' ? 'oneTime.delivered' : 'common.perDelivery')}</span></strong>
       <small>{t('founders.provisional')} · {t('founders.deliveryIncluded')}</small>
-      {data.quantity==='4+' && <small>{t('summary.fourDetails',{price:money(data.pricePerBouquet)})}</small>}
+      {order.discountAmount > 0 && <p className="bouquet-saving">{t('multiBouquet.savedDelivery',{amount:money(order.discountAmount)})}</p>}
+      {data.quantity==='4+' && <small>{t('summary.fourDetails',{price:money(order.additionalBouquetPrice)})}</small>}
     </div>
   </aside>;
 }

@@ -259,5 +259,13 @@
     "once": "Einmalig",
     "orderType": "Bestellart",
     "switchRecurring": "Lieber Flowerup! im Abo wählen"
+  },
+  "multiBouquet": {
+    "headline": "MEHR BLUMEN. GLEICHE HAUSTÜR.",
+    "add": "Ein weiterer Strauss für nur {price}.",
+    "sameAddress": "Alle Sträusse kommen zusammen an dieselbe Adresse.",
+    "save": "DU SPARST {amount} 🌸",
+    "savedDelivery": "{amount} gespart bei jeder Lieferung 🌸",
+    "breakdown": "Erster Strauss {price} · jeder weitere {additional} · Lieferung inklusive"
   }
 }

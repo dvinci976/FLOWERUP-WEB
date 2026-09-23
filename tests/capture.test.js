@@ -18,7 +18,7 @@ test('payload is a strict allowlist with actual order pricing for both journeys'
  const once=signupPayload(form,{...config,frequency:'one_time'},'fr','direct');
  assert.equal(once.price_per_bouquet,34.9);assert.equal(once.order_type,'one_time');
  assert.equal(once.language,'fr');assert.equal(once.first_name,'Preview');
- assert.deepEqual(Object.keys(once),['first_name','email','postcode','language','style','colour_preference','order_type','frequency','bouquet_quantity','price_per_bouquet','source']);
+ assert.deepEqual(Object.keys(once),['first_name','email','postcode','language','style','colour_preference','order_type','frequency','bouquet_quantity','price_per_bouquet','delivery_total','discount_amount','source']);
 });
 test('API uses the approved RPC and an INSERT only, without SELECT',async()=>{
  const calls=[];const api=createCaptureApi({rpc:(...args)=>{calls.push(args);return {retry:enabled=>{assert.equal(enabled,false);return Promise.resolve({data:id,error:null})}}},from:table=>({insert:row=>{calls.push([table,row]);return {retry:enabled=>{assert.equal(enabled,false);return Promise.resolve({error:null})}}}})});
@@ -62,4 +62,20 @@ test('intent retries never create a signup; double clicks and saved revisits nev
 test('technical error logging excludes raw errors, payloads, URLs and credentials',()=>{
  const original=console.error;let logged;console.error=(...args)=>{logged=args};
  try{logCaptureError('signup',{code:'42501',message:'secret',details:'personal data'});assert.deepEqual(logged,['[Flowerup] signup save failed',{code:'42501'}]);}finally{console.error=original}
+});
+
+test('signup payload maps all eight pricing combinations across every language',()=>{
+ for(const language of ['en','de','it','fr','es','pt']){
+  for(const frequency of ['weekly','fortnightly','monthly','one_time']){
+   for(let quantity=1;quantity<=4;quantity++){
+    const payload=signupPayload(form,{...config,frequency,quantity:String(quantity)},language,'instagram');
+    const once=frequency==='one_time';
+    assert.equal(payload.price_per_bouquet,once?34.9:24.9);
+    assert.equal(payload.delivery_total,(once?[34.9,69.8,104.7,139.6]:[24.9,44.9,64.9,84.9])[quantity-1]);
+    assert.equal(payload.discount_amount,once?0:[0,4.9,9.8,14.7][quantity-1]);
+    assert.equal(payload.bouquet_quantity,quantity);
+    assert.equal(payload.language,language);
+   }
+  }
+ }
 });

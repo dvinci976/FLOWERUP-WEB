@@ -259,5 +259,13 @@
     "once": "One-time",
     "orderType": "Order type",
     "switchRecurring": "Choose recurring Flowerup! instead"
+  },
+  "multiBouquet": {
+    "headline": "MORE FLOWERS. SAME DOORSTEP.",
+    "add": "Add another bouquet for just {price}.",
+    "sameAddress": "All bouquets delivered together to the same address.",
+    "save": "YOU SAVE {amount} 🌸",
+    "savedDelivery": "{amount} saved each delivery 🌸",
+    "breakdown": "First bouquet {price} · each extra {additional} · delivery included"
   }
 }

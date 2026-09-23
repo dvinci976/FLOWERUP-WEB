@@ -259,5 +259,13 @@
     "once": "Une seule fois",
     "orderType": "Type de commande",
     "switchRecurring": "Choisir plutôt Flowerup! en abonnement"
+  },
+  "multiBouquet": {
+    "headline": "PLUS DE FLEURS. UNE MÊME ADRESSE.",
+    "add": "Un bouquet de plus pour seulement {price}.",
+    "sameAddress": "Tous les bouquets sont livrés ensemble à la même adresse.",
+    "save": "VOUS ÉCONOMISEZ {amount} 🌸",
+    "savedDelivery": "{amount} économisés à chaque livraison 🌸",
+    "breakdown": "Premier bouquet {price} · chaque bouquet supplémentaire {additional} · livraison incluse"
   }
 }

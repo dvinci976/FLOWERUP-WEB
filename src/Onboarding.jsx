@@ -60,7 +60,7 @@ export function Onboarding({ close, initialVibe }) {
     if (step === 6 && !founders.stage) dispatchFounders({type:'view'});
   }, [step, founders.stage]);
   const startFounders = () => dispatchFounders({type:'start', firstName:data.name.trim().split(/\s+/)[0], postcode:data.postcode});
-  const total = data.total;
+  const total = data.deliveryTotal;
   const progress = journeyProgress(step, isOneTime);
   const next = () => setStep((s) => nextScreen(s, isOneTime));
   const chooseOneTime = () => { patch("frequency", "one_time"); setStep(3); };
@@ -90,7 +90,7 @@ export function Onboarding({ close, initialVibe }) {
 
         {step !== 6 && <div className="flow-heading">
           <h1 ref={titleRef} tabIndex={-1}>{t(step === 2 && isOneTime ? "oneTime.name" : `steps.titles.${step}`)}</h1>
-          <p>{t(step === 2 && isOneTime ? "oneTime.selected" : `steps.subtitles.${step}`)}</p>
+          <p className={step === 3 && !isOneTime ? "same-doorstep-heading" : undefined}>{t(step === 3 && !isOneTime ? "multiBouquet.headline" : step === 2 && isOneTime ? "oneTime.selected" : `steps.subtitles.${step}`)}</p>
         </div>}
         {step === 0 && (
           <div className="choice-grid">
@@ -140,16 +140,19 @@ export function Onboarding({ close, initialVibe }) {
         )}
         {step === 3 && (
           <>
+            {!isOneTime && <p className="additional-bouquet-note">{t("multiBouquet.add", {price:money(pricing.additionalRecurringPrice)})}<small>{t("multiBouquet.sameAddress")}</small></p>}
             <PetalWheel
               label={t("wheel.quantity")}
               options={["1", "2", "3", "4+"]}
               value={data.quantity}
               onChange={(v) => patch("quantity", v)}
             />
-            <p className="price-note">
+            <p className="price-note" aria-live="polite">
+              <strong className="quantity-count">{t(data.quantity === "1" ? "common.bouquetOne" : "common.bouquetMany", {count:data.quantity})}</strong>
               {data.quantity === '4+' ? `${t('common.from')} ` : ''}{money(total)} {t(isOneTime ? 'oneTime.delivered' : 'common.perDelivery')}
               {data.quantity === '4+' ? t('summary.fourNote') : ''}
             </p>
+            {data.discountAmount > 0 && <p className="bouquet-saving" aria-live="polite">{t('multiBouquet.save', {amount:money(data.discountAmount)})}</p>}
           </>
         )}
         {step === 4 && (
@@ -238,13 +241,14 @@ export function Onboarding({ close, initialVibe }) {
                     ? t('summary.estimated')
                     : t('summary.total')}
                 </strong>
-                <small>{t(isOneTime ? 'oneTime.unit' : 'summary.unit', {price:money(data.pricePerBouquet)})}</small>
+                <small>{t(isOneTime ? 'oneTime.unit' : 'multiBouquet.breakdown', {price:money(data.pricePerBouquet), additional:money(data.additionalBouquetPrice)})}</small>
               </div>
-              <strong>{money(total)}</strong>
+              <strong>{money(total)}<small>{t(isOneTime ? "oneTime.delivered" : "common.perDelivery")}</small></strong>
             </div>
+            {data.discountAmount > 0 && <p className="bouquet-saving">{t("multiBouquet.savedDelivery", {amount:money(data.discountAmount)})}</p>}
             {data.quantity === "4+" && (
               <p className="privacy-note">
-                {t('summary.fourDetails', {price:money(data.pricePerBouquet)})}
+                {t('summary.fourDetails', {price:money(data.additionalBouquetPrice)})}
               </p>
             )}
             <p className="privacy-note">

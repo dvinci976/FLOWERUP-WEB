@@ -11,7 +11,8 @@ export function signupPayload(form, configuration, language, source) {
     first_name: form.firstName.trim(), email: form.email.trim(), postcode: form.postcode.trim(),
     language, style: configuration.vibe, colour_preference: configuration.colour,
     order_type: order.orderType, frequency: order.frequency,
-    bouquet_quantity: order.bouquetQuantity, price_per_bouquet: order.pricePerBouquet, source,
+    bouquet_quantity: order.bouquetQuantity, price_per_bouquet: order.pricePerBouquet,
+    delivery_total: order.deliveryTotal, discount_amount: order.discountAmount, source,
   };
 }
 export function createCaptureApi(client) {

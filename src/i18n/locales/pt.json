@@ -259,5 +259,13 @@
     "once": "Só uma vez",
     "orderType": "Tipo de encomenda",
     "switchRecurring": "Prefiro Flowerup! por subscrição"
+  },
+  "multiBouquet": {
+    "headline": "MAIS FLORES. A MESMA PORTA.",
+    "add": "Adiciona outro ramo por apenas {price}.",
+    "sameAddress": "Todos os ramos chegam juntos à mesma morada.",
+    "save": "POUPAS {amount} 🌸",
+    "savedDelivery": "Poupas {amount} em cada entrega 🌸",
+    "breakdown": "Primeiro ramo {price} · cada ramo adicional {additional} · entrega incluída"
   }
 }
