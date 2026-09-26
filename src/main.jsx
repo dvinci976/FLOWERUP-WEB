@@ -12,3 +12,5 @@ createRoot(document.getElementById("root")).render(
 import "./redesign.css";
 
 import "./personality.css";
+
+import "./floralBackgrounds.css";

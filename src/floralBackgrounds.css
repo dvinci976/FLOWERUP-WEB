@@ -1,0 +1,37 @@
+/* One continuous repeat, with even flower strength and no mirrored panels.
+   Alpha artwork tints only the flowers; existing surface colours stay intact. */
+:where(#root:has(> .announcement), .onboarding, .founders-screen, .how-section, .benefit-strip, .closing) {
+  position: relative;
+  isolation: isolate;
+  --flower-bg-image: url('./assets/backgrounds/flowerup-continuous-repeat.svg?no-inline');
+  --flower-bg-ink: #b39263;
+  --flower-bg-opacity: .08;
+  --flower-bg-size: 1120px;
+}
+:where(#root:has(> .announcement), .onboarding, .founders-screen, .how-section, .benefit-strip, .closing)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background-color: var(--flower-bg-ink);
+  mask-image: var(--flower-bg-image);
+  mask-mode: alpha;
+  mask-size: var(--flower-bg-size) auto;
+  mask-position: left top;
+  mask-repeat: repeat;
+  opacity: var(--flower-bg-opacity);
+}
+.onboarding.flow-step-1 { --flower-bg-ink: #ba8c21; }
+.onboarding.flow-step-2, .how-section, .closing { --flower-bg-ink: #c86c8b; }
+.onboarding.flow-step-3, .onboarding.flow-step-5, .benefit-strip { --flower-bg-ink: #599e8d; }
+.onboarding.flow-step-4 { --flower-bg-ink: #cc9556; }
+/* The opaque First Bloom canvas owns its own single texture layer. */
+.onboarding.founders-active::before { content: none; }
+@media (max-width: 700px) {
+  :where(#root:has(> .announcement), .onboarding, .founders-screen, .how-section, .benefit-strip, .closing) { --flower-bg-size: 880px; }
+}
+@media (forced-colors: active) {
+  :where(#root:has(> .announcement), .onboarding, .founders-screen, .how-section, .benefit-strip, .closing)::before { content: none; }
+}
